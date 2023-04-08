@@ -1,0 +1,1864 @@
+0.2778999999864027	EXP	Created Window = Window( name=Window, fullscr=true, color=#808080, units=height, waitBlanking=true, autoLog=true, size=[1536,754] )
+13.980265000020154	EXP	Created welcome_text = TextStim( name=welcome_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=Welcome to this study!, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.981795000028796	EXP	Created taskinstr_text = TextStim( name=taskinstr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.03, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.98374000005424	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.985135000082664	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.986389999976382	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.988130000070669	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.995665000053123	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+13.998525000060908	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.001344999996945	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.00186499999836	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.002345000044443	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.002809999976307	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.003254999988712	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.003740000072867	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.004200000083074	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.004725000006147	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.006930000032298	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.00749500002712	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.007979999994859	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.008419999969192	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.00901999999769	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.00964499998372	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.010239999974146	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.012265000026673	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.012764999992214	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.013205000082962	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.013645000057295	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.014079999993555	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.014560000039637	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.015005000052042	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.015484999981709	EXP	Created sentence_text = TextStim( name=sentence_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.017059999983758	EXP	Created probe_text = TextStim( name=probe_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.01753000007011	EXP	Created compr_instr_text = TextStim( name=compr_instr_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.018054999993183	EXP	Created comprehension_text = TextStim( name=comprehension_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=default text, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.018520000041462	EXP	Created Thankyou_text = TextStim( name=Thankyou_text, win=Window( name=Window, fullscr=true, color=#808080, ~), autoDraw=null, autoLog=true, units=height, ori=null, opacity=1, pos=[0,0], size=undefined, text=Thank you for your participation in this study!
+
+
+~, font=Arial, color=#FFFFFF, contrast=1, height=0.04, bold=null, italic=null, alignHoriz=left, alignVert=center, wrapWidth=1, flipHoriz=null, flipVert=null )
+14.241325000068173	EXP	welcome_text: units = "height"
+14.241325000068173	EXP	welcome_text: ori = 0
+14.241325000068173	EXP	welcome_text: opacity = 1
+14.241325000068173	EXP	welcome_text: pos = [0,0]
+14.241325000068173	EXP	welcome_text: size = undefined
+14.241325000068173	EXP	welcome_text: text = "Welcome to this study!"
+14.241325000068173	EXP	welcome_text: font = "Arial"
+14.241325000068173	EXP	welcome_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	welcome_text: contrast = 1
+14.241325000068173	EXP	welcome_text: height = 0.04
+14.241325000068173	EXP	welcome_text: bold = false
+14.241325000068173	EXP	welcome_text: italic = false
+14.241325000068173	EXP	welcome_text: alignHoriz = "left"
+14.241325000068173	EXP	welcome_text: alignVert = "center"
+14.241325000068173	EXP	welcome_text: wrapWidth = 1
+14.241325000068173	EXP	welcome_text: flipHoriz = false
+14.241325000068173	EXP	welcome_text: flipVert = false
+14.241325000068173	EXP	taskinstr_text: units = "height"
+14.241325000068173	EXP	taskinstr_text: ori = 0
+14.241325000068173	EXP	taskinstr_text: opacity = 1
+14.241325000068173	EXP	taskinstr_text: pos = [0,0]
+14.241325000068173	EXP	taskinstr_text: size = undefined
+14.241325000068173	EXP	taskinstr_text: text = "default text"
+14.241325000068173	EXP	taskinstr_text: font = "Arial"
+14.241325000068173	EXP	taskinstr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	taskinstr_text: contrast = 1
+14.241325000068173	EXP	taskinstr_text: height = 0.03
+14.241325000068173	EXP	taskinstr_text: bold = false
+14.241325000068173	EXP	taskinstr_text: italic = false
+14.241325000068173	EXP	taskinstr_text: alignHoriz = "left"
+14.241325000068173	EXP	taskinstr_text: alignVert = "center"
+14.241325000068173	EXP	taskinstr_text: wrapWidth = 1
+14.241325000068173	EXP	taskinstr_text: flipHoriz = false
+14.241325000068173	EXP	taskinstr_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	sentence_text: units = "height"
+14.241325000068173	EXP	sentence_text: ori = 0
+14.241325000068173	EXP	sentence_text: opacity = 1
+14.241325000068173	EXP	sentence_text: pos = [0,0]
+14.241325000068173	EXP	sentence_text: size = undefined
+14.241325000068173	EXP	sentence_text: text = "default text"
+14.241325000068173	EXP	sentence_text: font = "Arial"
+14.241325000068173	EXP	sentence_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	sentence_text: contrast = 1
+14.241325000068173	EXP	sentence_text: height = 0.04
+14.241325000068173	EXP	sentence_text: bold = false
+14.241325000068173	EXP	sentence_text: italic = false
+14.241325000068173	EXP	sentence_text: alignHoriz = "left"
+14.241325000068173	EXP	sentence_text: alignVert = "center"
+14.241325000068173	EXP	sentence_text: wrapWidth = 1
+14.241325000068173	EXP	sentence_text: flipHoriz = false
+14.241325000068173	EXP	sentence_text: flipVert = false
+14.241325000068173	EXP	probe_text: units = "height"
+14.241325000068173	EXP	probe_text: ori = 0
+14.241325000068173	EXP	probe_text: opacity = 1
+14.241325000068173	EXP	probe_text: pos = [0,0]
+14.241325000068173	EXP	probe_text: size = undefined
+14.241325000068173	EXP	probe_text: text = "default text"
+14.241325000068173	EXP	probe_text: font = "Arial"
+14.241325000068173	EXP	probe_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	probe_text: contrast = 1
+14.241325000068173	EXP	probe_text: height = 0.04
+14.241325000068173	EXP	probe_text: bold = false
+14.241325000068173	EXP	probe_text: italic = false
+14.241325000068173	EXP	probe_text: alignHoriz = "left"
+14.241325000068173	EXP	probe_text: alignVert = "center"
+14.241325000068173	EXP	probe_text: wrapWidth = 1
+14.241325000068173	EXP	probe_text: flipHoriz = false
+14.241325000068173	EXP	probe_text: flipVert = false
+14.241325000068173	EXP	compr_instr_text: units = "height"
+14.241325000068173	EXP	compr_instr_text: ori = 0
+14.241325000068173	EXP	compr_instr_text: opacity = 1
+14.241325000068173	EXP	compr_instr_text: pos = [0,0]
+14.241325000068173	EXP	compr_instr_text: size = undefined
+14.241325000068173	EXP	compr_instr_text: text = "default text"
+14.241325000068173	EXP	compr_instr_text: font = "Arial"
+14.241325000068173	EXP	compr_instr_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	compr_instr_text: contrast = 1
+14.241325000068173	EXP	compr_instr_text: height = 0.04
+14.241325000068173	EXP	compr_instr_text: bold = false
+14.241325000068173	EXP	compr_instr_text: italic = false
+14.241325000068173	EXP	compr_instr_text: alignHoriz = "left"
+14.241325000068173	EXP	compr_instr_text: alignVert = "center"
+14.241325000068173	EXP	compr_instr_text: wrapWidth = 1
+14.241325000068173	EXP	compr_instr_text: flipHoriz = false
+14.241325000068173	EXP	compr_instr_text: flipVert = false
+14.241325000068173	EXP	comprehension_text: units = "height"
+14.241325000068173	EXP	comprehension_text: ori = 0
+14.241325000068173	EXP	comprehension_text: opacity = 1
+14.241325000068173	EXP	comprehension_text: pos = [0,0]
+14.241325000068173	EXP	comprehension_text: size = undefined
+14.241325000068173	EXP	comprehension_text: text = "default text"
+14.241325000068173	EXP	comprehension_text: font = "Arial"
+14.241325000068173	EXP	comprehension_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	comprehension_text: contrast = 1
+14.241325000068173	EXP	comprehension_text: height = 0.04
+14.241325000068173	EXP	comprehension_text: bold = false
+14.241325000068173	EXP	comprehension_text: italic = false
+14.241325000068173	EXP	comprehension_text: alignHoriz = "left"
+14.241325000068173	EXP	comprehension_text: alignVert = "center"
+14.241325000068173	EXP	comprehension_text: wrapWidth = 1
+14.241325000068173	EXP	comprehension_text: flipHoriz = false
+14.241325000068173	EXP	comprehension_text: flipVert = false
+14.241325000068173	EXP	Thankyou_text: units = "height"
+14.241325000068173	EXP	Thankyou_text: ori = 0
+14.241325000068173	EXP	Thankyou_text: opacity = 1
+14.241325000068173	EXP	Thankyou_text: pos = [0,0]
+14.241325000068173	EXP	Thankyou_text: size = undefined
+14.241325000068173	EXP	Thankyou_text: text = "Thank you for your participation in this study!\n\n\nMAKE SURE TO PRESS \"OK\" ON THE NEXT POP-UP MESSAGE TO BE REDIRECTED TO RECEIVE YOUR COMPLETION CODE!\n\n\nWithout this completion code, we will not be able to pay you for your time.\n\nPlease press the space bar"
+14.241325000068173	EXP	Thankyou_text: font = "Arial"
+14.241325000068173	EXP	Thankyou_text: color = {"_hex":"#FFFFFF","_rgb":[1,1,1]}
+14.241325000068173	EXP	Thankyou_text: contrast = 1
+14.241325000068173	EXP	Thankyou_text: height = 0.04
+14.241325000068173	EXP	Thankyou_text: bold = false
+14.241325000068173	EXP	Thankyou_text: italic = false
+14.241325000068173	EXP	Thankyou_text: alignHoriz = "left"
+14.241325000068173	EXP	Thankyou_text: alignVert = "center"
+14.241325000068173	EXP	Thankyou_text: wrapWidth = 1
+14.241325000068173	EXP	Thankyou_text: flipHoriz = false
+14.241325000068173	EXP	Thankyou_text: flipVert = false
+14.241325000068173	EXP	welcome_text: autoDraw = true
+16.121855000033975	EXP	welcome_text: autoDraw = false
+16.121855000033975	EXP	welcome_text: autoDraw = false
+16.121855000033975	EXP	taskinstr_text: text = "TASK INSTRUCTIONS - PLEASE READ CAREFULLY!\n\nThe goal of this study is to learn how mind wandering affects how you learn information during reading. Mind wandering is a term used to describe what occurs when your attention wanders from a task. Sometimes when your mind wanders, you begin thinking about personal events or concerns rather than your task. At other times, your mind can wander because you are bored or tired and you don’t really know what you’re thinking about; all you know is that you are no longer thinking about your task.\n\nPlease press the space bar to continue."
+16.121855000033975	EXP	taskinstr_text: autoDraw = true
+82.8066000000108	DATA	Keydown:  
+82.83753999997862	EXP	taskinstr_text: autoDraw = false
+82.83753999997862	EXP	taskinstr_text: text = "In this experiment, you will read 8 passages and answer reading comprehension questions for each passage. THE PASSAGES WILL BE PRESENTED IN A SENTENCE-BY-SENTENCE FASHION. PLEASE READ THE SENTENCES AT YOUR NORMAL READING PACE. ONCE YOU HAVE FINISHED READING ONE SENTENCE, PRESS THE SPACE KEY TO MOVE ON TO THE NEXT SENTENCE. Once you've read the sentence you MAY NOT GO BACK.\n\nPlease press the space bar to continue."
+82.83753999997862	EXP	taskinstr_text: autoDraw = true
+116.99259500007611	DATA	Keydown:  
+117.01308499998413	EXP	taskinstr_text: autoDraw = false
+117.01308499998413	EXP	taskinstr_text: text = "THE SET OF READING COMPREHENSION QUESTIONS FOR THAT PARTICULAR PASSAGE YOU’VE FINISHED READING WILL APPEAR AFTER EACH PASSAGE, not all together at the end. Like the sentences, once you've answered the questions you MAY NOT GO BACK TO CHANGE YOUR ANSWER.\n\nPlease press the space bar to continue."
+117.01308499998413	EXP	taskinstr_text: autoDraw = true
+135.57214000006206	DATA	Keydown:  
+135.5936900000088	EXP	taskinstr_text: autoDraw = false
+135.5936900000088	EXP	taskinstr_text: text = "Additionally, while you are reading you will be randomly interrupted and asked “WERE YOU MIND WANDERING WHEN YOU READ THE PREVIOUS SENTENCE?\" as the question will appear on screen. That is, whether your thoughts were off-task rather than focusing on the prior sentence, in which you would have to choose either “Yes” or “No” by pressing the \"Y\" for Yes or \"N\" for No on your keyboard.\n\nPlease press the space bar to continue."
+135.5936900000088	EXP	taskinstr_text: autoDraw = true
+171.6042900000466	DATA	Keydown:  
+171.62786999996752	EXP	taskinstr_text: autoDraw = false
+171.62786999996752	EXP	taskinstr_text: text = "This entire experiment is self-paced. Though of course you should try NOT TO go over the experiment's ending time of 30 minutes. So try to do the task all the way through instead of taking too many small breaks in between. The experiment isn't long so you should be able to do it without taking any breaks. \n\nPlease press the space bar to continue."
+171.62786999996752	EXP	taskinstr_text: autoDraw = true
+193.4995699999854	DATA	Keydown:  
+193.51993499998935	EXP	taskinstr_text: autoDraw = false
+193.51993499998935	EXP	taskinstr_text: text = "Please press the space bar to start reading the first passage."
+193.51993499998935	EXP	taskinstr_text: autoDraw = true
+196.91344500007108	DATA	Keydown:  
+196.9511000000639	EXP	taskinstr_text: autoDraw = false
+196.9511000000639	EXP	sentence_text: text = "Passage 1"
+196.9511000000639	EXP	sentence_text: autoDraw = true
+206.91161000006832	DATA	Keydown:  
+206.9515000000829	EXP	sentence_text: autoDraw = false
+206.9515000000829	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+206.9515000000829	EXP	probe_text: autoDraw = true
+206.9515000000829	EXP	probe_text: autoDraw = false
+206.9515000000829	EXP	sentence_text: text = "Elizabeth Barrett was wise enough to see that Browning was a fine poet."
+206.9515000000829	EXP	sentence_text: autoDraw = true
+220.36462000000756	DATA	Keydown:  
+220.3882750000339	EXP	sentence_text: autoDraw = false
+220.3882750000339	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+220.3882750000339	EXP	probe_text: autoDraw = true
+220.3882750000339	EXP	probe_text: autoDraw = false
+220.3882750000339	EXP	sentence_text: text = "The young man with the lemon-colored gloves and long dark hair and high-strung, restless manner who had visited her in 1846 had been moved to write to her because she had praised his poetry."
+220.3882750000339	EXP	sentence_text: autoDraw = true
+239.0193750000326	DATA	Keydown:  
+239.0438950000098	EXP	sentence_text: autoDraw = false
+239.0438950000098	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+239.0438950000098	EXP	probe_text: autoDraw = true
+243.235575000057	DATA	Keydown: n
+243.27224000007845	EXP	probe_text: autoDraw = false
+243.27224000007845	EXP	sentence_text: text = "She found the man even more to her liking than the verse, and it was not so very long-only the time between May, 1845 and September, 1846-before Robert Browning had stolen the poetess from the dour father who guarded her like a dragon (never wanting her to marry any man), and taken her with him to Italy and a new life."
+243.27224000007845	EXP	sentence_text: autoDraw = true
+277.28695500001777	DATA	Keydown:  
+277.29519500001334	EXP	sentence_text: autoDraw = false
+277.29519500001334	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+277.29519500001334	EXP	probe_text: autoDraw = true
+279.43810500006657	DATA	Keydown: y
+279.4532200000249	EXP	probe_text: autoDraw = false
+279.4532200000249	EXP	sentence_text: text = "One morning, soon after Robert and Elizabeth married; she thrust a manuscript into Robert’s pocket."
+279.4532200000249	EXP	sentence_text: autoDraw = true
+287.83067000005394	DATA	Keydown:  
+287.85070499998983	EXP	sentence_text: autoDraw = false
+287.85070499998983	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+287.85070499998983	EXP	probe_text: autoDraw = true
+287.85070499998983	EXP	probe_text: autoDraw = false
+287.85070499998983	EXP	sentence_text: text = "Then she ran up to her room, embarrassed by her action."
+287.85070499998983	EXP	sentence_text: autoDraw = true
+293.86127500003204	DATA	Keydown:  
+293.888905000058	EXP	sentence_text: autoDraw = false
+293.888905000058	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+293.888905000058	EXP	probe_text: autoDraw = true
+293.888905000058	EXP	probe_text: autoDraw = false
+293.888905000058	EXP	sentence_text: text = "The manuscript was a sonnet sequence that she had written about their courtship and their love letters."
+293.888905000058	EXP	sentence_text: autoDraw = true
+303.7745550000109	DATA	Keydown:  
+303.8021450000815	EXP	sentence_text: autoDraw = false
+303.8021450000815	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+303.8021450000815	EXP	probe_text: autoDraw = true
+303.8021450000815	EXP	probe_text: autoDraw = false
+303.8021450000815	EXP	sentence_text: text = "Mrs. Browning never intended for these poems to be published, but Robert promptly insisted that they must be."
+303.8021450000815	EXP	sentence_text: autoDraw = true
+313.0873300000094	DATA	Keydown:  
+313.1209449999733	EXP	sentence_text: autoDraw = false
+313.1209449999733	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+313.1209449999733	EXP	probe_text: autoDraw = true
+313.1209449999733	EXP	probe_text: autoDraw = false
+313.1209449999733	EXP	sentence_text: text = "He suggested calling them Sonnets from the Portuguese."
+313.1209449999733	EXP	sentence_text: autoDraw = true
+318.5953950000694	DATA	Keydown:  
+318.60878500004765	EXP	sentence_text: autoDraw = false
+318.60878500004765	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+318.60878500004765	EXP	probe_text: autoDraw = true
+318.60878500004765	EXP	probe_text: autoDraw = false
+318.60878500004765	EXP	sentence_text: text = "He may have suggested this title to hide the fact that the poems were personal."
+318.60878500004765	EXP	sentence_text: autoDraw = true
+326.0241200000746	DATA	Keydown:  
+326.0466950000264	EXP	sentence_text: autoDraw = false
+326.0466950000264	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+326.0466950000264	EXP	probe_text: autoDraw = true
+326.0466950000264	EXP	probe_text: autoDraw = false
+326.0466950000264	EXP	sentence_text: text = "He thought that these poems were “the finest sonnets written in our language since Shakespeare’s.”"
+326.0466950000264	EXP	sentence_text: autoDraw = true
+332.8769650000613	DATA	Keydown:  
+332.89525499998126	EXP	sentence_text: autoDraw = false
+332.89525499998126	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+332.89525499998126	EXP	probe_text: autoDraw = true
+332.89525499998126	EXP	probe_text: autoDraw = false
+332.89525499998126	EXP	sentence_text: text = "Robert Browning’s opinion of Sonnets from the Portuguese was flattering to his wife, the same as his opinion of most of her poetry."
+332.89525499998126	EXP	sentence_text: autoDraw = true
+342.4796300000744	DATA	Keydown:  
+342.50100499996915	EXP	sentence_text: autoDraw = false
+342.50100499996915	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+342.50100499996915	EXP	probe_text: autoDraw = true
+342.50100499996915	EXP	probe_text: autoDraw = false
+342.50100499996915	EXP	sentence_text: text = "He thought that she was a better poet than he was, and the world at that time agreed with him."
+342.50100499996915	EXP	sentence_text: autoDraw = true
+350.237369999988	DATA	Keydown:  
+350.25615500006825	EXP	sentence_text: autoDraw = false
+350.25615500006825	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+350.25615500006825	EXP	probe_text: autoDraw = true
+350.25615500006825	EXP	probe_text: autoDraw = false
+350.25615500006825	EXP	sentence_text: text = "He called her his “moon of poets,” and she considered him her sun."
+350.25615500006825	EXP	sentence_text: autoDraw = true
+356.9974500000244	DATA	Keydown:  
+357.02121000003535	EXP	sentence_text: autoDraw = false
+357.02121000003535	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+357.02121000003535	EXP	probe_text: autoDraw = true
+357.02121000003535	EXP	probe_text: autoDraw = false
+357.02121000003535	EXP	sentence_text: text = "Elizabeth Barrett Browning was a pure singer with a lovely lyrical tenderness."
+357.02121000003535	EXP	sentence_text: autoDraw = true
+362.7970000000205	DATA	Keydown:  
+362.82768500002567	EXP	sentence_text: autoDraw = false
+362.82768500002567	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+362.82768500002567	EXP	probe_text: autoDraw = true
+362.82768500002567	EXP	probe_text: autoDraw = false
+362.82768500002567	EXP	sentence_text: text = "She was the best poet of her sex since Sappho."
+362.82768500002567	EXP	sentence_text: autoDraw = true
+368.9316800000379	DATA	Keydown:  
+368.9538900000043	EXP	sentence_text: autoDraw = false
+368.9538900000043	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+368.9538900000043	EXP	probe_text: autoDraw = true
+368.9538900000043	EXP	probe_text: autoDraw = false
+368.9538900000043	EXP	sentence_text: text = "Her Sonnets reveal a woman’s secret soul like no other poetry in our literature up to that time."
+368.9538900000043	EXP	sentence_text: autoDraw = true
+376.3919500000775	DATA	Keydown:  
+376.4183099999791	EXP	sentence_text: autoDraw = false
+376.4183099999791	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+376.4183099999791	EXP	probe_text: autoDraw = true
+376.4183099999791	EXP	probe_text: autoDraw = false
+376.4183099999791	EXP	sentence_text: text = "They did so with autobiographical honesty, fine moderation and fullness."
+376.4183099999791	EXP	sentence_text: autoDraw = true
+383.9751300000353	DATA	Keydown:  
+383.9981150000822	EXP	sentence_text: autoDraw = false
+383.9981150000822	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+383.9981150000822	EXP	probe_text: autoDraw = true
+383.9981150000822	EXP	probe_text: autoDraw = false
+383.9981150000822	EXP	sentence_text: text = "Her lyrical mastery shines in many passages of her writings."
+383.9981150000822	EXP	sentence_text: autoDraw = true
+389.4616099999985	DATA	Keydown:  
+389.4975850000046	EXP	sentence_text: autoDraw = false
+389.4975850000046	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+389.4975850000046	EXP	probe_text: autoDraw = true
+389.4975850000046	EXP	probe_text: autoDraw = false
+389.4975850000046	EXP	sentence_text: text = "Italy was a kind of promised land for Elizabeth Browning."
+389.4975850000046	EXP	sentence_text: autoDraw = true
+393.50689000007696	DATA	Keydown:  
+393.5286049999995	EXP	sentence_text: autoDraw = false
+393.5286049999995	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+393.5286049999995	EXP	probe_text: autoDraw = true
+393.5286049999995	EXP	probe_text: autoDraw = false
+393.5286049999995	EXP	sentence_text: text = "In the summer, she and her husband lived in Florence or in little villages."
+393.5286049999995	EXP	sentence_text: autoDraw = true
+400.0537699999986	DATA	Keydown:  
+400.0733800000744	EXP	sentence_text: autoDraw = false
+400.0733800000744	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+400.0733800000744	EXP	probe_text: autoDraw = true
+400.0733800000744	EXP	probe_text: autoDraw = false
+400.0733800000744	EXP	sentence_text: text = "She drank in the sun of the south and the warmth of her husband’s love."
+400.0733800000744	EXP	sentence_text: autoDraw = true
+406.6185299999779	DATA	Keydown:  
+406.63766999996733	EXP	sentence_text: autoDraw = false
+406.63766999996733	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+406.63766999996733	EXP	probe_text: autoDraw = true
+406.63766999996733	EXP	probe_text: autoDraw = false
+406.63766999996733	EXP	sentence_text: text = "She blossomed in a life of delicate happiness for fifteen years."
+406.63766999996733	EXP	sentence_text: autoDraw = true
+413.2049350000452	DATA	Keydown:  
+413.2337149999803	EXP	sentence_text: autoDraw = false
+413.2337149999803	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+413.2337149999803	EXP	probe_text: autoDraw = true
+413.2337149999803	EXP	probe_text: autoDraw = false
+413.2337149999803	EXP	sentence_text: text = "She found friends in Italy, most of them cultured Americans."
+413.2337149999803	EXP	sentence_text: autoDraw = true
+417.5522200000705	DATA	Keydown:  
+417.5792750000255	EXP	sentence_text: autoDraw = false
+417.5792750000255	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+417.5792750000255	EXP	probe_text: autoDraw = true
+417.5792750000255	EXP	probe_text: autoDraw = false
+417.5792750000255	EXP	sentence_text: text = "Hawthorne saw the Browning's there: the New England thinker and essayist Margaret Fuller visited them."
+417.5792750000255	EXP	sentence_text: autoDraw = true
+425.54978500003926	DATA	Keydown:  
+425.5715049999999	EXP	sentence_text: autoDraw = false
+425.5715049999999	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+425.5715049999999	EXP	probe_text: autoDraw = true
+426.8914550000336	DATA	Keydown: y
+426.9065150000388	EXP	probe_text: autoDraw = false
+426.9065150000388	EXP	sentence_text: text = "The painter Story and the young sculptress Harriet Hosmer came."
+426.9065150000388	EXP	sentence_text: autoDraw = true
+433.30098499997985	DATA	Keydown:  
+433.32767500006594	EXP	sentence_text: autoDraw = false
+433.32767500006594	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+433.32767500006594	EXP	probe_text: autoDraw = true
+433.32767500006594	EXP	probe_text: autoDraw = false
+433.32767500006594	EXP	sentence_text: text = "One caller records that Robert Browning was “simple, natural, and playful,” and that Mrs. Browning was all “genius and sensibility.”"
+433.32767500006594	EXP	sentence_text: autoDraw = true
+443.1368599999696	DATA	Keydown:  
+443.1498750000028	EXP	sentence_text: autoDraw = false
+443.1498750000028	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+443.1498750000028	EXP	probe_text: autoDraw = true
+444.76292999996804	DATA	Keydown: n
+444.78745000006165	EXP	probe_text: autoDraw = false
+444.78745000006165	EXP	sentence_text: text = "Daytimes Browning walked forth with Elizabeth's little dog Flush, but he seldom could be lured from his home evenings."
+444.78745000006165	EXP	sentence_text: autoDraw = true
+454.56547500006855	DATA	Keydown:  
+454.581445000018	EXP	sentence_text: autoDraw = false
+454.581445000018	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+454.581445000018	EXP	probe_text: autoDraw = true
+456.428515000036	DATA	Keydown: n
+456.4477500000503	EXP	probe_text: autoDraw = false
+456.4477500000503	EXP	sentence_text: text = "One privileged intruder, coming frequently at night to join the poets over hot chestnuts and mulled wine, found talk good and laughter plentiful."
+456.4477500000503	EXP	sentence_text: autoDraw = true
+465.7481850000331	DATA	Keydown:  
+465.763355000061	EXP	sentence_text: autoDraw = false
+465.763355000061	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+465.763355000061	EXP	probe_text: autoDraw = true
+466.8915900000138	DATA	Keydown: n
+466.91152500000317	EXP	probe_text: autoDraw = false
+466.91152500000317	EXP	sentence_text: text = "He found the talk good and the laughter plentiful."
+466.91152500000317	EXP	sentence_text: autoDraw = true
+469.9274050000822	DATA	Keydown:  
+469.95203000004403	EXP	sentence_text: autoDraw = false
+469.95203000004403	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+469.95203000004403	EXP	probe_text: autoDraw = true
+469.95203000004403	EXP	probe_text: autoDraw = false
+469.95203000004403	EXP	sentence_text: text = "The Brownings had a son, Robert Weidemann Browning, during the third year of their stay in Italy."
+469.95203000004403	EXP	sentence_text: autoDraw = true
+476.9793500000378	DATA	Keydown:  
+476.99833500001114	EXP	sentence_text: autoDraw = false
+476.99833500001114	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+476.99833500001114	EXP	probe_text: autoDraw = true
+476.99833500001114	EXP	probe_text: autoDraw = false
+476.99833500001114	EXP	sentence_text: text = "But a strain of dark dread began to creep through this happy life."
+476.99833500001114	EXP	sentence_text: autoDraw = true
+482.6138450000435	DATA	Keydown:  
+482.62571499997284	EXP	sentence_text: autoDraw = false
+482.62571499997284	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+482.62571499997284	EXP	probe_text: autoDraw = true
+482.62571499997284	EXP	probe_text: autoDraw = false
+482.62571499997284	EXP	sentence_text: text = "Elizabeth Browning’s father died still disapproving of her marriage."
+482.62571499997284	EXP	sentence_text: autoDraw = true
+487.22753500007093	DATA	Keydown:  
+487.2453300000634	EXP	sentence_text: autoDraw = false
+487.2453300000634	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+487.2453300000634	EXP	probe_text: autoDraw = true
+487.2453300000634	EXP	probe_text: autoDraw = false
+487.2453300000634	EXP	sentence_text: text = "He had refused to see her or to allow any of his family to see her."
+487.2453300000634	EXP	sentence_text: autoDraw = true
+495.06931499997154	DATA	Keydown:  
+495.09274500003085	EXP	sentence_text: autoDraw = false
+495.09274500003085	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+495.09274500003085	EXP	probe_text: autoDraw = true
+495.09274500003085	EXP	probe_text: autoDraw = false
+495.09274500003085	EXP	sentence_text: text = "Elizabeth’s dearly loved sister died and left three children who were all younger than her own boy."
+495.09274500003085	EXP	sentence_text: autoDraw = true
+501.3600800000131	DATA	Keydown:  
+501.372730000061	EXP	sentence_text: autoDraw = false
+501.372730000061	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+501.372730000061	EXP	probe_text: autoDraw = true
+501.372730000061	EXP	probe_text: autoDraw = false
+501.372730000061	EXP	sentence_text: text = "Elizabeth drooped and grieved a little and Robert shielded her from ordinary visitors."
+501.372730000061	EXP	sentence_text: autoDraw = true
+508.0385750000132	DATA	Keydown:  
+508.0575800000224	EXP	sentence_text: autoDraw = false
+508.0575800000224	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+508.0575800000224	EXP	probe_text: autoDraw = true
+508.0575800000224	EXP	probe_text: autoDraw = false
+508.0575800000224	EXP	sentence_text: text = "She had a sudden and alarming attack of sickness but was not considered in any danger."
+508.0575800000224	EXP	sentence_text: autoDraw = true
+515.8549300000304	DATA	Keydown:  
+515.8774350000313	EXP	sentence_text: autoDraw = false
+515.8774350000313	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+515.8774350000313	EXP	probe_text: autoDraw = true
+515.8774350000313	EXP	probe_text: autoDraw = false
+515.8774350000313	EXP	sentence_text: text = "One night, soon after, she awoke from a troubled sleep, apparently with no idea that she was about to leave Robert."
+515.8774350000313	EXP	sentence_text: autoDraw = true
+523.6508900000481	DATA	Keydown:  
+523.6664749999763	EXP	sentence_text: autoDraw = false
+523.6664749999763	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+523.6664749999763	EXP	probe_text: autoDraw = true
+523.6664749999763	EXP	probe_text: autoDraw = false
+523.6664749999763	EXP	sentence_text: text = "She spoke tenderly about her love for him. In his arms, her head drooped as though in a faint, but it was the end."
+523.6664749999763	EXP	sentence_text: autoDraw = true
+532.7535200000275	DATA	Keydown:  
+532.7722100000829	EXP	sentence_text: autoDraw = false
+532.7722100000829	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+532.7722100000829	EXP	probe_text: autoDraw = true
+532.7722100000829	EXP	probe_text: autoDraw = false
+532.7722100000829	EXP	sentence_text: text = "Profound and lasting was Browning's grief. “Looking back,” he said, “I see that we have been all the time walking over a torrent on a straw.”"
+532.7722100000829	EXP	sentence_text: autoDraw = true
+544.3145749999676	DATA	Keydown:  
+544.3244050000794	EXP	sentence_text: autoDraw = false
+544.3244050000794	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+544.3244050000794	EXP	probe_text: autoDraw = true
+546.3985749999993	DATA	Keydown: y
+546.4195949999848	EXP	probe_text: autoDraw = false
+546.4195949999848	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+546.4195949999848	EXP	compr_instr_text: autoDraw = true
+574.9431249999907	DATA	Keydown:  
+574.9878749999916	EXP	compr_instr_text: autoDraw = false
+574.9878749999916	EXP	comprehension_text: alignHoriz = "left"
+574.9878749999916	EXP	comprehension_text: text = "1.     Flush was the name of the Brownings’\n\na.     Cat\nb.     Dog\nc.     Canary\nd.     Turtle\ne.     Thrush"
+574.9878749999916	EXP	comprehension_text: autoDraw = true
+602.3904950000579	DATA	Keydown: c
+602.5143900000257	EXP	comprehension_text: autoDraw = false
+602.5143900000257	EXP	comprehension_text: alignHoriz = "left"
+602.5143900000257	EXP	comprehension_text: text = "2.     At night the Brownings often enjoyed\n\na.     hot chestnuts\nb.     a tart with clotted cream\nc.      strawberries and cream\nd.     café au lait\ne.     cheese soufflé"
+602.5143900000257	EXP	comprehension_text: autoDraw = true
+611.5530199999921	DATA	Keydown: a
+611.562975000008	EXP	comprehension_text: autoDraw = false
+611.562975000008	EXP	comprehension_text: alignHoriz = "left"
+611.562975000008	EXP	comprehension_text: text = "3.     The Brownings saw\n\na.     Coleridge\nb.     Byron\nc.     Walt Whitman\nd.     Poe\ne.     Hawthorne"
+611.562975000008	EXP	comprehension_text: autoDraw = true
+623.5939149999758	DATA	Keydown: a
+623.6186450000387	EXP	comprehension_text: autoDraw = false
+623.6186450000387	EXP	comprehension_text: alignHoriz = "left"
+623.6186450000387	EXP	comprehension_text: text = "4.     Browning wrote to Miss Barrett because she had\n\na.     invited him to visit\nb.     written him for advice\nc.     praised his poetry\nd.     sent him one of her own poems\ne.     sent a friend to meet him"
+623.6186450000387	EXP	comprehension_text: autoDraw = true
+644.2798500000499	DATA	Keydown: c
+644.299645000021	EXP	comprehension_text: autoDraw = false
+644.299645000021	EXP	comprehension_text: alignHoriz = "left"
+644.299645000021	EXP	comprehension_text: text = "5.     The authors of this passage placed most attention on the Brownings’\n\na.     literary efforts\nb.     personal relationship\nc.     social contacts\nd.     problems\ne.     early meeting"
+644.299645000021	EXP	comprehension_text: autoDraw = true
+662.0793050000211	DATA	Keydown: b
+662.0873249999713	EXP	comprehension_text: autoDraw = false
+662.0873249999713	EXP	comprehension_text: alignHoriz = "left"
+662.0873249999713	EXP	comprehension_text: text = "6.     What best describes the Brownings’ early days abroad?\n\na.     Travel\nb.     Relaxation\nc.     Creative activity\nd.     Intellectual stimulation\ne.     Happiness"
+662.0873249999713	EXP	comprehension_text: autoDraw = true
+670.721370000043	DATA	Keydown: a
+670.7433750000782	EXP	comprehension_text: autoDraw = false
+670.7433750000782	EXP	comprehension_text: alignHoriz = "left"
+670.7433750000782	EXP	comprehension_text: text = "7.     You would assume that Browning\n\na.     found it easy to see Elizabeth\nb.     carefully avoided Mr. Barrett\nc.     begged Mr. Barrett’s consent to marry\nd.     understood Mr. Barrett\ne.     got Elizabeth to ask her father’s consent"
+670.7433750000782	EXP	comprehension_text: autoDraw = true
+699.8452050000196	DATA	Keydown: b
+699.8727949999738	EXP	comprehension_text: autoDraw = false
+699.8727949999738	EXP	comprehension_text: alignHoriz = "left"
+699.8727949999738	EXP	comprehension_text: text = "8.     In the “torrent on a straw” quotation, the word straw probably refers to\n\na.     the frailty of life\nb.     weakness of character\nc.     sorrow\nd.     happiness\ne.     the fleeting nature of fame"
+699.8727949999738	EXP	comprehension_text: autoDraw = true
+731.8571450000163	DATA	Keydown: a
+731.8914150000783	EXP	comprehension_text: autoDraw = false
+731.8914150000783	EXP	sentence_text: text = "Passage 2"
+731.8914150000783	EXP	sentence_text: autoDraw = true
+734.5232800000813	DATA	Keydown:  
+734.5470050000586	EXP	sentence_text: autoDraw = false
+734.5470050000586	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+734.5470050000586	EXP	probe_text: autoDraw = true
+734.5470050000586	EXP	probe_text: autoDraw = false
+734.5470050000586	EXP	sentence_text: text = "The performance of those business activities that direct the flow of goods and services from producer to consumer or user is called marketing. "
+734.5470050000586	EXP	sentence_text: autoDraw = true
+747.4245300000766	DATA	Keydown:  
+747.444540000055	EXP	sentence_text: autoDraw = false
+747.444540000055	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+747.444540000055	EXP	probe_text: autoDraw = true
+747.444540000055	EXP	probe_text: autoDraw = false
+747.444540000055	EXP	sentence_text: text = "Marketing is the connecting link between the producer and the consumer or user."
+747.444540000055	EXP	sentence_text: autoDraw = true
+754.2859399999725	DATA	Keydown:  
+754.3115100000286	EXP	sentence_text: autoDraw = false
+754.3115100000286	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+754.3115100000286	EXP	probe_text: autoDraw = true
+754.3115100000286	EXP	probe_text: autoDraw = false
+754.3115100000286	EXP	sentence_text: text = "Production and consumption are brought together by the marketing system."
+754.3115100000286	EXP	sentence_text: autoDraw = true
+759.5815300000831	DATA	Keydown:  
+759.6056550000794	EXP	sentence_text: autoDraw = false
+759.6056550000794	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+759.6056550000794	EXP	probe_text: autoDraw = true
+759.6056550000794	EXP	probe_text: autoDraw = false
+759.6056550000794	EXP	sentence_text: text = "Wholesaling or retailing activities are directly engaged in by approximately one in every six gainfully employed persons."
+759.6056550000794	EXP	sentence_text: autoDraw = true
+771.9482149999822	DATA	Keydown:  
+771.9747849999694	EXP	sentence_text: autoDraw = false
+771.9747849999694	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+771.9747849999694	EXP	probe_text: autoDraw = true
+771.9747849999694	EXP	probe_text: autoDraw = false
+771.9747849999694	EXP	sentence_text: text = "This ratio does not take into account other persons who are serving marketing through transportation, communication, and office vocations."
+771.9747849999694	EXP	sentence_text: autoDraw = true
+781.3811599999899	DATA	Keydown:  
+781.4081749999896	EXP	sentence_text: autoDraw = false
+781.4081749999896	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+781.4081749999896	EXP	probe_text: autoDraw = true
+781.4081749999896	EXP	probe_text: autoDraw = false
+781.4081749999896	EXP	sentence_text: text = "Opportunities for many kinds of positions requiring a wide range of skills and abilities is provided by marketing."
+781.4081749999896	EXP	sentence_text: autoDraw = true
+790.2304050000384	DATA	Keydown:  
+790.2524650000269	EXP	sentence_text: autoDraw = false
+790.2524650000269	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+790.2524650000269	EXP	probe_text: autoDraw = true
+790.2524650000269	EXP	probe_text: autoDraw = false
+790.2524650000269	EXP	sentence_text: text = "Although one naturally thinks of merchandising as being the primary occupation in marketing, there are opportunities in management, advertising, market and product research, and purchasing."
+790.2524650000269	EXP	sentence_text: autoDraw = true
+802.4110050000018	DATA	Keydown:  
+802.4294249999803	EXP	sentence_text: autoDraw = false
+802.4294249999803	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+802.4294249999803	EXP	probe_text: autoDraw = true
+802.4294249999803	EXP	probe_text: autoDraw = false
+802.4294249999803	EXP	sentence_text: text = "The economic well-being of one’s country is determined largely by productivity, consumption, and employment. "
+802.4294249999803	EXP	sentence_text: autoDraw = true
+808.8116000000155	DATA	Keydown:  
+808.8276100000367	EXP	sentence_text: autoDraw = false
+808.8276100000367	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+808.8276100000367	EXP	probe_text: autoDraw = true
+810.4952150000026	DATA	Keydown: y
+810.5135400000727	EXP	probe_text: autoDraw = false
+810.5135400000727	EXP	sentence_text: text = "All three are affected by the efficiency of the marketing process."
+810.5135400000727	EXP	sentence_text: autoDraw = true
+816.7250850000419	DATA	Keydown:  
+816.7500950000249	EXP	sentence_text: autoDraw = false
+816.7500950000249	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+816.7500950000249	EXP	probe_text: autoDraw = true
+816.7500950000249	EXP	probe_text: autoDraw = false
+816.7500950000249	EXP	sentence_text: text = "If marketing stimulates appetite, people will consume goods at a high rate."
+816.7500950000249	EXP	sentence_text: autoDraw = true
+822.1933699999936	DATA	Keydown:  
+822.2166750000324	EXP	sentence_text: autoDraw = false
+822.2166750000324	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+822.2166750000324	EXP	probe_text: autoDraw = true
+822.2166750000324	EXP	probe_text: autoDraw = false
+822.2166750000324	EXP	sentence_text: text = "High consumption requires high productivity to meet the requirements of people, and high productivity and high-level activity in marketing combined result in high employment."
+822.2166750000324	EXP	sentence_text: autoDraw = true
+835.492915000068	DATA	Keydown:  
+835.5058500000741	EXP	sentence_text: autoDraw = false
+835.5058500000741	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+835.5058500000741	EXP	probe_text: autoDraw = true
+838.0935400000308	DATA	Keydown: y
+838.1069399999687	EXP	probe_text: autoDraw = false
+838.1069399999687	EXP	sentence_text: text = "Indirectly, marketing is a key to a high level of economic living for the people."
+838.1069399999687	EXP	sentence_text: autoDraw = true
+845.5355700000655	DATA	Keydown:  
+845.5672000000486	EXP	sentence_text: autoDraw = false
+845.5672000000486	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+845.5672000000486	EXP	probe_text: autoDraw = true
+845.5672000000486	EXP	probe_text: autoDraw = false
+845.5672000000486	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+845.5672000000486	EXP	compr_instr_text: autoDraw = true
+851.6659849999705	DATA	Keydown:  
+851.7076850000303	EXP	compr_instr_text: autoDraw = false
+851.7076850000303	EXP	comprehension_text: alignHoriz = "left"
+851.7076850000303	EXP	comprehension_text: text = "1.     Our economic well-being is determined largely by how many factors?\n\na.     One\nb.     Two\nc.     Three\nd.     Four\ne.     Five"
+851.7076850000303	EXP	comprehension_text: autoDraw = true
+867.979260000051	DATA	Keydown: c
+868.0037800000282	EXP	comprehension_text: autoDraw = false
+868.0037800000282	EXP	comprehension_text: alignHoriz = "left"
+868.0037800000282	EXP	comprehension_text: text = "2.     One major factor mentioned as affecting our economic well-being was\n\na.     high wages\nb.     low interest rates\nc.     technology\nd.     employment\ne.     foreign trade"
+868.0037800000282	EXP	comprehension_text: autoDraw = true
+891.8603400000138	DATA	Keydown: a
+891.8840250000358	EXP	comprehension_text: autoDraw = false
+891.8840250000358	EXP	comprehension_text: alignHoriz = "left"
+891.8840250000358	EXP	comprehension_text: text = "3.     The purpose of this passage is to\n\na.     persuade\nb.     guide\nc.     evaluate\nd.     inform\ne.     Interest"
+891.8840250000358	EXP	comprehension_text: autoDraw = true
+900.2227900000289	DATA	Keydown: d
+900.2470400000457	EXP	comprehension_text: autoDraw = false
+900.2470400000457	EXP	comprehension_text: alignHoriz = "left"
+900.2470400000457	EXP	comprehension_text: text = "4.     The chief emphasis is on\n\na.     defining marketing\nb.     principles of marketing\nc.     opportunities in marketing\nd.     kinds of jobs in marketing\ne.     the economic significance of marketing"
+900.2470400000457	EXP	comprehension_text: autoDraw = true
+910.7566200000001	DATA	Keydown: e
+910.7837000000291	EXP	comprehension_text: autoDraw = false
+910.7837000000291	EXP	sentence_text: text = "Passage 3"
+910.7837000000291	EXP	sentence_text: autoDraw = true
+912.423850000021	DATA	Keydown:  
+912.4430350000039	EXP	sentence_text: autoDraw = false
+912.4430350000039	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+912.4430350000039	EXP	probe_text: autoDraw = true
+912.4430350000039	EXP	probe_text: autoDraw = false
+912.4430350000039	EXP	sentence_text: text = "The nucleus of an atom is held together by a kind of energy called atomic energy."
+912.4430350000039	EXP	sentence_text: autoDraw = true
+916.4054550000001	DATA	Mouse: 0 button down, pos=(526.4000078439713,347.20000517368317)
+926.253619999974	DATA	Mouse: 0 button down, pos=(526.4000078439713,347.20000517368317)
+927.9903600000544	DATA	Mouse: 0 button down, pos=(526.4000078439713,347.20000517368317)
+928.1234500000719	DATA	Mouse: 0 button down, pos=(526.4000078439713,347.20000517368317)
+939.6478300000308	DATA	Keydown:  
+939.6722399999853	EXP	sentence_text: autoDraw = false
+939.6722399999853	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+939.6722399999853	EXP	probe_text: autoDraw = true
+939.6722399999853	EXP	probe_text: autoDraw = false
+939.6722399999853	EXP	sentence_text: text = "The sun’s energy comes from atomic reactions."
+939.6722399999853	EXP	sentence_text: autoDraw = true
+942.1971449999837	DATA	Keydown:  
+942.2152900000801	EXP	sentence_text: autoDraw = false
+942.2152900000801	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+942.2152900000801	EXP	probe_text: autoDraw = true
+942.2152900000801	EXP	probe_text: autoDraw = false
+942.2152900000801	EXP	sentence_text: text = "These reactions occur when the nuclei of hydrogen build up the nuclei of helium."
+942.2152900000801	EXP	sentence_text: autoDraw = true
+950.5159100000747	DATA	Keydown:  
+950.5365200000815	EXP	sentence_text: autoDraw = false
+950.5365200000815	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+950.5365200000815	EXP	probe_text: autoDraw = true
+950.5365200000815	EXP	probe_text: autoDraw = false
+950.5365200000815	EXP	sentence_text: text = "An atomic nucleus is made of particles, but the mass of the atomic nucleus is less than the total mass of the particles."
+950.5365200000815	EXP	sentence_text: autoDraw = true
+959.2686550000217	DATA	Keydown:  
+959.2895150000695	EXP	sentence_text: autoDraw = false
+959.2895150000695	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+959.2895150000695	EXP	probe_text: autoDraw = true
+959.2895150000695	EXP	probe_text: autoDraw = false
+959.2895150000695	EXP	sentence_text: text = "The reason for this is that part of the mass of particles is changed into energy when a nucleus is formed."
+959.2895150000695	EXP	sentence_text: autoDraw = true
+966.5330100000137	DATA	Keydown:  
+966.5511650000699	EXP	sentence_text: autoDraw = false
+966.5511650000699	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+966.5511650000699	EXP	probe_text: autoDraw = true
+966.5511650000699	EXP	probe_text: autoDraw = false
+966.5511650000699	EXP	sentence_text: text = "This energy then radiates away."
+966.5511650000699	EXP	sentence_text: autoDraw = true
+970.4779900000431	DATA	Keydown:  
+970.4934399999911	EXP	sentence_text: autoDraw = false
+970.4934399999911	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+970.4934399999911	EXP	probe_text: autoDraw = true
+970.4934399999911	EXP	probe_text: autoDraw = false
+970.4934399999911	EXP	sentence_text: text = "The quantity of energy released in reactions of this kind is almost inconceivably greater than the quantity released by any other type of reaction involving similar quantities of material."
+970.4934399999911	EXP	sentence_text: autoDraw = true
+984.7513899999904	DATA	Keydown:  
+984.7646599999862	EXP	sentence_text: autoDraw = false
+984.7646599999862	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+984.7646599999862	EXP	probe_text: autoDraw = true
+987.6728100000182	DATA	Keydown: n
+987.6968999999808	EXP	probe_text: autoDraw = false
+987.6968999999808	EXP	sentence_text: text = "Every second, the sun sends a million times more energy into space than we have stored in all of our coal, petroleum, and natural gas fields."
+987.6968999999808	EXP	sentence_text: autoDraw = true
+996.9391400000313	DATA	Keydown:  
+996.9639750000788	EXP	sentence_text: autoDraw = false
+996.9639750000788	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+996.9639750000788	EXP	probe_text: autoDraw = true
+996.9639750000788	EXP	probe_text: autoDraw = false
+996.9639750000788	EXP	sentence_text: text = "We could revolutionize the world if we could duplicate the method that releases such energy."
+996.9639750000788	EXP	sentence_text: autoDraw = true
+1007.6896750000305	DATA	Keydown:  
+1007.7123200000497	EXP	sentence_text: autoDraw = false
+1007.7123200000497	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1007.7123200000497	EXP	probe_text: autoDraw = true
+1007.7123200000497	EXP	probe_text: autoDraw = false
+1007.7123200000497	EXP	sentence_text: text = "This possibility is not a fantasy, just as it was not a fantasy to imagine developing an atom bomb in 1900."
+1007.7123200000497	EXP	sentence_text: autoDraw = true
+1015.438850000035	DATA	Keydown:  
+1015.4608000000007	EXP	sentence_text: autoDraw = false
+1015.4608000000007	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1015.4608000000007	EXP	probe_text: autoDraw = true
+1015.4608000000007	EXP	probe_text: autoDraw = false
+1015.4608000000007	EXP	sentence_text: text = "The time may come when the hydrogen from a cubic mile of sea water will provide enough energy to satisfy our needs at the 1960 rate for 300 centuries."
+1015.4608000000007	EXP	sentence_text: autoDraw = true
+1029.2058299999917	DATA	Keydown:  
+1029.213390000048	EXP	sentence_text: autoDraw = false
+1029.213390000048	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1029.213390000048	EXP	probe_text: autoDraw = true
+1030.9242250000825	DATA	Keydown: n
+1030.9388100000797	EXP	probe_text: autoDraw = false
+1030.9388100000797	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+1030.9388100000797	EXP	compr_instr_text: autoDraw = true
+1034.6715649999678	DATA	Keydown:  
+1034.7069550000597	EXP	compr_instr_text: autoDraw = false
+1034.7069550000597	EXP	comprehension_text: alignHoriz = "left"
+1034.7069550000597	EXP	comprehension_text: text = "1.     How much sea water was mentioned?\n\na.     One ton\nb.     A cubic acre\nc.     A cubic mile\nd.     A thousand gallons\ne.     A hundred tons"
+1034.7069550000597	EXP	comprehension_text: autoDraw = true
+1050.151285000029	DATA	Keydown: a
+1050.1710500000045	EXP	comprehension_text: autoDraw = false
+1050.1710500000045	EXP	comprehension_text: alignHoriz = "left"
+1050.1710500000045	EXP	comprehension_text: text = "2.     The quantity of energy released in an atomic reaction is spoken of as how much greater than with other types of reactions?\n\na.     Far greater\nb.     Unbelievably greater\nc.     A thousand times greater\nd.     Inconceivably greater\ne.     Tremendously greater"
+1050.1710500000045	EXP	comprehension_text: autoDraw = true
+1079.3375600000145	DATA	Keydown: e
+1079.3622050000122	EXP	comprehension_text: autoDraw = false
+1079.3622050000122	EXP	comprehension_text: alignHoriz = "left"
+1079.3622050000122	EXP	comprehension_text: text = "3.     The primary focus is on\n\na.     how energy is released\nb.     where energy is found\nc.     the energy from atomic reactions\nd.     what happens in an atomic reaction\ne.     the energy present in sunshine"
+1079.3622050000122	EXP	comprehension_text: autoDraw = true
+1106.7399650000734	DATA	Keydown: c
+1106.756640000036	EXP	comprehension_text: autoDraw = false
+1106.756640000036	EXP	comprehension_text: alignHoriz = "left"
+1106.756640000036	EXP	comprehension_text: text = "4.     This passage is best described as\n\na.     objective\nb.     skeptical\nc.     cautious\nd.     conservative\ne.     optimistic"
+1106.756640000036	EXP	comprehension_text: autoDraw = true
+1116.4890900000464	DATA	Keydown: e
+1116.5128500000574	EXP	comprehension_text: autoDraw = false
+1116.5128500000574	EXP	sentence_text: text = "Passage 4"
+1116.5128500000574	EXP	sentence_text: autoDraw = true
+1117.6845750000793	DATA	Keydown:  
+1117.7041250000475	EXP	sentence_text: autoDraw = false
+1117.7041250000475	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1117.7041250000475	EXP	probe_text: autoDraw = true
+1117.7041250000475	EXP	probe_text: autoDraw = false
+1117.7041250000475	EXP	sentence_text: text = "Even most skeptics, because they seem to share the hope that there is life on Mars, endeavor slavishly not to discount the possibility."
+1117.7041250000475	EXP	sentence_text: autoDraw = true
+1129.8133549999911	DATA	Keydown:  
+1129.8446850000182	EXP	sentence_text: autoDraw = false
+1129.8446850000182	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1129.8446850000182	EXP	probe_text: autoDraw = true
+1129.8446850000182	EXP	probe_text: autoDraw = false
+1129.8446850000182	EXP	sentence_text: text = "But it was a comedown in the mid-1960’s when scientists involved in the Mars exploration studied photographs taken by some of the early Mariner space flights."
+1129.8446850000182	EXP	sentence_text: autoDraw = true
+1141.6960449999897	DATA	Keydown:  
+1141.7166450000368	EXP	sentence_text: autoDraw = false
+1141.7166450000368	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1141.7166450000368	EXP	probe_text: autoDraw = true
+1141.7166450000368	EXP	probe_text: autoDraw = false
+1141.7166450000368	EXP	sentence_text: text = "No canals."
+1141.7166450000368	EXP	sentence_text: autoDraw = true
+1143.582790000015	DATA	Keydown:  
+1143.5976350000128	EXP	sentence_text: autoDraw = false
+1143.5976350000128	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1143.5976350000128	EXP	probe_text: autoDraw = true
+1143.5976350000128	EXP	probe_text: autoDraw = false
+1143.5976350000128	EXP	sentence_text: text = "No seas."
+1143.5976350000128	EXP	sentence_text: autoDraw = true
+1145.0339950000634	DATA	Keydown:  
+1145.0436750000808	EXP	sentence_text: autoDraw = false
+1145.0436750000808	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1145.0436750000808	EXP	probe_text: autoDraw = true
+1145.0436750000808	EXP	probe_text: autoDraw = false
+1145.0436750000808	EXP	sentence_text: text = "No busy Martian engineers."
+1145.0436750000808	EXP	sentence_text: autoDraw = true
+1150.5807000000495	DATA	Keydown:  
+1150.595025000046	EXP	sentence_text: autoDraw = false
+1150.595025000046	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1150.595025000046	EXP	probe_text: autoDraw = true
+1150.595025000046	EXP	probe_text: autoDraw = false
+1150.595025000046	EXP	sentence_text: text = "No menacing warmongering Martians as colossal as skyscrapers."
+1150.595025000046	EXP	sentence_text: autoDraw = true
+1156.8967450000346	DATA	Keydown:  
+1156.9222150000278	EXP	sentence_text: autoDraw = false
+1156.9222150000278	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1156.9222150000278	EXP	probe_text: autoDraw = true
+1156.9222150000278	EXP	probe_text: autoDraw = false
+1156.9222150000278	EXP	sentence_text: text = "Just mountains, craters, frigid winds, and dust storms."
+1156.9222150000278	EXP	sentence_text: autoDraw = true
+1160.4774250000482	DATA	Keydown:  
+1160.4997300000396	EXP	sentence_text: autoDraw = false
+1160.4997300000396	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1160.4997300000396	EXP	probe_text: autoDraw = true
+1160.4997300000396	EXP	probe_text: autoDraw = false
+1160.4997300000396	EXP	sentence_text: text = "It was almost as if scouts for Columbus had returned to Isabella’s court with the news that the world had turned out to be flat after all."
+1160.4997300000396	EXP	sentence_text: autoDraw = true
+1176.2882199999876	DATA	Keydown:  
+1176.30634000001	EXP	sentence_text: autoDraw = false
+1176.30634000001	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1176.30634000001	EXP	probe_text: autoDraw = true
+1178.222315000021	DATA	Keydown: n
+1178.2463550000684	EXP	probe_text: autoDraw = false
+1178.2463550000684	EXP	sentence_text: text = "Hopeful astronomers reminded us that the Mariner IV had photographed a mere one percent of the Martian surface from 2,000 miles away."
+1178.2463550000684	EXP	sentence_text: autoDraw = true
+1179.435875000083	DATA	Keydown:  
+1179.4558650000254	EXP	sentence_text: autoDraw = false
+1179.4558650000254	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1179.4558650000254	EXP	probe_text: autoDraw = true
+1183.8026550000068	DATA	Keydown: n
+1183.8237250000238	EXP	probe_text: autoDraw = false
+1183.8237250000238	EXP	sentence_text: text = "And they pointed out that the Earth-orbiting Tiros weather satellite shot over 20,000 pictures before uncovering any evidence of life on Earth."
+1183.8237250000238	EXP	sentence_text: autoDraw = true
+1199.1210650000721	DATA	Keydown:  
+1199.137480000034	EXP	sentence_text: autoDraw = false
+1199.137480000034	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1199.137480000034	EXP	probe_text: autoDraw = true
+1200.7701100000413	DATA	Keydown: n
+1200.7890800000168	EXP	probe_text: autoDraw = false
+1200.7890800000168	EXP	sentence_text: text = "But still, public enthusiasm for Martian exploration wilted."
+1200.7890800000168	EXP	sentence_text: autoDraw = true
+1209.0128350000596	DATA	Keydown:  
+1209.0320700000739	EXP	sentence_text: autoDraw = false
+1209.0320700000739	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1209.0320700000739	EXP	probe_text: autoDraw = true
+1210.4071700000204	DATA	Keydown: n
+1210.4242599999998	EXP	probe_text: autoDraw = false
+1210.4242599999998	EXP	sentence_text: text = "By the time Viking I touched down on the Plain of Chryse in August, few seemed to care at all."
+1210.4242599999998	EXP	sentence_text: autoDraw = true
+1218.5442899999907	DATA	Keydown:  
+1218.5765649999958	EXP	sentence_text: autoDraw = false
+1218.5765649999958	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1218.5765649999958	EXP	probe_text: autoDraw = true
+1218.5765649999958	EXP	probe_text: autoDraw = false
+1218.5765649999958	EXP	sentence_text: text = "J. Richard Keefe, one of the Viking scientists, declared himself “disgusted” at what he called the “blasé…apathetic” public response and the skimpy television coverage of what was certainly one of the magnificent scientific and technical accomplishments in human history."
+1218.5765649999958	EXP	sentence_text: autoDraw = true
+1238.792134999996	DATA	Keydown:  
+1238.818184999982	EXP	sentence_text: autoDraw = false
+1238.818184999982	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1238.818184999982	EXP	probe_text: autoDraw = true
+1238.818184999982	EXP	probe_text: autoDraw = false
+1238.818184999982	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+1238.818184999982	EXP	compr_instr_text: autoDraw = true
+1241.7408699999796	DATA	Keydown:  
+1241.773765000049	EXP	compr_instr_text: autoDraw = false
+1241.773765000049	EXP	comprehension_text: alignHoriz = "left"
+1241.773765000049	EXP	comprehension_text: text = "1.     One weather satellite was named\n\na.     Latos\nb.     Tiros\nc.     Prometheus\nd.     Sonar\ne.     Satelos"
+1241.773765000049	EXP	comprehension_text: autoDraw = true
+1251.7704099999974	DATA	Keydown: a
+1251.7972099999897	EXP	comprehension_text: autoDraw = false
+1251.7972099999897	EXP	comprehension_text: alignHoriz = "left"
+1251.7972099999897	EXP	comprehension_text: text = "2.     One of the Mariners photographed how much of the surface of Mars?\n\na.     One percent\nb.     Two percent\nc.     Three percent\nd.     Four percent\ne.     Five percent"
+1251.7972099999897	EXP	comprehension_text: autoDraw = true
+1263.516995000071	DATA	Keydown: 1
+1265.3110950000118	DATA	Keydown: a
+1265.3278500000015	EXP	comprehension_text: autoDraw = false
+1265.3278500000015	EXP	comprehension_text: alignHoriz = "left"
+1265.3278500000015	EXP	comprehension_text: text = "3.     Interest in Mars diminished largely because\n\na.     no Martians were found\nb.     the TV coverage was poor\nc.     the photos were all black and white\nd.     nothing was brought back to earth\ne.     the media did not appreciate the accomplishment"
+1265.3278500000015	EXP	comprehension_text: autoDraw = true
+1282.8032000000821	DATA	Keydown: e
+1282.8268150000367	EXP	comprehension_text: autoDraw = false
+1282.8268150000367	EXP	comprehension_text: alignHoriz = "left"
+1282.8268150000367	EXP	comprehension_text: text = "4.     Mention of the flat world was used to point out\n\na.     the flatness of Mars\nb.     the lack of canals\nc.     the lack of seas\nd.     the lack of Martians\ne.     the lack of mountains"
+1282.8268150000367	EXP	comprehension_text: autoDraw = true
+1308.1990249999799	DATA	Keydown: d
+1308.2265899999766	EXP	comprehension_text: autoDraw = false
+1308.2265899999766	EXP	sentence_text: text = "Passage 5"
+1308.2265899999766	EXP	sentence_text: autoDraw = true
+1309.3160950000165	DATA	Keydown:  
+1309.3334100000793	EXP	sentence_text: autoDraw = false
+1309.3334100000793	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1309.3334100000793	EXP	probe_text: autoDraw = true
+1309.3334100000793	EXP	probe_text: autoDraw = false
+1309.3334100000793	EXP	sentence_text: text = "Fungi give cheese the flavor, odor, and character that gourmets so highly prize."
+1309.3334100000793	EXP	sentence_text: autoDraw = true
+1314.3011800000677	DATA	Keydown:  
+1314.3102850000141	EXP	sentence_text: autoDraw = false
+1314.3102850000141	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1314.3102850000141	EXP	probe_text: autoDraw = true
+1314.3102850000141	EXP	probe_text: autoDraw = false
+1314.3102850000141	EXP	sentence_text: text = "One of the first molds was found in caves near the French village of Roquefort."
+1314.3102850000141	EXP	sentence_text: autoDraw = true
+1319.0574999999953	DATA	Keydown:  
+1319.0837349999929	EXP	sentence_text: autoDraw = false
+1319.0837349999929	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1319.0837349999929	EXP	probe_text: autoDraw = true
+1319.0837349999929	EXP	probe_text: autoDraw = false
+1319.0837349999929	EXP	sentence_text: text = "According to legend, a peasant boy left his lunch, which was a mild fresh piece of goat cheese, in one of the caves."
+1319.0837349999929	EXP	sentence_text: autoDraw = true
+1326.528430000064	DATA	Keydown:  
+1326.5522350000683	EXP	sentence_text: autoDraw = false
+1326.5522350000683	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1326.5522350000683	EXP	probe_text: autoDraw = true
+1326.5522350000683	EXP	probe_text: autoDraw = false
+1326.5522350000683	EXP	sentence_text: text = "When he returned, he found the cheese marbled, tart, and fragrant."
+1326.5522350000683	EXP	sentence_text: autoDraw = true
+1329.940270000021	DATA	Keydown:  
+1329.9608950000256	EXP	sentence_text: autoDraw = false
+1329.9608950000256	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1329.9608950000256	EXP	probe_text: autoDraw = true
+1329.9608950000256	EXP	probe_text: autoDraw = false
+1329.9608950000256	EXP	sentence_text: text = "Only cheeses that come from the area around these particular caves are allowed to bear the name of Roquefort."
+1329.9608950000256	EXP	sentence_text: autoDraw = true
+1337.1496800000314	DATA	Keydown:  
+1337.1667750000488	EXP	sentence_text: autoDraw = false
+1337.1667750000488	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1337.1667750000488	EXP	probe_text: autoDraw = true
+1337.1667750000488	EXP	probe_text: autoDraw = false
+1337.1667750000488	EXP	sentence_text: text = "As early as the seventeenth century, ergot, the fungus of rye, was used to facilitate childbirth."
+1337.1667750000488	EXP	sentence_text: autoDraw = true
+1343.5742500000633	DATA	Keydown:  
+1343.5883700000122	EXP	sentence_text: autoDraw = false
+1343.5883700000122	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1343.5883700000122	EXP	probe_text: autoDraw = true
+1346.702125000069	DATA	Keydown: y
+1346.723420000053	EXP	probe_text: autoDraw = false
+1346.723420000053	EXP	sentence_text: text = "It causes the contraction of involuntary muscles, particularly in the uterus."
+1346.723420000053	EXP	sentence_text: autoDraw = true
+1348.5103700000327	DATA	Mouse: 0 button down, pos=(534.4000079631805,357.60000532865524)
+1348.6195000000298	DATA	Mouse: 0 button down, pos=(534.4000079631805,357.60000532865524)
+1354.1611099999864	DATA	Keydown:  
+1354.1785450000316	EXP	sentence_text: autoDraw = false
+1354.1785450000316	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1354.1785450000316	EXP	probe_text: autoDraw = true
+1354.1785450000316	EXP	probe_text: autoDraw = false
+1354.1785450000316	EXP	sentence_text: text = "In the twentieth century, ergot has once more attracted interest as the source of the chemical from which the hallucinogenic drug LSD is derived."
+1354.1785450000316	EXP	sentence_text: autoDraw = true
+1363.5384700000286	DATA	Keydown:  
+1363.555960000027	EXP	sentence_text: autoDraw = false
+1363.555960000027	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1363.555960000027	EXP	probe_text: autoDraw = true
+1365.2798399999738	DATA	Keydown: y
+1365.300050000078	EXP	probe_text: autoDraw = false
+1365.300050000078	EXP	sentence_text: text = "Most modern antibiotics are produced by fungi."
+1365.300050000078	EXP	sentence_text: autoDraw = true
+1368.6447150000604	DATA	Keydown:  
+1368.663665	EXP	sentence_text: autoDraw = false
+1368.663665	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1368.663665	EXP	probe_text: autoDraw = true
+1368.663665	EXP	probe_text: autoDraw = false
+1368.663665	EXP	sentence_text: text = "Alexander Fleming discovered the first of these antibiotics."
+1368.663665	EXP	sentence_text: autoDraw = true
+1371.802795000025	DATA	Keydown:  
+1371.8211499999743	EXP	sentence_text: autoDraw = false
+1371.8211499999743	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1371.8211499999743	EXP	probe_text: autoDraw = true
+1371.8211499999743	EXP	probe_text: autoDraw = false
+1371.8211499999743	EXP	sentence_text: text = "A mold of the genus Penicillium had contaminated a culture of staphylococcus bacteria that was growing on a nutrient agar plate."
+1371.8211499999743	EXP	sentence_text: autoDraw = true
+1379.2321450000163	DATA	Keydown:  
+1379.2581750000827	EXP	sentence_text: autoDraw = false
+1379.2581750000827	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1379.2581750000827	EXP	probe_text: autoDraw = true
+1379.2581750000827	EXP	probe_text: autoDraw = false
+1379.2581750000827	EXP	sentence_text: text = "Alexander noted that the mold completely halted the growth of the bacteria."
+1379.2581750000827	EXP	sentence_text: autoDraw = true
+1383.0548500000732	DATA	Keydown:  
+1383.0720800000709	EXP	sentence_text: autoDraw = false
+1383.0720800000709	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1383.0720800000709	EXP	probe_text: autoDraw = true
+1383.0720800000709	EXP	probe_text: autoDraw = false
+1383.0720800000709	EXP	sentence_text: text = "Antibiotics, of which many hundreds have now been discovered, are substances produced by a living organism that injure another living organism."
+1383.0720800000709	EXP	sentence_text: autoDraw = true
+1393.223415000015	DATA	Keydown:  
+1393.24211500003	EXP	sentence_text: autoDraw = false
+1393.24211500003	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1393.24211500003	EXP	probe_text: autoDraw = true
+1394.8562600000296	DATA	Keydown: y
+1394.8746599999722	EXP	probe_text: autoDraw = false
+1394.8746599999722	EXP	sentence_text: text = "All of these are substances produced by one living organism that injures another living organism."
+1394.8746599999722	EXP	sentence_text: autoDraw = true
+1403.0478550000116	DATA	Keydown:  
+1403.0636550000636	EXP	sentence_text: autoDraw = false
+1403.0636550000636	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1403.0636550000636	EXP	probe_text: autoDraw = true
+1403.0636550000636	EXP	probe_text: autoDraw = false
+1403.0636550000636	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+1403.0636550000636	EXP	compr_instr_text: autoDraw = true
+1404.0758749999804	DATA	Keydown:  
+1404.1184950000606	EXP	compr_instr_text: autoDraw = false
+1404.1184950000606	EXP	comprehension_text: alignHoriz = "left"
+1404.1184950000606	EXP	comprehension_text: text = "1.     A fungus was used as medicine as early as what century?\n\na.     Sixteenth\nb.     Seventeenth\nc.     Eighteenth\nd.     Nineteenth\ne.     Twentieth"
+1404.1184950000606	EXP	comprehension_text: autoDraw = true
+1413.2222000000766	DATA	Keydown: c
+1413.3454449999845	EXP	comprehension_text: autoDraw = false
+1413.3454449999845	EXP	comprehension_text: alignHoriz = "left"
+1413.3454449999845	EXP	comprehension_text: text = "2.     How many antibiotics have been discovered?\n\na.     Ninety-six\nb.     Many hundreds\nc.     Thousands\nd.     Millions\ne.     An unspecified number"
+1413.3454449999845	EXP	comprehension_text: autoDraw = true
+1422.0611600000411	DATA	Keydown: c
+1422.078925000038	EXP	comprehension_text: autoDraw = false
+1422.078925000038	EXP	comprehension_text: alignHoriz = "left"
+1422.078925000038	EXP	comprehension_text: text = "3.     This passage is mainly about\n\na.     ergot\nb.     drugs\nc.     fungi\nd.     antibiotics\ne.     Cheese"
+1422.078925000038	EXP	comprehension_text: autoDraw = true
+1427.3898000000045	DATA	Keydown: d
+1427.4111699999776	EXP	comprehension_text: autoDraw = false
+1427.4111699999776	EXP	comprehension_text: alignHoriz = "left"
+1427.4111699999776	EXP	comprehension_text: text = "4.     LSD is specifically mentioned to show that ergot\n\na.     needs to be further controlled\nb.     needs further research\nc.     has medicinal value\nd.     is of current interest\ne.     is dangerous"
+1427.4111699999776	EXP	comprehension_text: autoDraw = true
+1441.8332800000207	DATA	Keydown: e
+1441.8640049999813	EXP	comprehension_text: autoDraw = false
+1441.8640049999813	EXP	sentence_text: text = "Passage 6"
+1441.8640049999813	EXP	sentence_text: autoDraw = true
+1442.8368999999948	DATA	Keydown:  
+1442.8556450000033	EXP	sentence_text: autoDraw = false
+1442.8556450000033	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1442.8556450000033	EXP	probe_text: autoDraw = true
+1442.8556450000033	EXP	probe_text: autoDraw = false
+1442.8556450000033	EXP	sentence_text: text = "Local governments were our first governments."
+1442.8556450000033	EXP	sentence_text: autoDraw = true
+1447.3673900000285	DATA	Keydown:  
+1447.3847400000086	EXP	sentence_text: autoDraw = false
+1447.3847400000086	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1447.3847400000086	EXP	probe_text: autoDraw = true
+1454.1127100000158	DATA	Keydown:  
+1456.8208749999758	DATA	Keydown: n
+1456.8399900000077	EXP	probe_text: autoDraw = false
+1456.8399900000077	EXP	sentence_text: text = "The primitive tribe that chose the strongest man to be its chief and the oldest men to form a council was establishing local government."
+1456.8399900000077	EXP	sentence_text: autoDraw = true
+1472.6673650000012	DATA	Keydown:  
+1472.6846200000728	EXP	sentence_text: autoDraw = false
+1472.6846200000728	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1472.6846200000728	EXP	probe_text: autoDraw = true
+1472.6846200000728	EXP	probe_text: autoDraw = false
+1472.6846200000728	EXP	sentence_text: text = "It was seeking a better, safer life."
+1472.6846200000728	EXP	sentence_text: autoDraw = true
+1474.7933900000062	DATA	Keydown:  
+1474.8257450000383	EXP	sentence_text: autoDraw = false
+1474.8257450000383	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1474.8257450000383	EXP	probe_text: autoDraw = true
+1474.8257450000383	EXP	probe_text: autoDraw = false
+1474.8257450000383	EXP	sentence_text: text = "In the same way, the need for rules and leaders was realized by the first English settlers who landed at Jamestown, Virginia, in 1607."
+1474.8257450000383	EXP	sentence_text: autoDraw = true
+1483.2559800000163	DATA	Keydown:  
+1483.2746550000738	EXP	sentence_text: autoDraw = false
+1483.2746550000738	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1483.2746550000738	EXP	probe_text: autoDraw = true
+1483.2746550000738	EXP	probe_text: autoDraw = false
+1483.2746550000738	EXP	sentence_text: text = "At first, the settlers at Jamestown had to shepherd themselves."
+1483.2746550000738	EXP	sentence_text: autoDraw = true
+1488.9483450000407	DATA	Keydown:  
+1488.9635649999836	EXP	sentence_text: autoDraw = false
+1488.9635649999836	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1488.9635649999836	EXP	probe_text: autoDraw = true
+1488.9635649999836	EXP	probe_text: autoDraw = false
+1488.9635649999836	EXP	sentence_text: text = "The colonists searched for gold, and had to find their own sustenance and provide their own sanctuary. "
+1488.9635649999836	EXP	sentence_text: autoDraw = true
+1496.0075700000161	DATA	Keydown:  
+1496.0347700000275	EXP	sentence_text: autoDraw = false
+1496.0347700000275	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1496.0347700000275	EXP	probe_text: autoDraw = true
+1496.0347700000275	EXP	probe_text: autoDraw = false
+1496.0347700000275	EXP	sentence_text: text = "As food supplies began to run low, and as the colonists faced hunger and disease, they saw that they needed to work together if the colony was to survive."
+1496.0347700000275	EXP	sentence_text: autoDraw = true
+1505.5416550000664	DATA	Keydown:  
+1505.5588500000304	EXP	sentence_text: autoDraw = false
+1505.5588500000304	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1505.5588500000304	EXP	probe_text: autoDraw = true
+1507.8392849999946	DATA	Keydown: y
+1507.8538150000386	EXP	probe_text: autoDraw = false
+1507.8538150000386	EXP	sentence_text: text = "A council to make laws for the colony was formed by the settlers."
+1507.8538150000386	EXP	sentence_text: autoDraw = true
+1515.6529200000223	DATA	Keydown:  
+1515.6764250000706	EXP	sentence_text: autoDraw = false
+1515.6764250000706	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1515.6764250000706	EXP	probe_text: autoDraw = true
+1515.6764250000706	EXP	probe_text: autoDraw = false
+1515.6764250000706	EXP	sentence_text: text = "Captain John Smith was chosen as president of the council to see that the laws were implemented."
+1515.6764250000706	EXP	sentence_text: autoDraw = true
+1522.5333800000371	DATA	Keydown:  
+1522.5593100000406	EXP	sentence_text: autoDraw = false
+1522.5593100000406	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1522.5593100000406	EXP	probe_text: autoDraw = true
+1522.5593100000406	EXP	probe_text: autoDraw = false
+1522.5593100000406	EXP	sentence_text: text = "This government at Jamestown was the first local government in America."
+1522.5593100000406	EXP	sentence_text: autoDraw = true
+1527.7671649999684	DATA	Keydown:  
+1527.7812900000717	EXP	sentence_text: autoDraw = false
+1527.7812900000717	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1527.7812900000717	EXP	probe_text: autoDraw = true
+1529.6462049999973	DATA	Keydown: n
+1529.6649650000036	EXP	probe_text: autoDraw = false
+1529.6649650000036	EXP	sentence_text: text = "Today, local government is still the first and most important government in our lives."
+1529.6649650000036	EXP	sentence_text: autoDraw = true
+1535.3955650000134	DATA	Keydown:  
+1535.42047500005	EXP	sentence_text: autoDraw = false
+1535.42047500005	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1535.42047500005	EXP	probe_text: autoDraw = true
+1535.42047500005	EXP	probe_text: autoDraw = false
+1535.42047500005	EXP	sentence_text: text = "It protects our lives, our safety, and our homes, and it helps to keep our environment clean."
+1535.42047500005	EXP	sentence_text: autoDraw = true
+1541.2481949999928	DATA	Keydown:  
+1541.2687050000532	EXP	sentence_text: autoDraw = false
+1541.2687050000532	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1541.2687050000532	EXP	probe_text: autoDraw = true
+1543.249829999986	DATA	Keydown: n
+1543.2713800000492	EXP	probe_text: autoDraw = false
+1543.2713800000492	EXP	sentence_text: text = "Schools, libraries, and other important services are provided to us by local government."
+1543.2713800000492	EXP	sentence_text: autoDraw = true
+1548.4807850000216	DATA	Keydown:  
+1548.5054600000149	EXP	sentence_text: autoDraw = false
+1548.5054600000149	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1548.5054600000149	EXP	probe_text: autoDraw = true
+1548.5054600000149	EXP	probe_text: autoDraw = false
+1548.5054600000149	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+1548.5054600000149	EXP	compr_instr_text: autoDraw = true
+1550.0782850000542	DATA	Keydown:  
+1550.118710000068	EXP	compr_instr_text: autoDraw = false
+1550.118710000068	EXP	comprehension_text: alignHoriz = "left"
+1550.118710000068	EXP	comprehension_text: text = "1.     The first colonial government was\n      \na.     tribal\nb.     city\nc.     county\nd.     local\ne.     federal"
+1550.118710000068	EXP	comprehension_text: autoDraw = true
+1558.2304250000743	DATA	Keydown: a
+1558.2569849999854	EXP	comprehension_text: autoDraw = false
+1558.2569849999854	EXP	comprehension_text: alignHoriz = "left"
+1558.2569849999854	EXP	comprehension_text: text = "2.     The Jamestown colonists formed a government because of\n\na.     pride\nb.     greed\nc.     necessity\nd.     togetherness\ne.     public spirit"
+1558.2569849999854	EXP	comprehension_text: autoDraw = true
+1576.6282999999821	DATA	Keydown: d
+1576.650585000054	EXP	comprehension_text: autoDraw = false
+1576.650585000054	EXP	comprehension_text: alignHoriz = "left"
+1576.650585000054	EXP	comprehension_text: text = "3.     The best title for this selection would be\n\na.     John Smith\nb.     The First Government\nc.     Jamestown\nd.     Local Government\ne.     American Government"
+1576.650585000054	EXP	comprehension_text: autoDraw = true
+1590.5078699999722	DATA	Keydown: c
+1590.5288200000068	EXP	comprehension_text: autoDraw = false
+1590.5288200000068	EXP	comprehension_text: alignHoriz = "left"
+1590.5288200000068	EXP	comprehension_text: text = "4.     The overall goal of local government seems to be public\n\na.     regulation\nb.     wealth\nc.     growth\nd.     welfare\ne.     protection"
+1590.5288200000068	EXP	comprehension_text: autoDraw = true
+1617.4537049999926	DATA	Keydown: d
+1617.4790950000752	EXP	comprehension_text: autoDraw = false
+1617.4790950000752	EXP	sentence_text: text = "Passage 7"
+1617.4790950000752	EXP	sentence_text: autoDraw = true
+1618.3834550000029	DATA	Keydown:  
+1618.407424999983	EXP	sentence_text: autoDraw = false
+1618.407424999983	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1618.407424999983	EXP	probe_text: autoDraw = true
+1618.407424999983	EXP	probe_text: autoDraw = false
+1618.407424999983	EXP	sentence_text: text = "Once in a while you will hear about an artist who was recognized as a master during his lifetime, but was then almost forgotten after his death."
+1618.407424999983	EXP	sentence_text: autoDraw = true
+1627.8633100000443	DATA	Keydown:  
+1627.8878900000127	EXP	sentence_text: autoDraw = false
+1627.8878900000127	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1627.8878900000127	EXP	probe_text: autoDraw = true
+1627.8878900000127	EXP	probe_text: autoDraw = false
+1627.8878900000127	EXP	sentence_text: text = "A good example is the painter, Domenicos Theotocopoulos."
+1627.8878900000127	EXP	sentence_text: autoDraw = true
+1632.5785750000505	DATA	Keydown:  
+1632.6081600000616	EXP	sentence_text: autoDraw = false
+1632.6081600000616	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1632.6081600000616	EXP	probe_text: autoDraw = true
+1632.6081600000616	EXP	probe_text: autoDraw = false
+1632.6081600000616	EXP	sentence_text: text = "He was known as El Greco because of his Greek ancestry."
+1632.6081600000616	EXP	sentence_text: autoDraw = true
+1636.6828649999807	DATA	Keydown:  
+1636.7017350000096	EXP	sentence_text: autoDraw = false
+1636.7017350000096	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1636.7017350000096	EXP	probe_text: autoDraw = true
+1636.7017350000096	EXP	probe_text: autoDraw = false
+1636.7017350000096	EXP	sentence_text: text = "After pursuing his early career in Italy, El Greco settled in the Spanish city of Toledo, where he prospered for the rest of his life."
+1636.7017350000096	EXP	sentence_text: autoDraw = true
+1643.9287199999671	DATA	Keydown:  
+1643.9514099999797	EXP	sentence_text: autoDraw = false
+1643.9514099999797	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1643.9514099999797	EXP	probe_text: autoDraw = true
+1646.2430200000526	DATA	Keydown: y
+1646.2647799999686	EXP	probe_text: autoDraw = false
+1646.2647799999686	EXP	sentence_text: text = "He prospered there for the rest of his life."
+1646.2647799999686	EXP	sentence_text: autoDraw = true
+1650.9253899999894	DATA	Keydown:  
+1650.9506350000156	EXP	sentence_text: autoDraw = false
+1650.9506350000156	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1650.9506350000156	EXP	probe_text: autoDraw = true
+1650.9506350000156	EXP	probe_text: autoDraw = false
+1650.9506350000156	EXP	sentence_text: text = "History forgot El Greco for nearly three hundred years."
+1650.9506350000156	EXP	sentence_text: autoDraw = true
+1656.7422400000505	DATA	Keydown:  
+1656.757265000022	EXP	sentence_text: autoDraw = false
+1656.757265000022	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1656.757265000022	EXP	probe_text: autoDraw = true
+1656.757265000022	EXP	probe_text: autoDraw = false
+1656.757265000022	EXP	sentence_text: text = "Then, artists and critics of the twentieth century rediscovered him."
+1656.757265000022	EXP	sentence_text: autoDraw = true
+1660.7403799999738	DATA	Keydown:  
+1660.7665500000585	EXP	sentence_text: autoDraw = false
+1660.7665500000585	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1660.7665500000585	EXP	probe_text: autoDraw = true
+1660.7665500000585	EXP	probe_text: autoDraw = false
+1660.7665500000585	EXP	sentence_text: text = "The power of El Greco’s intensely emotional style can be felt most strongly in his later paintings, such as the famous View of Toledo."
+1660.7665500000585	EXP	sentence_text: autoDraw = true
+1675.5607249999885	DATA	Keydown:  
+1675.5796950000804	EXP	sentence_text: autoDraw = false
+1675.5796950000804	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1675.5796950000804	EXP	probe_text: autoDraw = true
+1675.5796950000804	EXP	probe_text: autoDraw = false
+1675.5796950000804	EXP	sentence_text: text = "He painted this canvas in 1610, only a few years before his death."
+1675.5796950000804	EXP	sentence_text: autoDraw = true
+1684.3945600000443	DATA	Keydown:  
+1684.4113099999959	EXP	sentence_text: autoDraw = false
+1684.4113099999959	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1684.4113099999959	EXP	probe_text: autoDraw = true
+1684.4113099999959	EXP	probe_text: autoDraw = false
+1684.4113099999959	EXP	sentence_text: text = "It is a strange landscape."
+1684.4113099999959	EXP	sentence_text: autoDraw = true
+1693.4178100000136	DATA	Keydown:  
+1693.442645000061	EXP	sentence_text: autoDraw = false
+1693.442645000061	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1693.442645000061	EXP	probe_text: autoDraw = true
+1693.442645000061	EXP	probe_text: autoDraw = false
+1693.442645000061	EXP	sentence_text: text = "One notices that eerie, silvery buildings take on a ghostlike stillness next to the explosive light of the sky and the writhing forms of the countryside below."
+1693.442645000061	EXP	sentence_text: autoDraw = true
+1706.7972150000278	DATA	Keydown:  
+1706.8224150000606	EXP	sentence_text: autoDraw = false
+1706.8224150000606	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1706.8224150000606	EXP	probe_text: autoDraw = true
+1706.8224150000606	EXP	probe_text: autoDraw = false
+1706.8224150000606	EXP	sentence_text: text = "Curiously, about the same time, another important artist was scorned even by many of his contemporaries."
+1706.8224150000606	EXP	sentence_text: autoDraw = true
+1718.3486150000244	DATA	Keydown:  
+1718.3699900000356	EXP	sentence_text: autoDraw = false
+1718.3699900000356	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1718.3699900000356	EXP	probe_text: autoDraw = true
+1718.3699900000356	EXP	probe_text: autoDraw = false
+1718.3699900000356	EXP	sentence_text: text = "This artist was Caravaggio."
+1718.3699900000356	EXP	sentence_text: autoDraw = true
+1722.1155049999943	DATA	Keydown:  
+1722.1356249999953	EXP	sentence_text: autoDraw = false
+1722.1356249999953	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1722.1356249999953	EXP	probe_text: autoDraw = true
+1722.1356249999953	EXP	probe_text: autoDraw = false
+1722.1356249999953	EXP	sentence_text: text = "He was a self-taught painter who came to Rome around 1590 from a small town in Lombardy."
+1722.1356249999953	EXP	sentence_text: autoDraw = true
+1734.4814650000772	DATA	Keydown:  
+1734.503000000026	EXP	sentence_text: autoDraw = false
+1734.503000000026	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1734.503000000026	EXP	probe_text: autoDraw = true
+1734.503000000026	EXP	probe_text: autoDraw = false
+1734.503000000026	EXP	sentence_text: text = "Caravaggio’s critics complained that he treated sacred religious subjects in a low, vulgar way by including the faces and figures of common people in his paintings."
+1734.503000000026	EXP	sentence_text: autoDraw = true
+1741.7592850000365	DATA	Keydown:  
+1741.785220000078	EXP	sentence_text: autoDraw = false
+1741.785220000078	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1741.785220000078	EXP	probe_text: autoDraw = true
+1741.785220000078	EXP	probe_text: autoDraw = false
+1741.785220000078	EXP	sentence_text: text = "By using stark contrasts of light and shadow, Caravaggio managed to conjure up unforgettable scenes of dramatic realism."
+1741.785220000078	EXP	sentence_text: autoDraw = true
+1743.74053499999	DATA	Keydown:  
+1743.7619050000794	EXP	sentence_text: autoDraw = false
+1743.7619050000794	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1743.7619050000794	EXP	probe_text: autoDraw = true
+1744.95848999999	DATA	Keydown: y
+1744.9816649999702	EXP	probe_text: autoDraw = false
+1744.9816649999702	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+1744.9816649999702	EXP	compr_instr_text: autoDraw = true
+1746.4915749999927	DATA	Keydown:  
+1746.534670000081	EXP	compr_instr_text: autoDraw = false
+1746.534670000081	EXP	comprehension_text: alignHoriz = "left"
+1746.534670000081	EXP	comprehension_text: text = "1.     In his paintings, Caravaggio included\n\na.     common people\nb.     strange landscapes\nc.     eerie, silvery buildings\nd.     ghosts\ne.     Corpses"
+1746.534670000081	EXP	comprehension_text: autoDraw = true
+1768.1198299999814	DATA	Keydown: c
+1768.1444299999857	EXP	comprehension_text: autoDraw = false
+1768.1444299999857	EXP	comprehension_text: alignHoriz = "left"
+1768.1444299999857	EXP	comprehension_text: text = "2.     El Greco pursued his early career in\n\na.     Italy\nb.     Greece\nc.     Lombardy\nd.     Rome\ne.     Toledo"
+1768.1444299999857	EXP	comprehension_text: autoDraw = true
+1775.7194649999728	DATA	Keydown: b
+1775.7461599999806	EXP	comprehension_text: autoDraw = false
+1775.7461599999806	EXP	comprehension_text: alignHoriz = "left"
+1775.7461599999806	EXP	comprehension_text: text = "3.     Apparently a major technique of Caravaggio’s was\n\na.     using exalted religious subjects\nb.     using stark contrasts\nc.     using cadavers\nd.     using ghostlike stillness\ne.     none of the above"
+1775.7461599999806	EXP	comprehension_text: autoDraw = true
+1787.747650000034	DATA	Keydown: e
+1787.7747600000584	EXP	comprehension_text: autoDraw = false
+1787.7747600000584	EXP	comprehension_text: alignHoriz = "left"
+1787.7747600000584	EXP	comprehension_text: text = "4.     The principal idea discussed in this passage concerns\n\na.     El Greco\nb.     Caravaggio\nc.      contemporary approval of artists\nd.     the travels of painters\ne.     the prosperity of artists"
+1787.7747600000584	EXP	comprehension_text: autoDraw = true
+1794.869004999986	DATA	Keydown: a
+1794.8934199999785	EXP	comprehension_text: autoDraw = false
+1794.8934199999785	EXP	sentence_text: text = "Passage 8"
+1794.8934199999785	EXP	sentence_text: autoDraw = true
+1795.8351900000125	DATA	Keydown:  
+1795.8536950000562	EXP	sentence_text: autoDraw = false
+1795.8536950000562	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1795.8536950000562	EXP	probe_text: autoDraw = true
+1795.8536950000562	EXP	probe_text: autoDraw = false
+1795.8536950000562	EXP	sentence_text: text = "The key to the design called experimental is assignment of subjects to conditions randomly. "
+1795.8536950000562	EXP	sentence_text: autoDraw = true
+1801.2515150000108	DATA	Keydown:  
+1801.271294999984	EXP	sentence_text: autoDraw = false
+1801.271294999984	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1801.271294999984	EXP	probe_text: autoDraw = true
+1801.271294999984	EXP	probe_text: autoDraw = false
+1801.271294999984	EXP	sentence_text: text = "By the influence on the results of some extraneous variable that is tied to or correlated with the variable under investigation is insured against."
+1801.271294999984	EXP	sentence_text: autoDraw = true
+1808.8613950000145	DATA	Keydown:  
+1808.8873900000472	EXP	sentence_text: autoDraw = false
+1808.8873900000472	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1808.8873900000472	EXP	probe_text: autoDraw = true
+1808.8873900000472	EXP	probe_text: autoDraw = false
+1808.8873900000472	EXP	sentence_text: text = "By contrast with experimental designs, subjects, in correlational designs, in a sense, assign themselves to conditions."
+1808.8873900000472	EXP	sentence_text: autoDraw = true
+1815.1085750000784	DATA	Keydown:  
+1815.1375049999915	EXP	sentence_text: autoDraw = false
+1815.1375049999915	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1815.1375049999915	EXP	probe_text: autoDraw = true
+1815.1375049999915	EXP	probe_text: autoDraw = false
+1815.1375049999915	EXP	sentence_text: text = "Thus, in the cancer studies as they have been done, only people who are four-pack-a-day smokers—by their own “choice”—get into a four-pack-a-day condition."
+1815.1375049999915	EXP	sentence_text: autoDraw = true
+1840.1108399999794	DATA	Keydown:  
+1840.1254849999677	EXP	sentence_text: autoDraw = false
+1840.1254849999677	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1840.1254849999677	EXP	probe_text: autoDraw = true
+1842.1264700000174	DATA	Keydown: y
+1842.1407149999868	EXP	probe_text: autoDraw = false
+1842.1407149999868	EXP	sentence_text: text = "Whatever the factors are that contribute to a person’s being a heavy smoker surely must also make him different from the typical nonsmoker in other ways."
+1842.1407149999868	EXP	sentence_text: autoDraw = true
+1851.7381150000729	DATA	Keydown:  
+1851.7606350000715	EXP	sentence_text: autoDraw = false
+1851.7606350000715	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1851.7606350000715	EXP	probe_text: autoDraw = true
+1851.7606350000715	EXP	probe_text: autoDraw = false
+1851.7606350000715	EXP	sentence_text: text = "Hence the ambiguity of interpretation in correlational designs, and hence the virtue of experimental designs."
+1851.7606350000715	EXP	sentence_text: autoDraw = true
+1857.1699200000148	DATA	Keydown:  
+1857.1858800000045	EXP	sentence_text: autoDraw = false
+1857.1858800000045	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1857.1858800000045	EXP	probe_text: autoDraw = true
+1858.3067750000628	DATA	Keydown: y
+1858.3295400000643	EXP	probe_text: autoDraw = false
+1858.3295400000643	EXP	sentence_text: text = "In the latter case, if assignment to conditions is truly random then prevailing differences among individual subjects cannot confound the results systematically."
+1858.3295400000643	EXP	sentence_text: autoDraw = true
+1868.5663400000194	DATA	Keydown:  
+1868.5904850000516	EXP	sentence_text: autoDraw = false
+1868.5904850000516	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1868.5904850000516	EXP	probe_text: autoDraw = true
+1868.5904850000516	EXP	probe_text: autoDraw = false
+1868.5904850000516	EXP	sentence_text: text = "Put another way, the experimenter has under his control all the variables that can influence the results."
+1868.5904850000516	EXP	sentence_text: autoDraw = true
+1875.4328850000165	DATA	Keydown:  
+1875.451149999979	EXP	sentence_text: autoDraw = false
+1875.451149999979	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1875.451149999979	EXP	probe_text: autoDraw = true
+1877.098245000001	DATA	Keydown: n
+1877.120110000018	EXP	probe_text: autoDraw = false
+1877.120110000018	EXP	sentence_text: text = "Whether he can exactly identify these variables is another question."
+1877.120110000018	EXP	sentence_text: autoDraw = true
+1881.314075000002	DATA	Keydown:  
+1881.3405950000742	EXP	sentence_text: autoDraw = false
+1881.3405950000742	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1881.3405950000742	EXP	probe_text: autoDraw = true
+1881.3405950000742	EXP	probe_text: autoDraw = false
+1881.3405950000742	EXP	sentence_text: text = "Thus, entirely unambiguous results are not yielded by experimental designs, merely results that are less ambiguous than those associated with correlational designs."
+1881.3405950000742	EXP	sentence_text: autoDraw = true
+1892.6115299999947	DATA	Keydown:  
+1892.6406350000761	EXP	sentence_text: autoDraw = false
+1892.6406350000761	EXP	probe_text: text = "Where you mind wandering when you read the previous sentence?\n\nPress Y for yes, or N for no"
+1892.6406350000761	EXP	probe_text: autoDraw = true
+1892.6406350000761	EXP	probe_text: autoDraw = false
+1892.6406350000761	EXP	compr_instr_text: text = "Now you will take the reading comprehension test for the passage you just read. The questions are in multiple choice format, you will use the letters a through e on your keyboard to answer. The test is self-paced. \n\nPlease press the space bar to continue."
+1892.6406350000761	EXP	compr_instr_text: autoDraw = true
+1893.5269800000824	DATA	Keydown:  
+1893.5738300000085	EXP	compr_instr_text: autoDraw = false
+1893.5738300000085	EXP	comprehension_text: alignHoriz = "left"
+1893.5738300000085	EXP	comprehension_text: text = "1.     Specific mention is made of\n \na.     psychogenesis\nb.     psychodynamics\nc.     psychobiology\nd.     psychotherapy\ne.     none of the above"
+1893.5738300000085	EXP	comprehension_text: autoDraw = true
+1909.0661300000502	DATA	Keydown: e
+1909.0843800000148	EXP	comprehension_text: autoDraw = false
+1909.0843800000148	EXP	comprehension_text: alignHoriz = "left"
+1909.0843800000148	EXP	comprehension_text: text = "2.     How many research design patterns were discussed?\n\na.     One only\nb.     Two\nc.     Three\nd.     Four\ne.     Five"
+1909.0843800000148	EXP	comprehension_text: autoDraw = true
+1917.0069699999876	DATA	Keydown: a
+1917.025435000076	EXP	comprehension_text: autoDraw = false
+1917.025435000076	EXP	comprehension_text: alignHoriz = "left"
+1917.025435000076	EXP	comprehension_text: text = "3.     As used in this passage, the phrase put another way means\n\na.     rephrasing\nb.     enumeration\nc.     using details\nd.     reasoning\ne.     Illustration"
+1917.025435000076	EXP	comprehension_text: autoDraw = true
+1933.8443400000688	DATA	Keydown: e
+1933.853235000046	EXP	comprehension_text: autoDraw = false
+1933.853235000046	EXP	comprehension_text: alignHoriz = "left"
+1933.853235000046	EXP	comprehension_text: text = "4.     In this passage the authors imply that heavy smoking is probably caused by\n\na.     tension\nb.     nervousness\nc.     habit\nd.     social pressure\ne.     all the above and more"
+1933.853235000046	EXP	comprehension_text: autoDraw = true
+1956.8972550000763	DATA	Keydown: a
+1956.9234649999999	EXP	comprehension_text: autoDraw = false
+1956.9234649999999	EXP	Thankyou_text: autoDraw = true
+1988.59267500008	DATA	Keydown: o
+1988.9836500000674	DATA	Keydown: k
+1989.9914550000103	DATA	Keydown:  

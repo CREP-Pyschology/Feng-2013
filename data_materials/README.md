@@ -13,6 +13,7 @@ so the folders are organised by software, then by project (`yy_nn` folder).
 | `codebooks/` | One codebook CSV per dataset, `master_schema.csv` (harmonised names), `master_codebook_long.csv` |
 | `master_codebook.xlsx` | Combined codebook: schema, master-name x dataset crosswalk, all variables, items to review |
 | `master_data.csv` | All datasets harmonised to one row per probed sentence |
+| `master_comprehension.csv` | Every scored comprehension answer, one row per question (47,755 rows); see below |
 | `superlab/superlab_answer_key.csv` | Comprehension answer key for SuperLab (not stored by SuperLab; see below) |
 | `data_combination.xlsx` | Earlier hand-made codebook draft, superseded by the files above |
 
@@ -49,6 +50,14 @@ exactly those 27 probes. A row holds the (untreated) reading time of the probed 
 (`mw_probe`, 0/1), and comprehension question *k* of the passage paired with probe *k* (questions beyond the
 number of probes are dropped; this pairing is how the processed files are built, and jsPsych's `QuestionNum`
 1.1, 1.2, ... confirms it).
+
+**All 36 comprehension answers:** `master_data.csv` keeps only the 27 questions that pair with a probe. The other nine
+per participant are in `master_comprehension.csv`, which has one row per question (`question_num` is the question's
+number within the passage) with the chosen letter (`response_letter`), the keyed answer (`correct_key`) and
+`comprehension_correct`. Every project is there; the processed datasets (E-Prime, jsPsych, OpenSesame 17_32, 18_06,
+18_38, 21_28) only ever contained the paired questions, so for them it has the same rows as the master and no
+letter or key. Raw participants have 36 answers (a few have fewer because the session ended early). Where both files
+overlap, the scores are identical (checked).
 
 Exceptions to the 27 rows:
 
@@ -158,6 +167,10 @@ SuperLab keeps the file structure of the export but several column headers do no
 
 ### E-Prime and jsPsych
 
+- **E-Prime Level 1 is sorted by reading time within each participant, not by trial order.** `Sen_num` is a constant
+  per passage (all seven rows of passage 1 have `Sen_num` = 1), not a probe counter, so the probe order is lost:
+  `probe_num` and `comprehension_item` are `NA` for 19_32. Each row still carries its own `MW` and `Com_Score`, so the
+  per-row data are intact; only the order within a passage is unknown.
 - E-Prime `RT_out` follows the "out = outliers removed" convention but has no missing values; `Test_Anx` (Level 2) is joined by
   `Subject`.
 - jsPsych has 26 probes per participant. Chronotype factor scores and centred variables (`*C`, `ImplicitWP_C`,
@@ -178,6 +191,11 @@ SuperLab keeps the file structure of the export but several column headers do no
 - **Reading time** is the `Q#_Page Submit` timer in seconds, converted to ms. In 19_42 and 19_53 every page has a
   timer *including the probe page* (time spent answering), so the probed sentence's time is the timer **before** the
   probe page's. In 19_01 only the sentence pages are timed, so it is the last timer before the probe.
+- **Timer coverage:** the survey files confirm that all sentence pages and probe pages have a timer in 19_53 (and the
+  probed sentence pages in 19_01), and every respondent in a branch has the same number of timers in all three
+  datasets, so picking the timer by position before the probe is safe. The only untimed page is the one noted
+  under Booklet below, which is not a sentence page. A collaborator recalled an inconsistency in the number of timing
+  questions; this is the only one found.
 - **Probe answers** are text: Yes/No, or Igen/Nem in Hungarian.
 - **Comprehension** is scored here against `superlab/superlab_answer_key.csv`. 19_42 stores the option letter
   ("e. ..."); 19_01 and 19_53 store only the option text, which is matched to the closest option (within 25% edit
@@ -190,7 +208,10 @@ SuperLab keeps the file structure of the export but several column headers do no
   booklet 1, `Q227` = booklet 2) and 19_53 (`Q227` = booklet 1, `Q11` = booklet 2) it comes from the `.qsf`.
   **For 19_42 it is an inference:** the two branches (`Q13`, `Q376`) were matched to 19_53 by total sentence pages
   (the branch with more pages has the longer easy versions of the odd passages, i.e. booklet 2): 19_53 differs by 20
-  pages between booklets and 19_42 by 19. Per-passage accuracy could not confirm this (too noisy). If you can get
+  pages between booklets and 19_42 by 19. The 20 includes one missing timer: in the 19_53 survey file, the
+  comprehension-intro page of "Passage 4 Easy Booklet 1" has no timer (every sentence and probe page does), so the
+  like-for-like difference is 19, the same as 19_42. That fits, but it is supporting evidence, not proof.
+  Per-passage accuracy could not confirm this (too noisy). If you can get
   the Hungarian survey export, replace this with the real mapping.
 - 19_53 has a per-passage interest rating (`Q740_*`) which is not in the master (no master variable).
 

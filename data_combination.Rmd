@@ -203,7 +203,10 @@ m_eprime <- ep1 %>%
     source_file = "Feng replication - Level 1.sav",
     subject_id = Subject, passage = Passages,
     difficulty = recode_difficulty(Condition), difficulty_num = difficulty_num(difficulty),
-    booklet = Booklet, probe_num = Sen_num, n_probes_in_passage = num_Probs,
+    booklet = Booklet,
+    # Level 1 is sorted by reading time, not trial order, and Sen_num is constant within a passage,
+    # so the probe order cannot be recovered
+    probe_num = NA_integer_, n_probes_in_passage = num_Probs,
     read_rt_ms = RT, mw_probe = MW,
     comprehension_correct = Com_Score, test_anxiety = Test_Anx
   ) %>%
@@ -284,8 +287,8 @@ row directly before it. Some files are a stripped-down export with only 7 column
 `line`, `line_text`), so participant ids fall back to the file name and only fields present are used.
 
 ```{r master-os}
-os_reshape <- function(d, sid) {
-  for (m in c("line", "line_text", "condition", "booklet", "Condition_Num", "correct", "passage")) {
+os_reshape <- function(d, sid, comp_only = FALSE) {
+  for (m in c("line", "line_text", "condition", "booklet", "Condition_Num", "correct", "correct_response", "passage")) {
     if (!m %in% names(d)) d[[m]] <- NA_character_
   }
   d <- d %>%
@@ -323,7 +326,19 @@ os_reshape <- function(d, sid) {
     group_by(passage) %>%
     mutate(probe_num = row_number()) %>%
     ungroup() %>%
-    transmute(passage, probe_num, comprehension_correct = as.integer(correct))
+    transmute(passage, probe_num, response_letter = response, correct_key = correct_response,
+              comprehension_correct = as.integer(correct))
+
+  if (comp_only) {
+    attrs <- sent %>%
+      transmute(passage,
+                difficulty = coalesce(case_when(Condition_Num == "1" ~ "Difficult", Condition_Num == "2" ~ "Easy"),
+                                      recode_difficulty(condition)),
+                booklet = suppressWarnings(as.integer(booklet))) %>%
+      group_by(passage) %>% slice(1) %>% ungroup() %>%
+      mutate(difficulty_num = difficulty_num(difficulty), booklet = coalesce(booklet, booklet_from(passage, difficulty)))
+    return(comp %>% left_join(attrs, by = "passage") %>% mutate(subject_id = sid))
+  }
 
   out %>%
     left_join(comp, by = c("passage", "probe_num")) %>%
@@ -339,7 +354,7 @@ os_participant_id <- function(d, path) {
   id
 }
 
-os_file <- function(path) {
+os_file <- function(path, comp_only = FALSE) {
   if (file.size(path) == 0) return(NULL)
   d <- read_csv(path, col_types = cols(.default = "c"), show_col_types = FALSE)
   if (nrow(d) == 0 || !"response" %in% names(d)) return(NULL)
@@ -347,7 +362,7 @@ os_file <- function(path) {
   d %>%
     filter(!is.na(.sid)) %>%
     group_split(.sid) %>%
-    map_df(~ os_reshape(.x, .x$.sid[1])) %>%
+    map_df(~ os_reshape(.x, .x$.sid[1], comp_only)) %>%
     mutate(source_file = basename(path))
 }
 
@@ -370,7 +385,7 @@ One row per sentence; for probed sentences (`probe == 1`) the probe answer is in
 from the passage difficulty.
 
 ```{r master-psychopy}
-psychopy_file <- function(path, set_n) {
+psychopy_file <- function(path, set_n, comp_only = FALSE) {
   d <- read_csv(path, col_types = cols(.default = "c"), show_col_types = FALSE)
   if (!"probe_resp.keys" %in% names(d)) return(NULL)
   sid <- d$participant[1]
@@ -395,7 +410,16 @@ psychopy_file <- function(path, set_n) {
     group_by(passage) %>%
     mutate(probe_num = row_number()) %>%
     ungroup() %>%
-    transmute(passage, probe_num, comprehension_correct = as.integer(`comprehension_resp.corr`))
+    transmute(passage, probe_num, response_letter = `comprehension_resp.keys`, correct_key = correct_response,
+              comprehension_correct = as.integer(`comprehension_resp.corr`))
+
+  if (comp_only) {
+    attrs <- d %>% filter(!is.na(`sentence_resp.keys`)) %>%
+      transmute(passage = as.integer(passage), difficulty = recode_difficulty(condition)) %>%
+      group_by(passage) %>% slice(1) %>% ungroup() %>%
+      mutate(difficulty_num = difficulty_num(difficulty), booklet = booklet_from(passage, difficulty), set = set_n)
+    return(comp %>% left_join(attrs, by = "passage") %>% mutate(subject_id = sid, source_file = basename(path)))
+  }
 
   probes %>%
     left_join(comp, by = c("passage", "probe_num")) %>%
@@ -421,7 +445,7 @@ assumption that is checked below.
 ```{r master-superlab}
 sl_key <- read_csv(file.path(dm, "superlab/superlab_answer_key.csv"), col_types = cols(.default = "c"))
 
-superlab_file <- function(path) {
+superlab_file <- function(path, comp_only = FALSE) {
   d <- read_sav(path) %>% zap_labels() %>% mutate(across(everything(), as.character))
   d <- d %>% mutate(.row = row_number(), V12 = suppressWarnings(as.numeric(V12)))
 
@@ -475,10 +499,18 @@ superlab_file <- function(path) {
     group_by(passage) %>%
     mutate(probe_num = row_number()) %>%
     ungroup() %>%
-    select(passage, probe_num, comprehension_correct)
+    transmute(passage, probe_num, set = as.integer(set), response_letter = str_to_lower(Participant),
+              correct_key, comprehension_correct)
+
+  if (comp_only) {
+    return(comp %>%
+             mutate(subject_id = str_extract(d$Participant_A[1], "\\d+"), booklet = booklet,
+                    difficulty = difficulty_from_booklet(passage, booklet), difficulty_num = difficulty_num(difficulty),
+                    source_file = basename(path)))
+  }
 
   out %>%
-    left_join(comp, by = c("passage", "probe_num")) %>%
+    left_join(comp %>% select(-set), by = c("passage", "probe_num")) %>%
     mutate(comprehension_item = if_else(!is.na(comprehension_correct), paste0(passage, ".", probe_num), NA_character_),
            source_file = basename(path))
 }
@@ -559,7 +591,7 @@ read_qualtrics_wide <- function(path) {
 
 probes_per_passage <- c(7, 2, 2, 4, 3, 4, 2, 3)
 
-qualtrics_reshape <- function(ds, path, branch_booklet, rt_offset) {
+qualtrics_reshape <- function(ds, path, branch_booklet, rt_offset, comp_only = FALSE) {
   cb <- read_csv(file.path(cb_dir, paste0("qualtrics_", ds, "_codebook.csv")), col_types = cols(.default = "c"))
   d <- read_qualtrics_wide(path)
   if ("Status" %in% names(d)) d <- d %>% filter(Status != "Survey Preview")
@@ -588,7 +620,8 @@ qualtrics_reshape <- function(ds, path, branch_booklet, rt_offset) {
 
     ac <- answered(r, comp_cb$variable)
     comp <- if (length(ac) == 0) {
-      tibble(passage = integer(), probe_num = integer(), comprehension_correct = integer())
+      tibble(passage = integer(), probe_num = integer(), response_letter = character(), correct_key = character(),
+             comprehension_correct = integer())
     } else tibble(variable = ac, answer = unlist(r[ac])) %>%
       left_join(comp_cb %>% select(variable, passage), by = "variable") %>%
       group_by(passage) %>% mutate(probe_num = row_number()) %>% ungroup() %>%
@@ -597,10 +630,16 @@ qualtrics_reshape <- function(ds, path, branch_booklet, rt_offset) {
         tryCatch(letter_from_text(answer, passage, probe_num), error = function(e) NA_character_)) %>%
       ungroup() %>%
       left_join(comp_options %>% select(passage, question, key), by = c("passage", "probe_num" = "question")) %>%
-      transmute(passage, probe_num, comprehension_correct = as.integer(letter == key))
+      transmute(passage, probe_num, response_letter = letter, correct_key = key,
+                comprehension_correct = as.integer(letter == key))
 
     id <- if ("ResponseId" %in% names(d)) r$ResponseId else if (!is.na(r$id) && r$id != "") r$id else paste0("row", i)
     booklet <- unname(branch_booklet[am[1]])
+    if (comp_only) {
+      return(comp %>% mutate(subject_id = id, booklet = booklet,
+                             difficulty = difficulty_from_booklet(passage, booklet),
+                             difficulty_num = difficulty_num(difficulty), source_file = basename(path)))
+    }
     probes %>%
       left_join(comp, by = c("passage", "probe_num")) %>%
       mutate(subject_id = id, booklet = booklet,
@@ -649,6 +688,91 @@ stopifnot(
 
 write_csv(master_data, file.path(dm, "master_data.csv"), na = "")
 dim(master_data)
+```
+
+## Comprehension answers: all questions
+
+`master_data.csv` keeps only the comprehension questions that pair with a probe (27 of the 36 per participant).
+`master_comprehension.csv` has **every** scored comprehension answer, one row per question. The processed
+datasets (E-Prime, jsPsych, OpenSesame 17_32 / 18_06 / 18_38 / 21_28) only contain the paired questions, so for
+those projects the file has the same 27 (or fewer) rows per participant and no answer letter or key.
+
+```{r master-comprehension}
+comp_cols <- c("project", "software", "datatype", "source_file", "subject_id", "passage", "question_num",
+               "difficulty", "difficulty_num", "booklet", "set", "response_letter", "correct_key",
+               "comprehension_correct")
+
+finish_comp <- function(d, proj, soft, dtype) {
+  d <- d %>% rename(question_num = probe_num)
+  for (m in setdiff(comp_cols, names(d))) d[[m]] <- NA
+  d$project <- proj
+  d$software <- soft
+  d$datatype <- dtype
+  d %>% mutate(subject_id = as.character(subject_id)) %>% select(all_of(comp_cols))
+}
+
+comp_processed <- master_processed %>%
+  filter(!is.na(comprehension_correct)) %>%
+  rename(question_num = probe_num) %>%
+  mutate(response_letter = NA_character_, correct_key = NA_character_) %>%
+  select(all_of(comp_cols))
+
+comp_os <- map_df(os_raw_dirs, function(p) {
+  files <- list.files(file.path(dm, "open_sesame", p), pattern = "\\.csv$", full.names = TRUE)
+  map_df(files, os_file, comp_only = TRUE) %>% finish_comp(p, "opensesame", "raw")
+})
+comp_os_1941 <- os_file(file.path(dm, "open_sesame/19_41/Masterdata.csv"), comp_only = TRUE) %>%
+  finish_comp("19_41", "opensesame", "raw")
+
+comp_psychopy <- map_df(c(1, 2), function(s) {
+  files <- list.files(file.path(dm, "psychopy/20_26", paste0("Set", s)), pattern = "\\.csv$", full.names = TRUE)
+  map_df(files, psychopy_file, set_n = s, comp_only = TRUE)
+}) %>% finish_comp("20_26", "psychopy", "raw")
+
+comp_superlab <- list.files(file.path(dm, "superlab/17_03"), pattern = "\\.sav$", full.names = TRUE) %>%
+  map_df(superlab_file, comp_only = TRUE) %>%
+  finish_comp("17_03", "superlab", "raw")
+
+comp_qualtrics <- bind_rows(
+  qualtrics_reshape("19_01", file.path(dm, "qualtrics/19_01/Replication_Data.csv"), c(Q12 = 1L, Q227 = 2L),
+                    rt_offset = 1, comp_only = TRUE) %>% finish_comp("19_01", "qualtrics", "raw"),
+  qualtrics_reshape("19_42", file.path(dm, "qualtrics/19_42/feng_data.txt"), c(Q13 = 1L, Q376 = 2L),
+                    rt_offset = 2, comp_only = TRUE) %>% finish_comp("19_42", "qualtrics", "raw"),
+  qualtrics_reshape("19_53", file.path(dm, "qualtrics/19_53/Widman & Herion_Raw Data.csv"), c(Q227 = 1L, Q11 = 2L),
+                    rt_offset = 2, comp_only = TRUE) %>% finish_comp("19_53", "qualtrics", "raw")
+)
+
+master_comprehension <- bind_rows(comp_processed, comp_os, comp_os_1941, comp_psychopy, comp_superlab, comp_qualtrics) %>%
+  mutate(passage = as.integer(passage), question_num = as.integer(question_num), set = as.integer(set),
+         comprehension_correct = as.integer(comprehension_correct))
+
+# same participant-id disambiguation as master_data.csv
+master_comprehension <- master_comprehension %>%
+  left_join(reused_ids %>% select(-n) %>% mutate(reused = TRUE), by = c("project", "subject_id")) %>%
+  mutate(subject_id = if_else(!is.na(reused), paste0(subject_id, "_", str_remove(source_file, "\\.(csv|sav)$")), subject_id)) %>%
+  select(-reused)
+
+stopifnot(
+  all(master_comprehension$difficulty_num[master_comprehension$difficulty %in% "Difficult"] == 1),
+  all(master_comprehension$difficulty_num[master_comprehension$difficulty %in% "Easy"] == 2)
+)
+
+write_csv(master_comprehension, file.path(dm, "master_comprehension.csv"), na = "")
+dim(master_comprehension)
+```
+
+Answers per participant (a complete raw participant has 36 comprehension answers):
+
+```{r master-comprehension-checks}
+master_comprehension %>%
+  count(project, software, datatype, subject_id, name = "answers") %>%
+  group_by(project, software, datatype) %>%
+  summarise(participants = n(), with_36 = sum(answers == 36), median_answers = median(answers), .groups = "drop")
+
+master_comprehension %>%
+  group_by(project, software) %>%
+  summarise(rows = n(), unscored = sum(is.na(comprehension_correct)),
+            accuracy = round(mean(comprehension_correct, na.rm = TRUE), 3), .groups = "drop")
 ```
 
 ## Checks on the master data

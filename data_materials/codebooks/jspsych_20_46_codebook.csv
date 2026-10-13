@@ -1,0 +1,21 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+jspsych_20_46,V1,Row index added by export (ignore),integer,range 1 to 1820,1820,0,,draft from data_combination.xlsx; unverified
+jspsych_20_46,Subject,Participant identifier,integer,range 16 to 147,70,0,subject_id,draft from data_combination.xlsx; unverified
+jspsych_20_46,part_condition,Counterbalancing condition (cond1/cond2) = whether participant started with Easy or Difficult passages,categorical (text),cond1 | cond2,2,0,booklet,draft from data_combination.xlsx; unverified; assumed equal to booklet - verify
+jspsych_20_46,Passages,Passage number (1-8),integer,range 1 to 8,8,0,passage,draft from data_combination.xlsx; unverified
+jspsych_20_46,trial_difficulty,Passage difficulty (Hard / Easy),categorical (text),Hard | Easy,2,0,difficulty,draft from data_combination.xlsx; unverified
+jspsych_20_46,RT,Reading time for the sentence (ms),numeric,range 97.285 to 427301,1805,0,read_rt_ms,draft from data_combination.xlsx; unverified
+jspsych_20_46,answers,"Comprehension answer correctness: 1 = correct, 0 = incorrect",integer,0 | 1,2,0,comprehension_correct,draft from data_combination.xlsx; unverified
+jspsych_20_46,QuestionNum,Passage.question identifier (e.g. 1.1 = passage 1 question 1),numeric,range 1.1 to 8.3,26,0,comprehension_item,draft from data_combination.xlsx; unverified
+jspsych_20_46,MW,Mind-wandering probe response (0/1),integer,0 | 1,2,2,mw_probe,draft from data_combination.xlsx; unverified
+jspsych_20_46,Gender,Self-identified gender (female / male / other),categorical (text),female | male | other,3,0,gender,draft from data_combination.xlsx; unverified
+jspsych_20_46,ImplicitWP,Implicit willpower composite (6 Likert items; higher = limited-resource belief),integer,range 18 to 34,12,5.7,implicit_willpower,draft from data_combination.xlsx; unverified
+jspsych_20_46,MindwanderTheory,Mind-wandering beliefs composite (7 Likert items),integer,range 6 to 37,23,8.6,mindwander_theory,draft from data_combination.xlsx; unverified
+jspsych_20_46,Chronotype,Chronotype composite (5 questions),integer,range 4 to 20,16,1.4,chronotype,draft from data_combination.xlsx; unverified
+jspsych_20_46,ChronotypePM,Chronotype PM/evening factor score (centered); derived,numeric,range -4.89732 to 11.1027,16,1.4,,draft from data_combination.xlsx; unverified
+jspsych_20_46,ChronotypeAM,Chronotype AM/morning factor score (centered); derived,numeric,range -12.0302 to 3.96978,16,1.4,,draft from data_combination.xlsx; unverified
+jspsych_20_46,ChronotypeC,Centered chronotype composite; derived,numeric,range -8.46377 to 7.53623,16,1.4,,draft from data_combination.xlsx; unverified
+jspsych_20_46,MindwanderTheoryC,Mean-centered MindwanderTheory; derived,numeric,range -15.1406 to 15.8594,23,8.6,,draft from data_combination.xlsx; unverified
+jspsych_20_46,ImplicitWP_C,Mean-centered ImplicitWP; derived,numeric,range -5.59091 to 10.4091,12,5.7,,draft from data_combination.xlsx; unverified
+jspsych_20_46,RT_wind_Z,Z-score of winsorized reading time,numeric,range -1.13793 to 3.21169,1574,0,,draft from data_combination.xlsx; unverified; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data
+jspsych_20_46,RT_wind,Winsorized reading time (ms),numeric,range 395 to 24640,1574,0,,draft from data_combination.xlsx; unverified; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data

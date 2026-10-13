@@ -1,0 +1,115 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+psychopy_20_26_set1,taskinstr_resp.keys,Key pressed to leave an instruction screen,categorical (text),space,1,96.2,,inferred from data values; verify
+psychopy_20_26_set1,taskinstr_resp.rt,Instruction screen response time (seconds),numeric,range 0.377365 to 300.31,258,96.2,,inferred from data values; verify
+psychopy_20_26_set1,task_instr_loop.thisRepN,PsychoPy loop 'task_instr' repetition number,integer,0,1,96.2,,system/logging variable
+psychopy_20_26_set1,task_instr_loop.thisTrialN,PsychoPy loop 'task_instr' trial number within the repetition,integer,range 0 to 5,6,96.2,,system/logging variable
+psychopy_20_26_set1,task_instr_loop.thisN,PsychoPy loop 'task_instr' overall trial counter,integer,range 0 to 5,6,96.2,,system/logging variable
+psychopy_20_26_set1,task_instr_loop.thisIndex,PsychoPy loop 'task_instr' row index in the conditions file,integer,range 0 to 5,6,96.2,,system/logging variable
+psychopy_20_26_set1,task_instr_loop.ran,PsychoPy loop 'task_instr' whether the loop ran,integer,1,1,96.2,,system/logging variable
+psychopy_20_26_set1,instruct_num,Instruction screen number,integer,range 1 to 7,6,96.2,,inferred from data values; verify
+psychopy_20_26_set1,instruct_text,Instruction screen text,categorical (text),"Additionally, while you are reading y... | In this experiment, you will read 8 p... | Please press the space bar to start r... | TASK INSTRUCTIONS - PLEASE READ CAREF...",6,96.2,,inferred from data values; verify
+psychopy_20_26_set1,participant,Participant ID entered at start (e.g. M000141),text,M000141 | M001741 | M007355 | M012452,43,0,subject_id,standard OpenSesame/PsychoPy/Qualtrics field
+psychopy_20_26_set1,date,Session start date/time stamp,text,2020-07-23_08h51.52.243 | 2020-07-23_09h53.18.426 | 2020-07-23_13h23.02.152 | 2020-07-23_13h23.08.104,43,0,,standard OpenSesame/PsychoPy/Qualtrics field
+psychopy_20_26_set1,expName,Experiment name (Feng_Mindwandering_Set1 / Set2),categorical (text),Feng_Mindwandering_Set1,1,0,set,standard OpenSesame/PsychoPy/Qualtrics field; set parsed from name
+psychopy_20_26_set1,psychopyVersion,PsychoPy version,categorical (text),2020.1.3,1,0,,standard OpenSesame/PsychoPy/Qualtrics field
+psychopy_20_26_set1,OS,Participant's operating system / browser platform,categorical (text),Win32 | MacIntel | Linux i686 | Linux x86_64,4,0,,standard OpenSesame/PsychoPy/Qualtrics field
+psychopy_20_26_set1,frameRate,Measured display frame rate (Hz),integer,60,1,0,,standard OpenSesame/PsychoPy/Qualtrics field
+psychopy_20_26_set1,sentence_resp.keys,Key pressed to advance the sentence (space),categorical (text),space,1,26.9,,inferred from data values; verify
+psychopy_20_26_set1,sentence_resp.rt,Sentence reading time in SECONDS (PsychoPy default); multiply by 1000,numeric,range 0.168355 to 871.264,5009,26.9,read_rt_ms,inferred from data values; verify; unit conversion needed
+psychopy_20_26_set1,probe_resp.keys,Mind-wandering probe response (y = yes / n = no),categorical (text),n | y,2,83.1,mw_probe,inferred from data values; verify; recode to 1/0
+psychopy_20_26_set1,passage1_loop.thisRepN,PsychoPy loop 'passage1' repetition number,integer,0,1,80.6,,system/logging variable
+psychopy_20_26_set1,passage1_loop.thisTrialN,PsychoPy loop 'passage1' trial number within the repetition,integer,range 0 to 30,31,80.6,,system/logging variable
+psychopy_20_26_set1,passage1_loop.thisN,PsychoPy loop 'passage1' overall trial counter,integer,range 0 to 30,31,80.6,,system/logging variable
+psychopy_20_26_set1,passage1_loop.thisIndex,PsychoPy loop 'passage1' row index in the conditions file,integer,range 0 to 30,31,80.6,,system/logging variable
+psychopy_20_26_set1,passage1_loop.ran,PsychoPy loop 'passage1' whether the loop ran,integer,1,1,80.6,,system/logging variable
+psychopy_20_26_set1,passage,Passage number (1-8),integer,range 1 to 8,8,4.4,passage,inferred from data values; verify
+psychopy_20_26_set1,line,"Line index within passage (0 = title line), the sentence number",integer,range 0 to 30,31,4.4,sentence_num,inferred from data values; verify
+psychopy_20_26_set1,line_text,Sentence text shown,text,"1. A fungus was used as medicine as e... | 1. Flush was the name of the Browning... | 1. How much sea water was mentioned? ... | 1. In his paintings, Caravaggio inclu...",153,4.4,sentence_text,inferred from data values; verify
+psychopy_20_26_set1,probe,Whether a mind-wandering probe follows this sentence (0/1),integer,0 | 1,2,26.9,,inferred from data values; verify
+psychopy_20_26_set1,condition,Passage difficulty label (Easy / Diff / Diff.),categorical (text),Easy | Diff | Diff.,3,26.9,difficulty,inferred from data values; verify
+psychopy_20_26_set1,condition_num,"Numeric difficulty: 1 = Difficult, 2 = Easy",integer,1 | 2,2,26.9,difficulty_num,inferred from data values; verify
+psychopy_20_26_set1,set,Passage set (Set 1 / Set 2),integer,1,1,26.9,set,inferred from data values; verify
+psychopy_20_26_set1,probe_resp.rt,Probe response time in seconds,numeric,range 0.435865 to 14.457,1160,83.1,,inferred from data values; verify
+psychopy_20_26_set1,compr_instr_resp.keys,Key pressed on the comprehension instruction screen,categorical (text),space,1,95,,inferred from data values; verify
+psychopy_20_26_set1,compr_instr_resp.rt,Comprehension instruction response time (seconds),numeric,range 0.15589 to 87.2377,344,95,,inferred from data values; verify
+psychopy_20_26_set1,comprehension_resp.keys,Comprehension answer chosen (a-e),categorical (text),a | c | d | e,5,77.5,,inferred from data values; verify
+psychopy_20_26_set1,comprehension_resp.corr,"Comprehension correctness: 1 = correct, 0 = incorrect",integer,1 | 0,2,77.5,comprehension_correct,inferred from data values; verify
+psychopy_20_26_set1,comprehension_resp.rt,Comprehension response time in seconds,numeric,range 1.49375 to 183.602,1547,77.5,,inferred from data values; verify
+psychopy_20_26_set1,comprehension1_loop.thisRepN,PsychoPy loop 'comprehension1' repetition number,integer,0,1,95,,system/logging variable
+psychopy_20_26_set1,comprehension1_loop.thisTrialN,PsychoPy loop 'comprehension1' trial number within the repetition,integer,range 0 to 7,8,95,,system/logging variable
+psychopy_20_26_set1,comprehension1_loop.thisN,PsychoPy loop 'comprehension1' overall trial counter,integer,range 0 to 7,8,95,,system/logging variable
+psychopy_20_26_set1,comprehension1_loop.thisIndex,PsychoPy loop 'comprehension1' row index in the conditions file,integer,range 0 to 7,8,95,,system/logging variable
+psychopy_20_26_set1,comprehension1_loop.ran,PsychoPy loop 'comprehension1' whether the loop ran,integer,1,1,95,,system/logging variable
+psychopy_20_26_set1,correct_response,Keyed correct answer for the comprehension question,categorical (text),b | d | a | c,5,77.5,,inferred from data values; verify
+psychopy_20_26_set1,passage2_loop.thisRepN,PsychoPy loop 'passage2' repetition number,integer,0,1,91.9,,system/logging variable
+psychopy_20_26_set1,passage2_loop.thisTrialN,PsychoPy loop 'passage2' trial number within the repetition,integer,range 0 to 12,13,91.9,,system/logging variable
+psychopy_20_26_set1,passage2_loop.thisN,PsychoPy loop 'passage2' overall trial counter,integer,range 0 to 12,13,91.9,,system/logging variable
+psychopy_20_26_set1,passage2_loop.thisIndex,PsychoPy loop 'passage2' row index in the conditions file,integer,range 0 to 12,13,91.9,,system/logging variable
+psychopy_20_26_set1,passage2_loop.ran,PsychoPy loop 'passage2' whether the loop ran,integer,1,1,91.9,,system/logging variable
+psychopy_20_26_set1,comprehension2_loop.thisRepN,PsychoPy loop 'comprehension2' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension2_loop.thisTrialN,PsychoPy loop 'comprehension2' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension2_loop.thisN,PsychoPy loop 'comprehension2' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension2_loop.thisIndex,PsychoPy loop 'comprehension2' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension2_loop.ran,PsychoPy loop 'comprehension2' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,passage3_loop.thisRepN,PsychoPy loop 'passage3' repetition number,integer,0,1,93.8,,system/logging variable
+psychopy_20_26_set1,passage3_loop.thisTrialN,PsychoPy loop 'passage3' trial number within the repetition,integer,range 0 to 9,10,93.8,,system/logging variable
+psychopy_20_26_set1,passage3_loop.thisN,PsychoPy loop 'passage3' overall trial counter,integer,range 0 to 9,10,93.8,,system/logging variable
+psychopy_20_26_set1,passage3_loop.thisIndex,PsychoPy loop 'passage3' row index in the conditions file,integer,range 0 to 9,10,93.8,,system/logging variable
+psychopy_20_26_set1,passage3_loop.ran,PsychoPy loop 'passage3' whether the loop ran,integer,1,1,93.8,,system/logging variable
+psychopy_20_26_set1,comprehension3_loop.thisRepN,PsychoPy loop 'comprehension3' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension3_loop.thisTrialN,PsychoPy loop 'comprehension3' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension3_loop.thisN,PsychoPy loop 'comprehension3' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension3_loop.thisIndex,PsychoPy loop 'comprehension3' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension3_loop.ran,PsychoPy loop 'comprehension3' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,passage4_loop.thisRepN,PsychoPy loop 'passage4' repetition number,integer,0,1,91.2,,system/logging variable
+psychopy_20_26_set1,passage4_loop.thisTrialN,PsychoPy loop 'passage4' trial number within the repetition,integer,range 0 to 13,14,91.2,,system/logging variable
+psychopy_20_26_set1,passage4_loop.thisN,PsychoPy loop 'passage4' overall trial counter,integer,range 0 to 13,14,91.2,,system/logging variable
+psychopy_20_26_set1,passage4_loop.thisIndex,PsychoPy loop 'passage4' row index in the conditions file,integer,range 0 to 13,14,91.2,,system/logging variable
+psychopy_20_26_set1,passage4_loop.ran,PsychoPy loop 'passage4' whether the loop ran,integer,1,1,91.2,,system/logging variable
+psychopy_20_26_set1,comprehension4_loop.thisRepN,PsychoPy loop 'comprehension4' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension4_loop.thisTrialN,PsychoPy loop 'comprehension4' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension4_loop.thisN,PsychoPy loop 'comprehension4' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension4_loop.thisIndex,PsychoPy loop 'comprehension4' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension4_loop.ran,PsychoPy loop 'comprehension4' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,passage5_loop.thisRepN,PsychoPy loop 'passage5' repetition number,integer,0,1,93.8,,system/logging variable
+psychopy_20_26_set1,passage5_loop.thisTrialN,PsychoPy loop 'passage5' trial number within the repetition,integer,range 0 to 9,10,93.8,,system/logging variable
+psychopy_20_26_set1,passage5_loop.thisN,PsychoPy loop 'passage5' overall trial counter,integer,range 0 to 9,10,93.8,,system/logging variable
+psychopy_20_26_set1,passage5_loop.thisIndex,PsychoPy loop 'passage5' row index in the conditions file,integer,range 0 to 9,10,93.8,,system/logging variable
+psychopy_20_26_set1,passage5_loop.ran,PsychoPy loop 'passage5' whether the loop ran,integer,1,1,93.8,,system/logging variable
+psychopy_20_26_set1,comprehension5_loop.thisRepN,PsychoPy loop 'comprehension5' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension5_loop.thisTrialN,PsychoPy loop 'comprehension5' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension5_loop.thisN,PsychoPy loop 'comprehension5' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension5_loop.thisIndex,PsychoPy loop 'comprehension5' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension5_loop.ran,PsychoPy loop 'comprehension5' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,passage6_loop.thisRepN,PsychoPy loop 'passage6' repetition number,integer,0,1,90,,system/logging variable
+psychopy_20_26_set1,passage6_loop.thisTrialN,PsychoPy loop 'passage6' trial number within the repetition,integer,range 0 to 15,16,90,,system/logging variable
+psychopy_20_26_set1,passage6_loop.thisN,PsychoPy loop 'passage6' overall trial counter,integer,range 0 to 15,16,90,,system/logging variable
+psychopy_20_26_set1,passage6_loop.thisIndex,PsychoPy loop 'passage6' row index in the conditions file,integer,range 0 to 15,16,90,,system/logging variable
+psychopy_20_26_set1,passage6_loop.ran,PsychoPy loop 'passage6' whether the loop ran,integer,1,1,90,,system/logging variable
+psychopy_20_26_set1,comprehension6_loop.thisRepN,PsychoPy loop 'comprehension6' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension6_loop.thisTrialN,PsychoPy loop 'comprehension6' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension6_loop.thisN,PsychoPy loop 'comprehension6' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension6_loop.thisIndex,PsychoPy loop 'comprehension6' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension6_loop.ran,PsychoPy loop 'comprehension6' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,passage7_loop.thisRepN,PsychoPy loop 'passage7' repetition number,integer,0,1,93.1,,system/logging variable
+psychopy_20_26_set1,passage7_loop.thisTrialN,PsychoPy loop 'passage7' trial number within the repetition,integer,range 0 to 10,11,93.1,,system/logging variable
+psychopy_20_26_set1,passage7_loop.thisN,PsychoPy loop 'passage7' overall trial counter,integer,range 0 to 10,11,93.1,,system/logging variable
+psychopy_20_26_set1,passage7_loop.thisIndex,PsychoPy loop 'passage7' row index in the conditions file,integer,range 0 to 10,11,93.1,,system/logging variable
+psychopy_20_26_set1,passage7_loop.ran,PsychoPy loop 'passage7' whether the loop ran,integer,1,1,93.1,,system/logging variable
+psychopy_20_26_set1,comprehension7_loop.thisRepN,PsychoPy loop 'comprehension7' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension7_loop.thisTrialN,PsychoPy loop 'comprehension7' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension7_loop.thisN,PsychoPy loop 'comprehension7' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension7_loop.thisIndex,PsychoPy loop 'comprehension7' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension7_loop.ran,PsychoPy loop 'comprehension7' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,passage8_loop.thisRepN,PsychoPy loop 'passage8' repetition number,integer,0,1,92.5,,system/logging variable
+psychopy_20_26_set1,passage8_loop.thisTrialN,PsychoPy loop 'passage8' trial number within the repetition,integer,range 0 to 11,12,92.5,,system/logging variable
+psychopy_20_26_set1,passage8_loop.thisN,PsychoPy loop 'passage8' overall trial counter,integer,range 0 to 11,12,92.5,,system/logging variable
+psychopy_20_26_set1,passage8_loop.thisIndex,PsychoPy loop 'passage8' row index in the conditions file,integer,range 0 to 11,12,92.5,,system/logging variable
+psychopy_20_26_set1,passage8_loop.ran,PsychoPy loop 'passage8' whether the loop ran,integer,1,1,92.5,,system/logging variable
+psychopy_20_26_set1,comprehension8_loop.thisRepN,PsychoPy loop 'comprehension8' repetition number,integer,0,1,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension8_loop.thisTrialN,PsychoPy loop 'comprehension8' trial number within the repetition,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension8_loop.thisN,PsychoPy loop 'comprehension8' overall trial counter,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension8_loop.thisIndex,PsychoPy loop 'comprehension8' row index in the conditions file,integer,0 | 1 | 2 | 3,4,97.5,,system/logging variable
+psychopy_20_26_set1,comprehension8_loop.ran,PsychoPy loop 'comprehension8' whether the loop ran,integer,1,1,97.5,,system/logging variable
+psychopy_20_26_set1,Thankyou_resp.keys,Key pressed on the thank-you screen,categorical (text),space,1,99.4,,inferred from data values; verify
+psychopy_20_26_set1,Thankyou_resp.rt,Thank-you screen response time (seconds),numeric,range 2.64684 to 32.6928,43,99.4,,inferred from data values; verify

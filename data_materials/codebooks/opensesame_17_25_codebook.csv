@@ -1,0 +1,212 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+opensesame_17_25,Condition_Num,"Numeric difficulty of the passage: 1 = Difficult, 2 = Easy (populated on sentence rows only)",categorical (text),2 | 1 | ,3,0,difficulty_num,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,acc,Running comprehension accuracy (%); duplicate of accuracy,numeric,range 9.09091 to 100,1460,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,accuracy,Running comprehension accuracy (%),numeric,range 9.09091 to 100,1460,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,average_response_time,Running mean response time (ms); duplicate of avg_rt,numeric,range 477.429 to 849621,16475,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,avg_rt,Running mean response time (ms),numeric,range 477.429 to 849621,16475,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,background,Display background colour,categorical (text),white,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,bidi,Right-to-left text setting,categorical (text),no,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,booklet,Counterbalancing booklet: 1 = odd passages difficult / even easy; 2 = vice versa. Only populated on passage rows,categorical (text),2 | 1 | ,3,0,booklet,auto: present in 82 of 83 files; draft from data_combination.xlsx; unverified
+opensesame_17_25,booklet_assign,Booklet assignment made by the experiment flow (duplicate of booklet),integer,1 | 2,2,0,,auto: present in 82 of 83 files; draft from data_combination.xlsx; unverified
+opensesame_17_25,canvas_backend,Drawing back-end,categorical (text),xpyriment,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,clock_backend,Clock back-end,categorical (text),legacy,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,color_backend,Colour back-end,categorical (text),legacy,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,compensation,OpenSesame 'compensation' setting (OSWeb),integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,comprehension_q,y/n flag: row is a comprehension question,categorical (text),n | y | ,3,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,condition,Passage difficulty label (Easy / Diff.),categorical (text),Easy | Diff. | ,3,0,difficulty,auto: present in 82 of 83 files; draft from data_combination.xlsx; unverified
+opensesame_17_25,coordinates,Coordinate system setting,categorical (text),uniform,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,correct,Correctness of current response: 1/0 on comprehension rows; 'undefined' for sentence and probe rows,categorical (text),0 | undefined | 1,3,0,comprehension_correct,auto: present in 82 of 83 files; inferred from data values; verify; comprehension rows only
+opensesame_17_25,correct_Instr_1_response,Correctness field of item 'Instr 1 response' (carried forward),integer,1,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,correct_Instr_1_response_1,Correctness field of item 'Instr 1 response 1' (carried forward),categorical (text),0 | NA | undefined,3,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,correct_Instr_1_response_1_1,Correctness field of item 'Instr 1 response 1 1' (carried forward),categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,correct_comprehension_response,Correctness (1/0) of the last comprehension answer; carried forward,categorical (text),0 | 1 | NA,3,0,comprehension_correct,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,correct_passage_response,Correctness field of the sentence item; not meaningful,categorical (text),0 | undefined,2,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,correct_probe_response,Correctness field of the probe item (0/undefined); not meaningful,categorical (text),0 | undefined | NA,3,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,correct_response,Keyed correct answer (a-e) for the current comprehension question,categorical (text),d | NA | e | a,6,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,count_Booklet_Assignment,OpenSesame counter: number of times item 'Booklet Assignment' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Comprehension,OpenSesame counter: number of times item 'Comprehension' has run,text,NA | 23 | 15 | 27,37,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_End_of_Experiment,OpenSesame counter: number of times item 'End of Experiment' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_End_of_Experiment_Inst,OpenSesame counter: number of times item 'End of Experiment Inst' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instr_1_response,OpenSesame counter: number of times item 'Instr 1 response' has run,integer,5,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instr_1_response_1,OpenSesame counter: number of times item 'Instr 1 response 1' has run,categorical (text),NA | 0 | 4 | 2,9,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instr_1_response_1_1,OpenSesame counter: number of times item 'Instr 1 response 1 1' has run,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instruction1,OpenSesame counter: number of times item 'Instruction1' has run,integer,5,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instruction1_1,OpenSesame counter: number of times item 'Instruction1 1' has run,categorical (text),NA | 0 | 4 | 2,9,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instruction1_1_1,OpenSesame counter: number of times item 'Instruction1 1 1' has run,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instructions,OpenSesame counter: number of times item 'Instructions' has run,integer,5,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instructions_1,OpenSesame counter: number of times item 'Instructions 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instructions_2,OpenSesame counter: number of times item 'Instructions 2' has run,categorical (text),NA | 0 | 4 | 2,9,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Instructions_2_1,OpenSesame counter: number of times item 'Instructions 2 1' has run,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P1_Comprehension_Instructions,OpenSesame counter: number of times item 'P1 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P2_Comprehension_Instructions,OpenSesame counter: number of times item 'P2 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P3_Comprehension_Instructions,OpenSesame counter: number of times item 'P3 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P4_Comprehension_Instructions,OpenSesame counter: number of times item 'P4 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P5_Comprehension_Instructions,OpenSesame counter: number of times item 'P5 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P6_Comprehension_Instructions,OpenSesame counter: number of times item 'P6 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P7_Comprehension_Instructions,OpenSesame counter: number of times item 'P7 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_P8_Comprehension_Instructions,OpenSesame counter: number of times item 'P8 Comprehension Instructions' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage,OpenSesame counter: number of times item 'Passage' has run,integer,range 0 to 147,148,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_1,OpenSesame counter: number of times item 'Passage 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_1_Booklet_1,OpenSesame counter: number of times item 'Passage 1 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_1_Booklet_2,OpenSesame counter: number of times item 'Passage 1 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_1_Comprehension,OpenSesame counter: number of times item 'Passage 1 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_2,OpenSesame counter: number of times item 'Passage 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_2_Booklet_1,OpenSesame counter: number of times item 'Passage 2 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_2_Booklet_2,OpenSesame counter: number of times item 'Passage 2 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_2_Comprehension,OpenSesame counter: number of times item 'Passage 2 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_3,OpenSesame counter: number of times item 'Passage 3' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_3_Booklet_1,OpenSesame counter: number of times item 'Passage 3 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_3_Booklet_2,OpenSesame counter: number of times item 'Passage 3 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_3_Comprehension,OpenSesame counter: number of times item 'Passage 3 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_4,OpenSesame counter: number of times item 'Passage 4' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_4_Booklet_1,OpenSesame counter: number of times item 'Passage 4 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_4_Booklet_2,OpenSesame counter: number of times item 'Passage 4 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_4_Comprehension,OpenSesame counter: number of times item 'Passage 4 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_5,OpenSesame counter: number of times item 'Passage 5' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_5_Booklet_1,OpenSesame counter: number of times item 'Passage 5 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_5_Booklet_2,OpenSesame counter: number of times item 'Passage 5 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_5_Comprehension,OpenSesame counter: number of times item 'Passage 5 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_6,OpenSesame counter: number of times item 'Passage 6' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_6_Booklet_1,OpenSesame counter: number of times item 'Passage 6 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_6_Booklet_2,OpenSesame counter: number of times item 'Passage 6 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_6_Comprehension,OpenSesame counter: number of times item 'Passage 6 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_7,OpenSesame counter: number of times item 'Passage 7' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_7_Booklet_1,OpenSesame counter: number of times item 'Passage 7 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_7_Booklet_2,OpenSesame counter: number of times item 'Passage 7 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_7_Comprehension,OpenSesame counter: number of times item 'Passage 7 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_8,OpenSesame counter: number of times item 'Passage 8' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_8_Booklet_1,OpenSesame counter: number of times item 'Passage 8 Booklet 1' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_8_Booklet_2,OpenSesame counter: number of times item 'Passage 8 Booklet 2' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_8_Comprehension,OpenSesame counter: number of times item 'Passage 8 Comprehension' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_Comprehension,OpenSesame counter: number of times item 'Passage Comprehension' has run,text,NA | 23 | 15 | 27,37,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Passage_sequence,OpenSesame counter: number of times item 'Passage sequence' has run,integer,range 0 to 147,148,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_Probe,OpenSesame counter: number of times item 'Probe' has run,integer,range 0 to 147,148,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_comprehension_response,OpenSesame counter: number of times item 'comprehension response' has run,text,NA | 23 | 15 | 27,37,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_experiment,OpenSesame counter: number of times item 'experiment' has run,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_logger,OpenSesame counter: number of times item 'logger' has run,integer,range 1 to 331,215,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_passage_response,OpenSesame counter: number of times item 'passage response' has run,integer,range 0 to 147,148,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,count_probe_response,OpenSesame counter: number of times item 'probe response' has run,integer,range 0 to 147,148,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,datetime,Date/time the session was run,text,06/22/17 12:39:44 | 06/22/17 13:04:23 | 06/22/17 14:14:41 | 06/22/17 14:46:57,82,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,description,Experiment description,categorical (text),The main experiment item,1,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,disable_garbage_collection,Garbage-collection setting,categorical (text),yes,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,experiment_file,Name of the .osexp file,categorical (text),FengReplication.osexp | FengReplication (1).osexp | FengReplication (2).osexp | FengReplication2.osexp,6,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,experiment_path,Path of the experiment on the lab computer,text,C:/Users/ablom/Downloads | C:/Users/Levi | /Users/lisamyers | C:\Users\lexis\Downloads,11,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,font_bold,Bold font setting,categorical (text),no,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,font_family,Font family,categorical (text),mono,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,font_italic,Italic font setting,categorical (text),no,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,font_size,Font size,integer,18,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,font_underline,Underline font setting,categorical (text),no,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,foreground,Display foreground (text) colour,categorical (text),black,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,form_clicks,OpenSesame form clicks setting/log,categorical (text),no,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,fullscreen,Whether run in fullscreen,categorical (text),yes,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,height,Display height (px),integer,768,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,instruct_num,Instruction screen number,integer,range 6 to 14,9,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,instruct_text,Instruction screen text,categorical (text),Do you have any questions so far?<br ... | Now you will take the reading compreh... | Now you will take the reading compreh... | Now you will take the reading compreh...,9,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,keyboard_backend,Keyboard back-end,categorical (text),legacy,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,line,"Line index within the passage: 0 = title line, then sentences 1..N; for comprehension rows it is the question number",text,3 | 4 | 2 | 1,41,0,sentence_num,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,line_text,Text of the sentence or question shown,text,Hawthorne saw the Browning's there: t... | She found the man even more to her li... | The young man with the lemon-colored ... | After pursuing his early career in It...,273,0,sentence_text,auto: present in 82 of 83 files; draft from data_combination.xlsx; unverified
+opensesame_17_25,live_row,Row of the loop table currently in use (generic OpenSesame live_row),integer,range 0 to 61,62,0,,system/logging variable
+opensesame_17_25,live_row_Booklet_Assignment,Row of the loop table currently in use by loop 'Booklet Assignment',integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,live_row_Instructions_1,Row of the loop table currently in use by loop 'Instructions 1',integer,5,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,live_row_Passage_1_Booklet_2,Row of the loop table currently in use by loop 'Passage 1 Booklet 2',integer,range 0 to 39,40,52.6,,auto: present in 40 of 83 files; system/logging variable
+opensesame_17_25,logfile,Path of the log file,text,/Users/alexysshoule/Documents/PSYCH 4... | /Users/alexysshoule/Documents/PSYCH 4... | /Users/alexysshoule/Documents/PSYCH 4... | /Users/alexysshoule/subject-3014.csv,82,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,mouse_backend,Mouse back-end,categorical (text),xpyriment,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,opensesame_codename,OpenSesame release codename,categorical (text),Jazzy James,1,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,opensesame_version,OpenSesame version used,categorical (text),3.1.6,1,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,osf_id,OSF link/token field (unused),categorical (text),5942b73bb83f690229b9b281,1,31.4,,auto: present in 56 of 83 files; inferred from data values; verify
+opensesame_17_25,passage,Passage number (1-8),categorical (text),1 | 6 | 4 | 7,9,0,passage,auto: present in 82 of 83 files; draft from data_combination.xlsx; unverified
+opensesame_17_25,probe,y/n: whether a mind-wandering probe follows this sentence,categorical (text),n | y | ,3,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,repeat_cycle,Loop repeat-cycle counter,integer,0,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response,Key pressed on the current row: space = advance sentence; y/n = probe; a-e = comprehension answer,categorical (text),space | n | y | a,8,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,response_Instr_1_response,Last response recorded by item 'Instr 1 response' (carried forward),categorical (text),space,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response_Instr_1_response_1,Last response recorded by item 'Instr 1 response 1' (carried forward),categorical (text),space | NA | n | y,4,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response_Instr_1_response_1_1,Last response recorded by item 'Instr 1 response 1 1' (carried forward),categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response_comprehension_response,Last comprehension answer given (a-e); carried forward,categorical (text),NA | a | e | d,6,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,response_passage_response,Last response (key) to a sentence page; carried forward,categorical (text),space,1,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,response_probe_response,Last response to the mind-wandering probe (y/n); carried forward on subsequent rows until the next probe,categorical (text),n | y | NA,3,0,mw_probe,auto: present in 82 of 83 files; inferred from data values; verify; recode y/n to 1/0; valid only on probe rows
+opensesame_17_25,response_time,"Response time (ms) for the current row (sentence reading, probe, or comprehension answer)",integer,range 2 to 166637,9652,0,read_rt_ms,auto: present in 82 of 83 files; inferred from data values; verify; only on sentence rows (response == space)
+opensesame_17_25,response_time_Instr_1_response,Response time (ms) of the last response collected in item 'Instr 1 response' (carried forward),integer,range 35 to 78242,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response_time_Instr_1_response_1,Response time (ms) of the last response collected in item 'Instr 1 response 1' (carried forward),text,NA | 1557 | 1697 | 1014,614,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response_time_Instr_1_response_1_1,Response time (ms) of the last response collected in item 'Instr 1 response 1 1' (carried forward),categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,response_time_comprehension_response,Response time (ms) of last comprehension answer; carried forward,text,NA | 6827 | 9321 | 12780,2667,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,response_time_passage_response,Response time (ms) of the last sentence page; carried forward until next sentence,integer,range 2 to 166637,7615,0,read_rt_ms,"auto: present in 82 of 83 files; inferred from data values; verify; the xlsx draft lists time_passage_response, but that is a timestamp"
+opensesame_17_25,response_time_probe_response,Response time (ms) of the last probe response; carried forward,text,NA | 2169 | 2225 | 2299,1484,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,round_decimals,Decimal places used when logging,integer,2,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,sampler_backend,Audio back-end,categorical (text),legacy,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,sound_buf_size,Sound buffer size,integer,1024,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,sound_channels,Sound channels,integer,2,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,sound_freq,Sound sample frequency,integer,48000,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,sound_sample_size,Sound sample size,integer,-16,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,start,Experiment start time / start item setting,categorical (text),experiment,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,subject_nr,OpenSesame subject number (auto-assigned or typed at start),integer,range 1001 to 6012,81,0,subject_id,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,subject_parity,Odd/even parity of subject number (OpenSesame),categorical (text),odd | even,2,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,time_Booklet_Assignment,Timestamp (ms since experiment start) when item 'Booklet Assignment' ran,integer,range 1140 to 14322526,81,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Comprehension,Timestamp (ms since experiment start) when item 'Comprehension' ran,text,NA | 1054180 | 1058465 | 1064435,2913,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_End_of_Experiment,Timestamp (ms since experiment start) when item 'End of Experiment' ran,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_End_of_Experiment_Inst,Timestamp (ms since experiment start) when item 'End of Experiment Inst' ran,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instr_1_response,Timestamp (ms since experiment start) when item 'Instr 1 response' ran,integer,range 6510 to 20255308,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instr_1_response_1,Timestamp (ms since experiment start) when item 'Instr 1 response 1' ran,text,NA | 1021523 | 1034145 | 1043378,649,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instr_1_response_1_1,Timestamp (ms since experiment start) when item 'Instr 1 response 1 1' ran,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instruction1,Timestamp (ms since experiment start) when item 'Instruction1' ran,integer,range 6510 to 20255308,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instruction1_1,Timestamp (ms since experiment start) when item 'Instruction1 1' ran,text,NA | 1021523 | 1034145 | 1043378,649,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instruction1_1_1,Timestamp (ms since experiment start) when item 'Instruction1 1 1' ran,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instructions,Timestamp (ms since experiment start) when item 'Instructions' ran,integer,range 6506 to 20255302,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instructions_1,Timestamp (ms since experiment start) when item 'Instructions 1' ran,integer,range 1141 to 14322528,81,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instructions_2,Timestamp (ms since experiment start) when item 'Instructions 2' ran,text,NA | 1021517 | 1034139 | 1043373,649,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Instructions_2_1,Timestamp (ms since experiment start) when item 'Instructions 2 1' ran,categorical (text),NA,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P1_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P1 Comprehension Instructions' ran,text,NA | 1027437 | 11348639 | 13295094,83,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P2_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P2 Comprehension Instructions' ran,text,NA | 1151906 | 1155274 | 1159442,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P3_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P3 Comprehension Instructions' ran,text,NA | 1026914 | 1045770 | 1069609,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P4_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P4 Comprehension Instructions' ran,text,NA | 10032301 | 1006739 | 1073789,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P5_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P5 Comprehension Instructions' ran,text,NA | 10176999 | 1018856 | 1019511,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P6_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P6 Comprehension Instructions' ran,text,NA | 10291521 | 1074691 | 1078466,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P7_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P7 Comprehension Instructions' ran,text,NA | 1119707 | 1145204 | 1200181,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_P8_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P8 Comprehension Instructions' ran,text,NA | 1020038 | 10553560 | 1133055,81,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage,Timestamp (ms since experiment start) when item 'Passage' ran,integer,range 6724 to 21595416,11357,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_1,Timestamp (ms since experiment start) when item 'Passage 1' ran,integer,range 6568 to 20268838,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_1_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 1 Booklet 1' ran,text,NA | 1087838 | 1107247 | 12423254,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_1_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 1 Booklet 2' ran,text,NA | 107896 | 10948623 | 110508,41,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_1_Comprehension,Timestamp (ms since experiment start) when item 'Passage 1 Comprehension' ran,text,NA | 1032464 | 11366849 | 13300717,83,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_2,Timestamp (ms since experiment start) when item 'Passage 2' ran,text,NA | 1043771 | 1074184 | 1100823,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_2_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 2 Booklet 1' ran,text,NA | 1090250 | 1098454 | 1216462,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_2_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 2 Booklet 2' ran,text,NA | 1043771 | 1074184 | 1100825,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_2_Comprehension,Timestamp (ms since experiment start) when item 'Passage 2 Comprehension' ran,text,NA | 1156952 | 1161644 | 1162502,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_3,Timestamp (ms since experiment start) when item 'Passage 3' ran,text,NA | 1006879 | 11708578 | 1185134,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_3_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 3 Booklet 1' ran,text,NA | 1000405 | 1006535 | 1037493,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_3_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 3 Booklet 2' ran,text,NA | 1006879 | 11708578 | 1185134,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_3_Comprehension,Timestamp (ms since experiment start) when item 'Passage 3 Comprehension' ran,text,NA | 1029342 | 1049525 | 1071806,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_4,Timestamp (ms since experiment start) when item 'Passage 4' ran,text,NA | 1006464 | 1086597 | 1098895,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_4_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 4 Booklet 1' ran,text,NA | 1011803 | 1047168 | 1085629,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_4_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 4 Booklet 2' ran,text,NA | 1006464 | 1086597 | 1098895,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_4_Comprehension,Timestamp (ms since experiment start) when item 'Passage 4 Comprehension' ran,text,NA | 10035295 | 1010143 | 1076720,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_5,Timestamp (ms since experiment start) when item 'Passage 5' ran,text,NA | 10093331 | 1033586 | 1056019,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_5_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 5 Booklet 1' ran,text,NA | 1023247 | 1036293 | 1048180,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_5_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 5 Booklet 2' ran,text,NA | 10093331 | 1033587 | 1056019,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_5_Comprehension,Timestamp (ms since experiment start) when item 'Passage 5 Comprehension' ran,text,NA | 10178916 | 1021004 | 1021337,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_6,Timestamp (ms since experiment start) when item 'Passage 6' ran,text,NA | 1001898 | 1018294 | 10227524,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_6_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 6 Booklet 1' ran,text,NA | 1011745 | 1014192 | 1066183,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_6_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 6 Booklet 2' ran,text,NA | 1001898 | 1018295 | 10227524,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_6_Comprehension,Timestamp (ms since experiment start) when item 'Passage 6 Comprehension' ran,text,NA | 10293246 | 1076120 | 1082062,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_7,Timestamp (ms since experiment start) when item 'Passage 7' ran,text,NA | 10342936 | 1103215 | 1117869,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_7_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 7 Booklet 1' ran,text,NA | 1048989 | 1078896 | 1115825,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_7_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 7 Booklet 2' ran,text,NA | 10342937 | 1103215 | 1117869,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_7_Comprehension,Timestamp (ms since experiment start) when item 'Passage 7 Comprehension' ran,text,NA | 1121918 | 1146533 | 1201284,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_8,Timestamp (ms since experiment start) when item 'Passage 8' ran,text,NA | 1154886 | 1184597 | 1238472,82,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_8_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 8 Booklet 1' ran,text,NA | 1154886 | 1184597 | 1238472,43,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_8_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 8 Booklet 2' ran,text,NA | 10467982 | 1083143 | 1097551,40,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_8_Comprehension,Timestamp (ms since experiment start) when item 'Passage 8 Comprehension' ran,text,NA | 1021657 | 10555221 | 1134202,81,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_Comprehension,Timestamp (ms since experiment start) when item 'Passage Comprehension' ran,text,NA | 1054174 | 1058459 | 1064431,2914,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Passage_sequence,Timestamp (ms since experiment start) when item 'Passage sequence' ran,integer,range 6719 to 21595411,11354,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_Probe,Timestamp (ms since experiment start) when item 'Probe' ran,text,NA | 1110639 | 1185556 | 12738629,2193,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_comprehension_response,Timestamp (ms since experiment start) when item 'comprehension response' ran,text,NA | 1054181 | 1058465 | 1064435,2915,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_experiment,Timestamp (ms since experiment start) when item 'experiment' ran,integer,range 1139 to 14322526,81,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_logger,Timestamp (ms since experiment start) when item 'logger' ran,integer,range 7527 to 21640363,16438,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,time_passage_response,Absolute timestamp (ms since experiment start) at which the sentence response item ran - NOT a reaction time,integer,range 6724 to 21595416,11357,0,,auto: present in 82 of 83 files; inferred from data values; verify; corrects xlsx draft
+opensesame_17_25,time_probe_response,Timestamp (ms since experiment start) when item 'probe response' ran,text,NA | 1110639 | 1185556 | 12738629,2193,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,title,Experiment title,categorical (text),Feng Replication,1,0,,auto: present in 82 of 83 files; standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_25,total_correct,Running count of correct comprehension answers,integer,range 6 to 37,32,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,total_response_time,Running total response time (ms),integer,range 3342 to 7271733,16424,0,,auto: present in 82 of 83 files; draft from data_combination.xlsx; unverified
+opensesame_17_25,total_responses,Running count of responses logged,integer,range 7 to 225,218,0,,auto: present in 82 of 83 files; inferred from data values; verify
+opensesame_17_25,uniform_coordinates,Uniform coordinates setting,categorical (text),yes,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,width,Display width (px),integer,1024,1,0,,auto: present in 82 of 83 files; system/logging variable
+opensesame_17_25,live_row_Passage_1_Booklet_1,Row of the loop table currently in use by loop 'Passage 1 Booklet 1',integer,range 0 to 61,62,47.4,,auto: present in 42 of 83 files; system/logging variable

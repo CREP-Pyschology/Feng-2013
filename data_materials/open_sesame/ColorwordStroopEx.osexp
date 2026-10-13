@@ -1,0 +1,456 @@
+---
+API: 2.1
+OpenSesame: 3.2.8
+Platform: nt
+---
+set width 1024
+set uniform_coordinates no
+set title "Color-word Stroop"
+set synth_backend legacy
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend legacy
+set round_decimals 2
+set mouse_backend xpyriment
+set keyboard_backend legacy
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground white
+set font_underline no
+set font_size 18
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "C:/Users/Toshiba User/Documents/Uni/Y3/Dissertation"
+set disable_garbage_collection yes
+set description "Default description"
+set coordinates relative
+set compensation 0
+set canvas_backend xpyriment
+set bidi no
+set background black
+
+define sketchpad Blank1000
+	set reset_variables no
+	set duration 995
+	set description "Displays stimuli"
+
+define sketchpad Blank200
+	set reset_variables no
+	set duration 195
+	set description "Displays stimuli"
+
+define sketchpad Break
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Break<br /><br />Press any key to continue<br />" x=0 y=0 z_index=0
+
+define sketchpad End_of_practice
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="This was the end of the practice<br /><br />Press any key to start the experiment" x=0 y=0 z_index=0
+
+define sequence Exp_Trial_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run Blank1000 always
+	run Fixation200 always
+	run Blank200 always
+	run Target1500 always
+	run keyboard_response always
+	run logger always
+
+define loop Experiment_block_loop
+	set source table
+	set repeat 2
+	set order random
+	set item Exp_Trial_sequence
+	set description "Repeatedly runs another item"
+	set cycles 18
+	set continuous no
+	set column_order "color;word;congruity;weight;correct_response;Sz"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Sz 32
+	setcycle 0 word yellow
+	setcycle 0 weight 2
+	setcycle 0 color yellow
+	setcycle 0 correct_response n
+	setcycle 0 congruity C
+	setcycle 1 Sz 32
+	setcycle 1 word yellow
+	setcycle 1 weight 2
+	setcycle 1 color yellow
+	setcycle 1 correct_response n
+	setcycle 1 congruity C
+	setcycle 2 Sz 32
+	setcycle 2 word green
+	setcycle 2 weight 1
+	setcycle 2 color yellow
+	setcycle 2 correct_response n
+	setcycle 2 congruity IC
+	setcycle 3 Sz 32
+	setcycle 3 word red
+	setcycle 3 weight 1
+	setcycle 3 color yellow
+	setcycle 3 correct_response n
+	setcycle 3 congruity IC
+	setcycle 4 Sz 32
+	setcycle 4 word xxx
+	setcycle 4 weight 2
+	setcycle 4 color yellow
+	setcycle 4 correct_response n
+	setcycle 4 congruity N
+	setcycle 5 Sz 32
+	setcycle 5 word xxx
+	setcycle 5 weight 2
+	setcycle 5 color yellow
+	setcycle 5 correct_response n
+	setcycle 5 congruity N
+	setcycle 6 Sz 32
+	setcycle 6 word yellow
+	setcycle 6 weight 1
+	setcycle 6 color green
+	setcycle 6 correct_response b
+	setcycle 6 congruity IC
+	setcycle 7 Sz 32
+	setcycle 7 word green
+	setcycle 7 weight 2
+	setcycle 7 color green
+	setcycle 7 correct_response b
+	setcycle 7 congruity C
+	setcycle 8 Sz 32
+	setcycle 8 word green
+	setcycle 8 weight 2
+	setcycle 8 color green
+	setcycle 8 correct_response b
+	setcycle 8 congruity C
+	setcycle 9 Sz 32
+	setcycle 9 word red
+	setcycle 9 weight 1
+	setcycle 9 color green
+	setcycle 9 correct_response b
+	setcycle 9 congruity IC
+	setcycle 10 Sz 32
+	setcycle 10 word xxx
+	setcycle 10 weight 2
+	setcycle 10 color green
+	setcycle 10 correct_response b
+	setcycle 10 congruity N
+	setcycle 11 Sz 32
+	setcycle 11 word xxx
+	setcycle 11 weight 2
+	setcycle 11 color green
+	setcycle 11 correct_response b
+	setcycle 11 congruity N
+	setcycle 12 Sz 32
+	setcycle 12 word yellow
+	setcycle 12 weight 1
+	setcycle 12 color red
+	setcycle 12 correct_response v
+	setcycle 12 congruity IC
+	setcycle 13 Sz 32
+	setcycle 13 word green
+	setcycle 13 weight 1
+	setcycle 13 color red
+	setcycle 13 correct_response v
+	setcycle 13 congruity IC
+	setcycle 14 Sz 32
+	setcycle 14 word red
+	setcycle 14 weight 2
+	setcycle 14 color red
+	setcycle 14 correct_response v
+	setcycle 14 congruity C
+	setcycle 15 Sz 32
+	setcycle 15 word red
+	setcycle 15 weight 2
+	setcycle 15 color red
+	setcycle 15 correct_response v
+	setcycle 15 congruity C
+	setcycle 16 Sz 32
+	setcycle 16 word xxx
+	setcycle 16 weight 2
+	setcycle 16 color red
+	setcycle 16 correct_response v
+	setcycle 16 congruity N
+	setcycle 17 Sz 32
+	setcycle 17 word xxx
+	setcycle 17 weight 2
+	setcycle 17 color red
+	setcycle 17 correct_response v
+	setcycle 17 congruity N
+	run Exp_Trial_sequence
+
+define sequence Experiment_trial_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+
+define sketchpad Fixation200
+	set reset_variables no
+	set duration 195
+	set description "Displays stimuli"
+	draw fixdot color=white show_if=always style=default x=0 y=0 z_index=0
+
+define sketchpad Goodbye
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Thank you for your participation!" x=0 y=0 z_index=0
+
+define sketchpad Instructions
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=29 html=yes show_if=always text="INSTRUCTIONS<br />" x=0 y=-320 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=25 html=yes show_if=always text="In the following trials,<br />you will see a word or a string of letters.<br />" x=0 y=-224 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=25 html=yes show_if=always text="You need to decide in which font-color<br />the word is printed in, and press<br />the bottons with the corresponding color<br /><br />for example: in response to the word" x=0 y=-96 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=26 html=yes show_if=always text="Press a key to start a short practice" x=0 y=320 z_index=0
+	draw textline center=1 color="#ffff7f" font_bold=no font_family=mono font_italic=no font_size=26 html=yes show_if=always text=Purple x=0 y=32 z_index=0
+	draw textline center=1 color="#ffff7f" font_bold=no font_family=mono font_italic=no font_size=26 html=yes show_if=always text="" x=0 y=32 z_index=0
+	draw textline center=1 color="#ffffff" font_bold=no font_family=mono font_italic=no font_size=26 html=yes show_if=always text="You should click the yellow key N" x=0 y=96 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="Be as fast and accurate as possible" x=-3 y=256 z_index=0
+	draw textline center=1 color="#ffffff" font_bold=no font_family=mono font_italic=no font_size=26 html=yes show_if=always text="For Red Font Press V<br />For Green Font Press B<br />For Yellow Font Press N" x=-32 y=160 z_index=0
+
+define loop Main_experiment_loop
+	set source_file ""
+	set source table
+	set repeat 1
+	set order random
+	set item Main_experiment_sequence
+	set description "Repeatedly runs another item"
+	set cycles 1
+	set continuous no
+	set column_order Practice
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Practice No
+	run Main_experiment_sequence
+
+define sequence Main_experiment_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run Experiment_block_loop always
+	run Break always
+	run Experiment_block_loop always
+	run Break always
+	run Experiment_block_loop always
+
+define loop Main_practice_loop
+	set source_file ""
+	set source table
+	set repeat 1
+	set order random
+	set item Main_practice_sequence
+	set description "Repeatedly runs another item"
+	set cycles 1
+	set continuous no
+	set column_order Practice
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Practice yes
+	run Main_practice_sequence
+
+define sequence Main_practice_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run Instructions always
+	run reset_feedback always
+	run Practice_block_loop always
+	run feedback always
+	run End_of_practice always
+
+define loop Practice_block_loop
+	set source table
+	set repeat 0.4
+	set order random
+	set item Trial_sequence
+	set description "Repeatedly runs another item"
+	set cycles 19
+	set continuous no
+	set column_order "color;word;congruity;weight;correct_response;Sz"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 Sz 24
+	setcycle 0 word yellow
+	setcycle 0 weight 2
+	setcycle 0 color yellow
+	setcycle 0 correct_response n
+	setcycle 0 congruity C
+	setcycle 1 Sz 32
+	setcycle 1 word yellow
+	setcycle 1 weight 2
+	setcycle 1 color yellow
+	setcycle 1 correct_response n
+	setcycle 1 congruity C
+	setcycle 2 Sz 44
+	setcycle 2 word green
+	setcycle 2 weight 1
+	setcycle 2 color yellow
+	setcycle 2 correct_response n
+	setcycle 2 congruity IC
+	setcycle 3 Sz 12
+	setcycle 3 word red
+	setcycle 3 weight 1
+	setcycle 3 color yellow
+	setcycle 3 correct_response n
+	setcycle 3 congruity IC
+	setcycle 4 Sz 34
+	setcycle 4 word xxx
+	setcycle 4 weight 2
+	setcycle 4 color yellow
+	setcycle 4 correct_response n
+	setcycle 4 congruity N
+	setcycle 5 Sz 70
+	setcycle 5 word xxx
+	setcycle 5 weight 2
+	setcycle 5 color yellow
+	setcycle 5 correct_response n
+	setcycle 5 congruity N
+	setcycle 6 Sz 33
+	setcycle 6 word yellow
+	setcycle 6 weight 1
+	setcycle 6 color green
+	setcycle 6 correct_response b
+	setcycle 6 congruity IC
+	setcycle 7 Sz 24
+	setcycle 7 word green
+	setcycle 7 weight 2
+	setcycle 7 color green
+	setcycle 7 correct_response b
+	setcycle 7 congruity C
+	setcycle 8 Sz 32
+	setcycle 8 word green
+	setcycle 8 weight 2
+	setcycle 8 color green
+	setcycle 8 correct_response b
+	setcycle 8 congruity C
+	setcycle 9 Sz 44
+	setcycle 9 word red
+	setcycle 9 weight 1
+	setcycle 9 color green
+	setcycle 9 correct_response b
+	setcycle 9 congruity IC
+	setcycle 10 Sz 12
+	setcycle 10 word xxx
+	setcycle 10 weight 2
+	setcycle 10 color green
+	setcycle 10 correct_response b
+	setcycle 10 congruity N
+	setcycle 11 Sz 34
+	setcycle 11 word xxx
+	setcycle 11 weight 2
+	setcycle 11 color green
+	setcycle 11 correct_response b
+	setcycle 11 congruity N
+	setcycle 12 Sz 70
+	setcycle 12 word yellow
+	setcycle 12 weight 1
+	setcycle 12 color red
+	setcycle 12 correct_response v
+	setcycle 12 congruity IC
+	setcycle 13 Sz 33
+	setcycle 13 word green
+	setcycle 13 weight 1
+	setcycle 13 color red
+	setcycle 13 correct_response v
+	setcycle 13 congruity IC
+	setcycle 14 Sz 24
+	setcycle 14 word red
+	setcycle 14 weight 2
+	setcycle 14 color red
+	setcycle 14 correct_response v
+	setcycle 14 congruity C
+	setcycle 15 Sz 32
+	setcycle 15 word red
+	setcycle 15 weight 2
+	setcycle 15 color red
+	setcycle 15 correct_response v
+	setcycle 15 congruity C
+	setcycle 16 Sz 44
+	setcycle 16 word xxx
+	setcycle 16 weight 2
+	setcycle 16 color red
+	setcycle 16 correct_response v
+	setcycle 16 congruity N
+	setcycle 17 Sz 12
+	setcycle 17 word xxx
+	setcycle 17 weight 2
+	setcycle 17 color red
+	setcycle 17 correct_response v
+	setcycle 17 congruity N
+	setcycle 18 Sz ""
+	setcycle 18 word ""
+	setcycle 18 weight ""
+	setcycle 18 color ""
+	setcycle 18 correct_response ""
+	setcycle 18 congruity ""
+	run Trial_sequence
+
+define sketchpad Target1500
+	set reset_variables no
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="[color]" font_bold=no font_family=mono font_italic=no font_size=65 html=yes show_if=always text="[word]" x=0 y=0 z_index=0
+
+define sequence Trial_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run Blank1000 always
+	run Fixation200 always
+	run Blank200 always
+	run Target1500 always
+	run keyboard_response always
+	run logger always
+
+define sketchpad _sketchpad
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run welcome always
+	run Main_practice_loop always
+	run Main_experiment_loop always
+	run Goodbye always
+
+define feedback feedback
+	set reset_variables yes
+	set duration keypress
+	set description "Provides feedback to the participant"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Your average response time was [avg_rt]ms" x=0 y=-96 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Your accuracy was [acc]%" x=0 y=-32 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Press any key to continue" x=0 y=32 z_index=0
+
+define keyboard_response keyboard_response
+	set timeout infinite
+	set flush yes
+	set event_type keypress
+	set duration keypress
+	set description "Collects keyboard responses"
+	set allowed_responses "v;b;n"
+
+define logger logger
+	set description "Logs experimental data"
+	set auto_log yes
+
+define reset_feedback reset_feedback
+	set description "Resets the feedback variables, such as 'avg_rt' and 'acc'"
+
+define sketchpad welcome
+	set start_response_interval no
+	set reset_variables no
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=serif font_italic=no font_size=27 html=yes show_if=always text="Welcome to the experiment!<br /><br />Because of the importance of concentration<br />to the result of this study,<br /><br />we would like to ask you to turn off<br />you phone completely" x=0 y=-224 z_index=0
+	draw textline center=1 color=white font_bold=no font_family=serif font_italic=no font_size=27 html=yes show_if=always text="Please let the experimenter know if:<br /><br />1. You use glasses/contact lenses and they are not here with you<br /><br />2. You take any medication that can affect your alertness<br /><br />3. For some reason you don't feel alert<br /><br />4. You were previously diagnosed with <br />attention deficits and learning disabilities" x=0 y=128 z_index=0
+

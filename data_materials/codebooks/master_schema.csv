@@ -1,0 +1,29 @@
+master_name,level,description,type,values_units,notes
+project,provenance,Project/site folder id (e.g. 19_46) of the dataset the row came from,text,folder name in data_materials/<software>/,Added when combining
+software,provenance,Experiment software used for data collection,categorical,e-prime | jspsych | opensesame | psychopy | qualtrics | superlab,Added when combining
+datatype,provenance,Whether the file is raw output or an already-processed version,categorical,raw | processed,Added when combining
+source_file,provenance,Name of the source file the row came from,text,file name,Added when combining
+subject_id,probe,Participant identifier,text,as recorded by each software (not unique across projects: combine with project),"Ids reused across files within a project are suffixed with the file name (17_25: 5008; 19_46: 38, 141)"
+passage,probe,Passage number (Nelson-Denny passage index),integer,1-8,Some projects used fewer than 8 passages (21_28 max 7)
+difficulty,probe,Passage difficulty label,categorical,Easy | Difficult,Source labels vary (Diff. / Diff / Hard / Difficult) and are recoded
+difficulty_num,probe,Numeric passage difficulty,integer,1 = Difficult; 2 = Easy,E-Prime 'Difficult' is 0/1 and must be recoded
+booklet,probe,Counterbalancing booklet,integer,1 = odd passages difficult / even easy; 2 = odd easy / even difficult,"Raw OpenSesame: from the log; PsychoPy/SuperLab: derived (SuperLab from the Condition 1/2 block, verified against the Easy/Difficult passage text); jsPsych: derived from passage difficulty (matches part_condition); Qualtrics: survey branch, inferred for 19_42"
+set,probe,Which passage set (Set 1 or Set 2) was used,integer,1 | 2,In PsychoPy and SuperLab Set 1 = booklet 1 and Set 2 = booklet 2 (each participant read all passages from one set; Set 2 odd passages use the easy wording). Only filled for those and 21_28
+probe_num,probe,Index of the probe within the passage (1..k); processed Sen_num / Sen_Num / Sentence_Num,integer,1-7,"Rows in the master are one per probed sentence: 27 per participant (7,2,2,4,3,4,2,3 probes in passages 1-8)"
+sentence_num,probe,Line (sentence) number of the probed sentence within the passage,integer,1-N,Raw logs only; processed datasets give probe_num instead
+n_probes_in_passage,probe,Number of mind-wandering probes in the passage,integer,2-7,"Processed: as reported in source (num_Probs, inconsistent in some files); raw: counted"
+passage_sentence_id,probe,Passage_sentence key (e.g. 1_3 = passage 1 sentence 3),text,passage_sentence,
+sentence_text,probe,Text of the sentence shown,text,,Only in raw logs; SuperLab text is truncated by the export
+read_rt_ms,probe,Time spent reading the sentence before pressing to advance,numeric,milliseconds,"Raw, untreated reading time: outlier treatment is decided on the full combined data, so the source files' cleaned columns (RT_out, RTnoOut, RT_wind ...) are not carried into the master. PsychoPy and Qualtrics are logged in seconds and converted to ms (x1000)"
+mw_probe,probe,Mind-wandering probe response for the sentence,integer,0 = not mind wandering (n); 1 = mind wandering (y),NA when no probe followed the sentence; y/n must be recoded to 1/0
+comprehension_item,probe,Identifier of the comprehension question (passage.question),text,,
+comprehension_correct,probe,Whether the comprehension answer was correct,integer,0 = incorrect; 1 = correct,Question k of the passage paired with probe k (as in the processed files). SuperLab and Qualtrics are scored against superlab/superlab_answer_key.csv (Qualtrics text answers matched to the closest option)
+gender,subject,Self-reported gender,categorical,as reported (German values in 18_38 need translation),
+age,subject,Age in years,integer,years,
+native_language,subject,Native language,integer,as coded in source (18_38: 1 or 2),Only 18_38. Coding not documented; 1 is probably German - verify
+test_anxiety,subject,Cognitive Test Anxiety Scale composite,numeric,mean item score,
+implicit_willpower,subject,Implicit willpower (limited-resource belief) composite,numeric,sum of 6 Likert items,
+mindwander_theory,subject,Beliefs about mind wandering composite,numeric,sum of 7 Likert items,
+chronotype,subject,Chronotype composite,numeric,sum of 5 items,
+passage_interest_rating,passage,Participant rating of interest in a passage,numeric,rating scale,Qualtrics 19_53 only - verify
+passage_difficulty_rating,passage,Participant rating of difficulty of a passage,numeric,rating scale,Qualtrics 19_53 only - verify

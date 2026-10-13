@@ -1,0 +1,684 @@
+---
+title: "Data Combination"
+author: "Erin M. Buchanan"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+## Overview
+
+Each dataset in `data_materials/` (one per software x project folder) has its own
+codebook in `data_materials/codebooks/<dataset>_codebook.csv`. Those are created
+(and their profiled columns refreshed) by `make_codebooks.R`; the `description`,
+`mapped_master_name` and `source_notes` columns are hand-edited and preserved.
+
+This document combines the per-dataset codebooks with `master_schema.csv`
+(the harmonised variable names) into `data_materials/master_codebook.xlsx`.
+
+## Libraries
+
+```{r libraries}
+library(tidyverse)
+library(writexl)
+
+cb_dir <- "data_materials/codebooks"
+```
+
+## Read codebooks
+
+```{r read}
+cb_files <- list.files(cb_dir, pattern = "_codebook\\.csv$", full.names = TRUE)
+
+codebooks <- map_df(cb_files, read_csv, col_types = cols(.default = "c")) %>%
+  mutate(
+    software = str_extract(dataset, "^[^_]+"),
+    project = str_remove(dataset, "^[^_]+_"),
+    n_unique = as.integer(n_unique),
+    pct_missing = as.numeric(pct_missing),
+    mapped_master_name = na_if(mapped_master_name, "")
+  ) %>%
+  relocate(software, project, .after = dataset)
+
+schema <- read_csv(file.path(cb_dir, "master_schema.csv"), col_types = cols(.default = "c"))
+```
+
+## Checks
+
+Every mapped name must exist in the master schema, and every schema variable
+(other than the columns added during combining) should be mapped somewhere.
+
+```{r checks}
+added_when_combining <- c("project", "software", "datatype", "source_file")
+
+unknown <- setdiff(na.omit(unique(codebooks$mapped_master_name)), schema$master_name)
+if (length(unknown) > 0) stop("Mapped names not in master_schema.csv: ", paste(unknown, collapse = ", "))
+
+unmapped_schema <- setdiff(schema$master_name, c(added_when_combining, na.omit(unique(codebooks$mapped_master_name))))
+unmapped_schema
+```
+
+## Dataset summary
+
+```{r summary}
+dataset_summary <- codebooks %>%
+  group_by(dataset, software, project) %>%
+  summarise(
+    n_variables = n(),
+    n_empty = sum(type == "empty"),
+    n_mapped = sum(!is.na(mapped_master_name)),
+    n_master_names = n_distinct(mapped_master_name, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+dataset_summary
+```
+
+## Crosswalk: master name by dataset
+
+One row per master variable, one column per dataset. Cells list the source
+variable(s) mapped to the master name. Wide-format Qualtrics datasets have many
+source columns per master variable (one per sentence/probe/question), so those
+cells show the count and the first few names.
+
+```{r crosswalk}
+collapse_vars <- function(x, show = 3) {
+  if (length(x) <= show) paste(x, collapse = "; ")
+  else paste0(paste(head(x, show), collapse = "; "), " ... (", length(x), " columns)")
+}
+
+crosswalk <- codebooks %>%
+  filter(!is.na(mapped_master_name)) %>%
+  group_by(mapped_master_name, dataset) %>%
+  summarise(source = collapse_vars(variable), .groups = "drop") %>%
+  pivot_wider(names_from = dataset, values_from = source) %>%
+  rename(master_name = mapped_master_name)
+
+crosswalk <- schema %>%
+  select(master_name, level, description) %>%
+  left_join(crosswalk, by = "master_name")
+
+crosswalk
+```
+
+## Items to review
+
+Mapped variables whose notes say the description is a draft, inferred, or needs verification.
+
+```{r review}
+to_review <- codebooks %>%
+  filter(!is.na(mapped_master_name),
+         str_detect(source_notes, regex("verify|unverified|inferred|suspected|recode|unknown", ignore_case = TRUE))) %>%
+  select(dataset, variable, mapped_master_name, description, source_notes)
+
+nrow(to_review)
+```
+
+## Write master codebook
+
+```{r write}
+readme <- tibble(
+  sheet = c("master_schema", "crosswalk", "dataset_summary", "all_variables", "to_review"),
+  contents = c(
+    "Harmonised variable names, levels, descriptions, values/units",
+    "Master variable x dataset: which source variable(s) feed each master variable",
+    "Counts of variables and mapped variables per dataset",
+    "Every variable from every per-dataset codebook, stacked",
+    "Mapped variables with draft/inferred descriptions that need a human check"
+  )
+)
+
+write_xlsx(
+  list(readme = readme, master_schema = schema, crosswalk = crosswalk,
+       dataset_summary = dataset_summary, all_variables = codebooks, to_review = to_review),
+  "data_materials/master_codebook.xlsx"
+)
+
+write_csv(codebooks, file.path(cb_dir, "master_codebook_long.csv"), na = "")
+```
+
+## Master data
+
+The master data has one row per **probed sentence**: 27 rows per participant
+(7, 2, 2, 4, 3, 4, 2, 3 probes in passages 1-8). This is the shape of the already
+processed datasets (E-Prime, jsPsych, OpenSesame 17_32 / 18_06 / 18_38 / 21_28). Each row holds the
+reading time of the probed sentence, the mind-wandering answer to the probe, and comprehension
+question *k* of the passage paired with probe *k* (the pairing used by the original processed files;
+questions beyond the number of probes are dropped). The raw OpenSesame, PsychoPy and SuperLab files are
+event logs, and Qualtrics is wide format; both are reshaped to this form below.
+
+```{r master-setup}
+library(haven)
+library(readxl)
+
+dm <- "data_materials"
+
+master_cols <- c(
+  "project", "software", "datatype", "source_file", "subject_id", "passage", "difficulty",
+  "difficulty_num", "booklet", "set", "probe_num", "sentence_num", "n_probes_in_passage",
+  "passage_sentence_id", "sentence_text", "read_rt_ms",
+  "mw_probe", "comprehension_item", "comprehension_correct",
+  "gender", "age", "native_language", "test_anxiety", "implicit_willpower",
+  "mindwander_theory", "chronotype"
+)
+
+recode_difficulty <- function(x) {
+  x <- str_to_lower(as.character(x))
+  case_when(str_detect(x, "^(diff|hard)") ~ "Difficult", str_detect(x, "^easy") ~ "Easy")
+}
+difficulty_num <- function(d) case_when(d == "Difficult" ~ 1L, d == "Easy" ~ 2L)
+# booklet 1: odd passages difficult; booklet 2: odd passages easy
+booklet_from <- function(passage, difficulty) {
+  if_else((passage %% 2 == 1) == (difficulty == "Difficult"), 1L, 2L)
+}
+difficulty_from_booklet <- function(passage, booklet) {
+  if_else((passage %% 2 == 1) == (booklet == 1), "Difficult", "Easy")
+}
+
+finish <- function(d, proj, soft, dtype) {
+  for (m in setdiff(master_cols, names(d))) d[[m]] <- NA
+  d$project <- proj
+  d$software <- soft
+  d$datatype <- dtype
+  d %>%
+    mutate(subject_id = as.character(subject_id)) %>%
+    select(all_of(master_cols))
+}
+```
+
+## Processed datasets
+
+```{r master-processed}
+# E-Prime (Level 1 has the trials, Level 2 the test anxiety score)
+ep1 <- read_sav(file.path(dm, "e_prime/19_32/Feng replication - Level 1.sav")) %>% zap_labels()
+ep2 <- read_sav(file.path(dm, "e_prime/19_32/Feng replication - Level 2.sav")) %>% zap_labels() %>%
+  distinct(Subject, .keep_all = TRUE)
+
+m_eprime <- ep1 %>%
+  left_join(ep2, by = "Subject") %>%
+  transmute(
+    source_file = "Feng replication - Level 1.sav",
+    subject_id = Subject, passage = Passages,
+    difficulty = recode_difficulty(Condition), difficulty_num = difficulty_num(difficulty),
+    booklet = Booklet, probe_num = Sen_num, n_probes_in_passage = num_Probs,
+    read_rt_ms = RT, mw_probe = MW,
+    comprehension_correct = Com_Score, test_anxiety = Test_Anx
+  ) %>%
+  finish("19_32", "e-prime", "processed")
+
+# jsPsych: QuestionNum is passage.probe (e.g. 1.3)
+js <- read_csv(file.path(dm, "jsPsych/20_46/FengReplicationResults_Dec2020.csv"), show_col_types = FALSE) %>%
+  mutate(difficulty = recode_difficulty(trial_difficulty),
+         booklet_derived = booklet_from(Passages, difficulty))
+
+# check: does part_condition line up with the booklet implied by the passage difficulty?
+table(js$part_condition, js$booklet_derived)
+
+m_jspsych <- js %>%
+  transmute(
+    source_file = "FengReplicationResults_Dec2020.csv",
+    subject_id = Subject, passage = Passages, difficulty, difficulty_num = difficulty_num(difficulty),
+    booklet = booklet_derived, probe_num = as.integer(round((QuestionNum - Passages) * 10)),
+    read_rt_ms = RT,
+    mw_probe = MW, comprehension_item = as.character(QuestionNum), comprehension_correct = answers,
+    gender = Gender, implicit_willpower = ImplicitWP, mindwander_theory = MindwanderTheory,
+    chronotype = Chronotype
+  ) %>%
+  finish("20_46", "jspsych", "processed")
+
+# OpenSesame processed files
+m_os_1732 <- read_csv(file.path(dm, "open_sesame/17_32/FENG.MASTER.R.csv"), show_col_types = FALSE) %>%
+  transmute(
+    source_file = "FENG.MASTER.R.csv", subject_id = Subject, passage = Passages,
+    difficulty = recode_difficulty(Condition), difficulty_num = Condition_Num, booklet = Booklet,
+    probe_num = Sen_num, n_probes_in_passage = num_Probs, passage_sentence_id = Passages_Sen_num,
+    read_rt_ms = RT, mw_probe = MW,
+    comprehension_correct = Com_Score
+  ) %>%
+  finish("17_32", "opensesame", "processed")
+
+m_os_1806 <- read_excel(file.path(dm, "open_sesame/18_06/Feng.Data.xlsx")) %>%
+  transmute(
+    source_file = "Feng.Data.xlsx", subject_id = Subject, passage = Passages,
+    difficulty = recode_difficulty(Condition), difficulty_num = Condition_Num, booklet = Booklet,
+    probe_num = Sen_Num, n_probes_in_passage = Num_Probs, passage_sentence_id = Passages_Sen_Num,
+    read_rt_ms = RT, mw_probe = as.integer(MW == "y"),
+    comprehension_correct = Com_Score
+  ) %>%
+  finish("18_06", "opensesame", "processed")
+
+m_os_1838 <- read_excel(file.path(dm, "open_sesame/18_38/Feng replication_Data.xlsx")) %>%
+  transmute(
+    source_file = "Feng replication_Data.xlsx", subject_id = Subject, passage = Passages,
+    difficulty = recode_difficulty(Condition), difficulty_num = Condition_Num, booklet = Booklet,
+    probe_num = Sen_Num, n_probes_in_passage = Num_Probs, passage_sentence_id = Passages_Sen_Num,
+    read_rt_ms = RT, mw_probe = MW,
+    comprehension_correct = Com_Score,
+    gender = recode(Gender, "männlich" = "male", "weiblich" = "female", "divers" = "other"),
+    age = Age, native_language = Muttersprache
+  ) %>%
+  finish("18_38", "opensesame", "processed")
+
+m_os_2128 <- read_csv(file.path(dm, "open_sesame/21_28/FengDatasetUpdated.csv"), show_col_types = FALSE) %>%
+  transmute(
+    source_file = "FengDatasetUpdated.csv", subject_id = ID, set = Set, passage = Passage,
+    difficulty = recode_difficulty(Condition), difficulty_num = Condition_Num,
+    booklet = booklet_from(Passage, difficulty), probe_num = Sentence_Num,
+    n_probes_in_passage = Num_Probs, passage_sentence_id = as.character(Passages_Sen_Num),
+    read_rt_ms = rt, mw_probe = MW_mean,
+    comprehension_correct = correct_mean
+  ) %>%
+  finish("21_28", "opensesame", "processed")
+
+master_processed <- bind_rows(m_eprime, m_jspsych, m_os_1732, m_os_1806, m_os_1838, m_os_2128)
+```
+
+## Raw OpenSesame
+
+Each file is an event log: sentence rows (`response == "space"`), probe rows (`response` is y/n)
+and comprehension rows (`response` is a-e with `correct` 0/1). A probe row belongs to the sentence
+row directly before it. Some files are a stripped-down export with only 7 columns (no `subject_nr`,
+`line`, `line_text`), so participant ids fall back to the file name and only fields present are used.
+
+```{r master-os}
+os_reshape <- function(d, sid) {
+  for (m in c("line", "line_text", "condition", "booklet", "Condition_Num", "correct", "passage")) {
+    if (!m %in% names(d)) d[[m]] <- NA_character_
+  }
+  d <- d %>%
+    mutate(.row = row_number(), passage = suppressWarnings(as.integer(passage)),
+           response_time = suppressWarnings(as.numeric(response_time)))
+
+  sent <- d %>% filter(response == "space", !is.na(passage))
+  probes <- d %>% filter(response %in% c("y", "n"), !is.na(passage))
+  if (nrow(probes) == 0 || nrow(sent) == 0) return(NULL)
+
+  idx <- findInterval(probes$.row, sent$.row)
+  keep <- idx > 0
+  probes <- probes[keep, ]
+  s <- sent[idx[keep], ]
+
+  out <- tibble(
+    subject_id = sid,
+    passage = s$passage,
+    difficulty = coalesce(case_when(s$Condition_Num == "1" ~ "Difficult", s$Condition_Num == "2" ~ "Easy"),
+                          recode_difficulty(s$condition)),
+    booklet = suppressWarnings(as.integer(s$booklet)),
+    sentence_num = suppressWarnings(as.integer(s$line)),
+    sentence_text = s$line_text,
+    read_rt_ms = s$response_time,
+    mw_probe = as.integer(probes$response == "y")
+  ) %>%
+    group_by(passage) %>%
+    mutate(probe_num = row_number(), n_probes_in_passage = n()) %>%
+    ungroup() %>%
+    mutate(difficulty_num = difficulty_num(difficulty),
+           booklet = coalesce(booklet, booklet_from(passage, difficulty)))
+
+  comp <- d %>%
+    filter(response %in% letters[1:5], correct %in% c("0", "1"), !is.na(passage)) %>%
+    group_by(passage) %>%
+    mutate(probe_num = row_number()) %>%
+    ungroup() %>%
+    transmute(passage, probe_num, comprehension_correct = as.integer(correct))
+
+  out %>%
+    left_join(comp, by = c("passage", "probe_num")) %>%
+    mutate(comprehension_item = if_else(!is.na(comprehension_correct), paste0(passage, ".", probe_num), NA_character_))
+}
+
+os_participant_id <- function(d, path) {
+  id <- NULL
+  for (col in c("Subject", "subject_nr")) {
+    if (col %in% names(d) && any(!is.na(d[[col]]))) { id <- d[[col]]; break }
+  }
+  if (is.null(id)) id <- rep(str_extract(basename(path), "\\d+"), nrow(d))
+  id
+}
+
+os_file <- function(path) {
+  if (file.size(path) == 0) return(NULL)
+  d <- read_csv(path, col_types = cols(.default = "c"), show_col_types = FALSE)
+  if (nrow(d) == 0 || !"response" %in% names(d)) return(NULL)
+  d$.sid <- os_participant_id(d, path)
+  d %>%
+    filter(!is.na(.sid)) %>%
+    group_split(.sid) %>%
+    map_df(~ os_reshape(.x, .x$.sid[1])) %>%
+    mutate(source_file = basename(path))
+}
+
+os_raw_dirs <- c("17_25", "17_28", "19_08", "19_23", "19_46")
+
+m_os_raw <- map_df(os_raw_dirs, function(p) {
+  files <- list.files(file.path(dm, "open_sesame", p), pattern = "\\.csv$", full.names = TRUE)
+  map_df(files, os_file) %>% finish(p, "opensesame", "raw")
+})
+
+# 19_41 is the same raw log format with the participants already stacked in one file
+m_os_1941 <- os_file(file.path(dm, "open_sesame/19_41/Masterdata.csv")) %>%
+  finish("19_41", "opensesame", "raw")
+```
+
+## Raw PsychoPy
+
+One row per sentence; for probed sentences (`probe == 1`) the probe answer is in the same row
+(`probe_resp.keys`). Reading times are in seconds. PsychoPy has no booklet field, so it is derived
+from the passage difficulty.
+
+```{r master-psychopy}
+psychopy_file <- function(path, set_n) {
+  d <- read_csv(path, col_types = cols(.default = "c"), show_col_types = FALSE)
+  if (!"probe_resp.keys" %in% names(d)) return(NULL)
+  sid <- d$participant[1]
+
+  probes <- d %>%
+    filter(probe == "1", !is.na(`probe_resp.keys`)) %>%
+    transmute(
+      subject_id = sid, passage = as.integer(passage),
+      difficulty = recode_difficulty(condition),
+      sentence_num = as.integer(line), sentence_text = line_text,
+      read_rt_ms = as.numeric(`sentence_resp.rt`) * 1000,
+      mw_probe = as.integer(`probe_resp.keys` == "y")
+    ) %>%
+    group_by(passage) %>%
+    mutate(probe_num = row_number(), n_probes_in_passage = n()) %>%
+    ungroup() %>%
+    mutate(difficulty_num = difficulty_num(difficulty), booklet = booklet_from(passage, difficulty), set = set_n)
+
+  comp <- d %>%
+    filter(!is.na(`comprehension_resp.keys`), !is.na(`comprehension_resp.corr`)) %>%
+    mutate(passage = as.integer(passage)) %>%
+    group_by(passage) %>%
+    mutate(probe_num = row_number()) %>%
+    ungroup() %>%
+    transmute(passage, probe_num, comprehension_correct = as.integer(`comprehension_resp.corr`))
+
+  probes %>%
+    left_join(comp, by = c("passage", "probe_num")) %>%
+    mutate(comprehension_item = if_else(!is.na(comprehension_correct), paste0(passage, ".", probe_num), NA_character_),
+           source_file = basename(path))
+}
+
+m_psychopy <- map_df(c(1, 2), function(s) {
+  files <- list.files(file.path(dm, "psychopy/20_26", paste0("Set", s)), pattern = "\\.csv$", full.names = TRUE)
+  map_df(files, psychopy_file, set_n = s)
+}) %>%
+  finish("20_26", "psychopy", "raw")
+```
+
+## Raw SuperLab
+
+SuperLab events are messy: event names carry typos, and the Trial column mislabels some passages. The
+passage (and set) of each sentence/probe is taken from the comprehension block that follows it (the
+question events are looked up in `superlab_answer_key.csv`), and comprehension correctness is scored
+against that key. Booklet is taken from the `Block` name (Condition 1 / Condition 2), which is an
+assumption that is checked below.
+
+```{r master-superlab}
+sl_key <- read_csv(file.path(dm, "superlab/superlab_answer_key.csv"), col_types = cols(.default = "c"))
+
+superlab_file <- function(path) {
+  d <- read_sav(path) %>% zap_labels() %>% mutate(across(everything(), as.character))
+  d <- d %>% mutate(.row = row_number(), V12 = suppressWarnings(as.numeric(V12)))
+
+  q <- d %>%
+    inner_join(sl_key, by = c("Event" = "event")) %>%
+    mutate(passage = as.integer(passage), question = as.integer(question))
+
+  # passage/set of any row = passage/set of the next question block
+  block_rows <- q %>% group_by(passage, set) %>% summarise(first_row = min(.row), last_row = max(.row), .groups = "drop") %>%
+    arrange(first_row)
+  nxt <- findInterval(d$.row, block_rows$last_row, left.open = TRUE) + 1
+  d$passage <- block_rows$passage[nxt]
+  d$set <- as.integer(block_rows$set[nxt])
+
+  is_prompt <- str_detect(d$Event, regex("mind wandering", ignore_case = TRUE))  # probe prompt screens
+  is_intro <- str_detect(d$Event, regex("intro|this (is )?passage|passage [0-9.]+ intro", ignore_case = TRUE))
+  sent <- d %>% filter(Participant == "space", !is.na(passage), !is_prompt, !is_intro, !.row %in% q$.row)
+  # y/n key presses on intro screens (e.g. "Passage 1.2 Intro Set 2") are stray presses, not probes
+  # a y/n press on a sentence event is a wrong key (Reaction == "E"), not a probe answer;
+  # a valid probe answer is logged C, or SC when it follows a wrong key on the same event
+  probes <- d %>% filter(Participant %in% c("Yes - press y", "No - press n"), Reaction %in% c("C", "SC"),
+                         !is.na(passage), !is_intro)
+  if (nrow(probes) == 0) return(NULL)
+
+  idx <- findInterval(probes$.row, sent$.row)
+  keep <- idx > 0
+  probes <- probes[keep, ]
+  s <- sent[idx[keep], ]
+
+  block <- d$Block[1]
+  booklet <- case_when(str_detect(block, "1") ~ 1L, str_detect(block, "2") ~ 2L)
+
+  out <- tibble(
+    subject_id = str_extract(d$Participant_A[1], "\\d+"),
+    passage = probes$passage, set = probes$set,
+    booklet = booklet,
+    sentence_num = as.integer(str_match(s$Event, "\\((\\d+),")[, 2]),
+    sentence_text = str_trim(str_replace(s$Event, "^.*?\\(\\d+,\\s*", "")),
+    read_rt_ms = s$V12,
+    mw_probe = as.integer(probes$Participant == "Yes - press y")
+  ) %>%
+    mutate(difficulty = difficulty_from_booklet(passage, booklet),
+           difficulty_num = difficulty_num(difficulty)) %>%
+    group_by(passage) %>%
+    mutate(probe_num = row_number(), n_probes_in_passage = n()) %>%
+    ungroup()
+
+  comp <- q %>%
+    filter(Participant %in% c(letters[1:5], "E")) %>%
+    mutate(comprehension_correct = as.integer(str_to_lower(Participant) == correct_key)) %>%
+    group_by(passage) %>%
+    mutate(probe_num = row_number()) %>%
+    ungroup() %>%
+    select(passage, probe_num, comprehension_correct)
+
+  out %>%
+    left_join(comp, by = c("passage", "probe_num")) %>%
+    mutate(comprehension_item = if_else(!is.na(comprehension_correct), paste0(passage, ".", probe_num), NA_character_),
+           source_file = basename(path))
+}
+
+m_superlab <- list.files(file.path(dm, "superlab/17_03"), pattern = "\\.sav$", full.names = TRUE) %>%
+  map_df(superlab_file) %>%
+  finish("17_03", "superlab", "raw")
+
+# the Block -> booklet assumption: Participant_B should agree with it
+sl_check <- list.files(file.path(dm, "superlab/17_03"), pattern = "\\.sav$", full.names = TRUE) %>%
+  map_df(~ read_sav(.x) %>% zap_labels() %>% mutate(across(everything(), as.character)) %>% slice(1) %>% select(Participant_B, Block))
+table(sl_check$Participant_B, sl_check$Block)
+```
+
+## Raw Qualtrics
+
+Qualtrics exports one row per respondent with a column per sentence page, probe and question. The
+columns are read in file order, which follows the survey flow within a booklet:
+
+* **Probes:** the respondent's answered probe columns (`mw_probe` in the codebooks) are split into passages with the
+  design counts 7, 2, 2, 4, 3, 4, 2, 3. The probed sentence's reading time is the page timer (`Q#_Page Submit`,
+  seconds, converted to ms) of the sentence page before the probe. In 19_42 and 19_53 the probe page has its own
+  timer (the time spent answering), so the sentence page is the second timer back; in 19_01 the probe page has no
+  timer, so it is the last one (checked in the survey definitions).
+* **Comprehension:** the answered comprehension columns are grouped by passage (labelled in the codebooks), and
+  question *k* is paired with probe *k*. Answers are scored against `superlab/superlab_answer_key.csv`. 19_42 stores the
+  option letter; 19_01 and 19_53 store only the option text, which is matched to the closest option of that question
+  (taken from the OpenSesame logs).
+* **Booklet** comes from which branch of the survey the respondent was in (the first probe column they answered).
+  For 19_01 and 19_53 this was read from the survey definitions (`.qsf`). 19_42 is a translated copy whose question
+  numbers do not match its `.qsf`, so its two branches were identified from the number of sentence pages: the
+  longer branch (more easy-version sentences) is booklet 2. **This is an inference.**
+* Probe answers are Yes/No (Igen/Nem in Hungarian). Survey previews (test responses) are dropped. There is no
+  participant number, so `subject_id` is `ResponseId` (19_42, 19_53) or `id` (19_01, row number when `id` is empty).
+
+```{r master-qualtrics}
+# option text and keyed answer for every comprehension question, from the OpenSesame logs
+passage_number <- function(x) {
+  case_when(str_detect(x, "Browning") ~ 1L, str_detect(x, "Economic") ~ 2L,
+            str_detect(x, "Sea Water|Atomic") ~ 3L, str_detect(x, "Mars") ~ 4L,
+            str_detect(x, "Fungus") ~ 5L, str_detect(x, "Colonial|Government") ~ 6L,
+            str_detect(x, "Caravaggio") ~ 7L, str_detect(x, "Research|Smoking") ~ 8L)
+}
+norm_text <- function(x) str_replace_all(str_to_lower(x), "[^a-z0-9]", "")
+
+comp_options <- list.files(file.path(dm, "open_sesame/19_08"), pattern = "\\.csv$", full.names = TRUE) %>%
+  map_df(~ read_csv(.x, col_types = cols(.default = "c"), show_col_types = FALSE) %>%
+           filter(comprehension_q == "y", !is.na(correct_response)) %>%
+           select(passage, line_text, correct_response)) %>%
+  mutate(question = as.integer(str_match(line_text, "^\\s*(\\d+)\\.")[, 2]), passage = as.integer(passage)) %>%
+  count(passage, question, line_text, correct_response) %>%
+  group_by(passage, question) %>% slice_max(n, n = 1, with_ties = FALSE) %>% ungroup() %>%
+  mutate(options = map(line_text, function(t) {
+    parts <- str_split(t, "<br/>")[[1]]
+    opt <- str_match(parts, "^\\s*([a-e])\\.\\s+(.*)$")
+    tibble(letter = opt[, 2], text = opt[, 3]) %>% filter(!is.na(letter))
+  })) %>%
+  select(passage, question, key = correct_response, options)
+
+letter_from_text <- function(answer, passage, question) {
+  opts <- comp_options$options[comp_options$passage == passage & comp_options$question == question][[1]]
+  d <- adist(norm_text(answer), norm_text(opts$text))[1, ] / pmax(nchar(norm_text(opts$text)), nchar(norm_text(answer)), 1)
+  if (min(d) <= 0.25) opts$letter[which.min(d)] else NA_character_
+}
+
+read_qualtrics_wide <- function(path) {
+  raw <- read_csv(path, col_names = FALSE, col_types = cols(.default = "c"), show_col_types = FALSE)
+  nm <- unlist(raw[1, ])
+  nm[is.na(nm) | nm == ""] <- paste0("unnamed_col_", which(is.na(nm) | nm == ""))
+  d <- raw[-(1:3), ]                      # rows 2-3 are question text and ImportId
+  names(d) <- make.unique(nm)
+  d
+}
+
+probes_per_passage <- c(7, 2, 2, 4, 3, 4, 2, 3)
+
+qualtrics_reshape <- function(ds, path, branch_booklet, rt_offset) {
+  cb <- read_csv(file.path(cb_dir, paste0("qualtrics_", ds, "_codebook.csv")), col_types = cols(.default = "c"))
+  d <- read_qualtrics_wide(path)
+  if ("Status" %in% names(d)) d <- d %>% filter(Status != "Survey Preview")
+  pos <- setNames(seq_along(names(d)), names(d))
+
+  mw_cols <- cb$variable[cb$mapped_master_name %in% "mw_probe"]
+  rt_cols <- cb$variable[cb$mapped_master_name %in% "read_rt_ms"]
+  comp_cb <- cb %>% filter(mapped_master_name %in% "comprehension_correct") %>%
+    mutate(passage = passage_number(str_match(source_notes, "passage=([^;]*)")[, 2]))
+
+  answered <- function(r, cols) cols[!is.na(unlist(r[cols])) & str_trim(unlist(r[cols])) != ""]
+
+  map_df(seq_len(nrow(d)), function(i) {
+    r <- d[i, ]
+    am <- answered(r, mw_cols)
+    if (length(am) == 0) return(NULL)
+    am <- am[seq_len(min(length(am), sum(probes_per_passage)))]
+    ar <- answered(r, rt_cols)
+    idx <- findInterval(pos[am], pos[ar]) - (rt_offset - 1)
+    rt <- ifelse(idx > 0, suppressWarnings(as.numeric(unlist(r[ar[pmax(idx, 1)]]))) * 1000, NA_real_)
+
+    probes <- tibble(passage = rep(1:8, times = probes_per_passage)[seq_along(am)],
+                     answer = unlist(r[am]), read_rt_ms = rt) %>%
+      group_by(passage) %>% mutate(probe_num = row_number(), n_probes_in_passage = n()) %>% ungroup() %>%
+      mutate(mw_probe = case_when(answer %in% c("Yes", "Igen") ~ 1L, answer %in% c("No", "Nem") ~ 0L))
+
+    ac <- answered(r, comp_cb$variable)
+    comp <- if (length(ac) == 0) {
+      tibble(passage = integer(), probe_num = integer(), comprehension_correct = integer())
+    } else tibble(variable = ac, answer = unlist(r[ac])) %>%
+      left_join(comp_cb %>% select(variable, passage), by = "variable") %>%
+      group_by(passage) %>% mutate(probe_num = row_number()) %>% ungroup() %>%
+      rowwise() %>%
+      mutate(letter = if (str_detect(answer, "^[a-eA-E]\\.")) str_to_lower(str_sub(answer, 1, 1)) else
+        tryCatch(letter_from_text(answer, passage, probe_num), error = function(e) NA_character_)) %>%
+      ungroup() %>%
+      left_join(comp_options %>% select(passage, question, key), by = c("passage", "probe_num" = "question")) %>%
+      transmute(passage, probe_num, comprehension_correct = as.integer(letter == key))
+
+    id <- if ("ResponseId" %in% names(d)) r$ResponseId else if (!is.na(r$id) && r$id != "") r$id else paste0("row", i)
+    booklet <- unname(branch_booklet[am[1]])
+    probes %>%
+      left_join(comp, by = c("passage", "probe_num")) %>%
+      mutate(subject_id = id, booklet = booklet,
+             difficulty = difficulty_from_booklet(passage, booklet), difficulty_num = difficulty_num(difficulty),
+             comprehension_item = if_else(!is.na(comprehension_correct), paste0(passage, ".", probe_num), NA_character_),
+             source_file = basename(path))
+  })
+}
+
+m_qualtrics <- bind_rows(
+  qualtrics_reshape("19_01", file.path(dm, "qualtrics/19_01/Replication_Data.csv"), c(Q12 = 1L, Q227 = 2L), rt_offset = 1) %>%
+    finish("19_01", "qualtrics", "raw"),
+  qualtrics_reshape("19_42", file.path(dm, "qualtrics/19_42/feng_data.txt"), c(Q13 = 1L, Q376 = 2L), rt_offset = 2) %>%
+    finish("19_42", "qualtrics", "raw"),
+  qualtrics_reshape("19_53", file.path(dm, "qualtrics/19_53/Widman & Herion_Raw Data.csv"), c(Q227 = 1L, Q11 = 2L), rt_offset = 2) %>%
+    finish("19_53", "qualtrics", "raw")
+)
+```
+
+## Combine
+
+```{r master-combine}
+master_data <- bind_rows(master_processed, m_os_raw, m_os_1941, m_psychopy, m_superlab, m_qualtrics) %>%
+  mutate(mw_probe = as.integer(mw_probe), comprehension_correct = as.integer(comprehension_correct))
+
+# a few raw projects reuse a participant id across files (e.g. subject-141.csv and subject-141b.csv
+# are separate sessions with different data): make those ids unique by adding the file name
+reused_ids <- master_data %>%
+  distinct(project, subject_id, source_file) %>%
+  count(project, subject_id) %>%
+  filter(n > 1)
+
+master_data <- master_data %>%
+  left_join(reused_ids %>% mutate(reused = TRUE), by = c("project", "subject_id")) %>%
+  mutate(subject_id = if_else(!is.na(reused), paste0(subject_id, "_", str_remove(source_file, "\\.(csv|sav)$")), subject_id)) %>%
+  select(-n, -reused)
+
+reused_ids
+
+write_csv(master_data, file.path(dm, "master_data.csv"), na = "")
+dim(master_data)
+```
+
+## Checks on the master data
+
+Rows per participant: complete participants have 27 probe rows (26 in jsPsych; 21-23 in 21_28
+which only has seven passages).
+
+```{r master-checks}
+master_data %>%
+  count(project, software, datatype, subject_id, name = "rows") %>%
+  count(project, software, datatype, rows) %>%
+  pivot_wider(names_from = rows, values_from = n, values_fill = 0) %>%
+  arrange(project)
+```
+
+Reading time and mind wandering by difficulty (difficult passages should be slower and show
+more mind wandering if difficulty was assigned correctly):
+
+```{r master-checks-difficulty}
+master_data %>%
+  group_by(project, software, datatype, difficulty) %>%
+  summarise(subjects = n_distinct(subject_id), mean_rt_ms = round(mean(read_rt_ms, na.rm = TRUE)),
+            mw_rate = round(mean(mw_probe, na.rm = TRUE), 3),
+            comp_accuracy = round(mean(comprehension_correct, na.rm = TRUE), 3), .groups = "drop") %>%
+  arrange(project, difficulty)
+```
+
+Participants that do not have the expected number of rows (partial sessions, or extra probe events in
+SuperLab). Complete participants have 27 rows; SuperLab Set 2 has 28 because passage 7 has three probes.
+
+```{r master-checks-incomplete}
+expected_rows <- master_data %>%
+  count(project, software, datatype, subject_id, set, name = "rows") %>%
+  group_by(project) %>%
+  mutate(expected = case_when(project == "17_03" & set == 2 ~ 28L,
+                              project == "20_46" ~ 26L,
+                              project == "21_28" ~ NA_integer_,
+                              TRUE ~ 27L)) %>%
+  ungroup()
+
+expected_rows %>%
+  filter(!is.na(expected), rows != expected) %>%
+  count(project, software, name = "participants_off_expected")
+```

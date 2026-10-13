@@ -1,0 +1,212 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+opensesame_17_28,Condition_Num,"Numeric difficulty of the passage: 1 = Difficult, 2 = Easy (populated on sentence rows only)",categorical (text),2 | 1 | ,3,0,difficulty_num,inferred from data values; verify
+opensesame_17_28,acc,Running comprehension accuracy (%); duplicate of accuracy,numeric,range 10.6667 to 100,1151,0,,inferred from data values; verify
+opensesame_17_28,accuracy,Running comprehension accuracy (%),numeric,range 10.6667 to 100,1151,0,,inferred from data values; verify
+opensesame_17_28,average_response_time,Running mean response time (ms); duplicate of avg_rt,numeric,range 2379 to 207370,4516,0,,inferred from data values; verify
+opensesame_17_28,avg_rt,Running mean response time (ms),numeric,range 2379 to 207370,4516,0,,inferred from data values; verify
+opensesame_17_28,background,Display background colour,categorical (text),white,1,0,,system/logging variable
+opensesame_17_28,bidi,Right-to-left text setting,categorical (text),no,1,0,,system/logging variable
+opensesame_17_28,booklet,Counterbalancing booklet: 1 = odd passages difficult / even easy; 2 = vice versa. Only populated on passage rows,categorical (text),2 | 1 | ,3,0,booklet,draft from data_combination.xlsx; unverified
+opensesame_17_28,booklet_assign,Booklet assignment made by the experiment flow (duplicate of booklet),integer,1 | 2,2,0,,draft from data_combination.xlsx; unverified
+opensesame_17_28,canvas_backend,Drawing back-end,categorical (text),xpyriment,1,0,,system/logging variable
+opensesame_17_28,clock_backend,Clock back-end,categorical (text),legacy,1,0,,system/logging variable
+opensesame_17_28,color_backend,Colour back-end,categorical (text),legacy,1,0,,system/logging variable
+opensesame_17_28,compensation,OpenSesame 'compensation' setting (OSWeb),integer,0,1,0,,system/logging variable
+opensesame_17_28,comprehension_q,y/n flag: row is a comprehension question,categorical (text),n | y | ,3,0,,inferred from data values; verify
+opensesame_17_28,condition,Passage difficulty label (Easy / Diff.),categorical (text),Easy | Diff. | ,3,0,difficulty,draft from data_combination.xlsx; unverified
+opensesame_17_28,coordinates,Coordinate system setting,categorical (text),uniform,1,0,,system/logging variable
+opensesame_17_28,correct,Correctness of current response: 1/0 on comprehension rows; 'undefined' for sentence and probe rows,categorical (text),0 | undefined | 1,3,0,comprehension_correct,inferred from data values; verify; comprehension rows only
+opensesame_17_28,correct_Instr_1_response,Correctness field of item 'Instr 1 response' (carried forward),integer,1,1,0,,system/logging variable
+opensesame_17_28,correct_Instr_1_response_1,Correctness field of item 'Instr 1 response 1' (carried forward),categorical (text),0 | NA | undefined,3,0,,system/logging variable
+opensesame_17_28,correct_Instr_1_response_1_1,Correctness field of item 'Instr 1 response 1 1' (carried forward),categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,correct_comprehension_response,Correctness (1/0) of the last comprehension answer; carried forward,categorical (text),0 | 1 | NA,3,0,comprehension_correct,inferred from data values; verify
+opensesame_17_28,correct_passage_response,Correctness field of the sentence item; not meaningful,categorical (text),0 | undefined,2,0,,inferred from data values; verify
+opensesame_17_28,correct_probe_response,Correctness field of the probe item (0/undefined); not meaningful,categorical (text),0 | undefined | NA,3,0,,inferred from data values; verify
+opensesame_17_28,correct_response,Keyed correct answer (a-e) for the current comprehension question,categorical (text),d | NA | e | a,6,0,,inferred from data values; verify
+opensesame_17_28,count_Booklet_Assignment,OpenSesame counter: number of times item 'Booklet Assignment' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Comprehension,OpenSesame counter: number of times item 'Comprehension' has run,text,NA | 23 | 15 | 27,37,0,,system/logging variable
+opensesame_17_28,count_End_of_Experiment,OpenSesame counter: number of times item 'End of Experiment' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_End_of_Experiment_Inst,OpenSesame counter: number of times item 'End of Experiment Inst' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Instr_1_response,OpenSesame counter: number of times item 'Instr 1 response' has run,integer,5,1,0,,system/logging variable
+opensesame_17_28,count_Instr_1_response_1,OpenSesame counter: number of times item 'Instr 1 response 1' has run,categorical (text),NA | 0 | 4 | 2,9,0,,system/logging variable
+opensesame_17_28,count_Instr_1_response_1_1,OpenSesame counter: number of times item 'Instr 1 response 1 1' has run,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,count_Instruction1,OpenSesame counter: number of times item 'Instruction1' has run,integer,5,1,0,,system/logging variable
+opensesame_17_28,count_Instruction1_1,OpenSesame counter: number of times item 'Instruction1 1' has run,categorical (text),NA | 0 | 4 | 2,9,0,,system/logging variable
+opensesame_17_28,count_Instruction1_1_1,OpenSesame counter: number of times item 'Instruction1 1 1' has run,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,count_Instructions,OpenSesame counter: number of times item 'Instructions' has run,integer,5,1,0,,system/logging variable
+opensesame_17_28,count_Instructions_1,OpenSesame counter: number of times item 'Instructions 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Instructions_2,OpenSesame counter: number of times item 'Instructions 2' has run,categorical (text),NA | 0 | 4 | 2,9,0,,system/logging variable
+opensesame_17_28,count_Instructions_2_1,OpenSesame counter: number of times item 'Instructions 2 1' has run,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,count_P1_Comprehension_Instructions,OpenSesame counter: number of times item 'P1 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P2_Comprehension_Instructions,OpenSesame counter: number of times item 'P2 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P3_Comprehension_Instructions,OpenSesame counter: number of times item 'P3 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P4_Comprehension_Instructions,OpenSesame counter: number of times item 'P4 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P5_Comprehension_Instructions,OpenSesame counter: number of times item 'P5 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P6_Comprehension_Instructions,OpenSesame counter: number of times item 'P6 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P7_Comprehension_Instructions,OpenSesame counter: number of times item 'P7 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_P8_Comprehension_Instructions,OpenSesame counter: number of times item 'P8 Comprehension Instructions' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage,OpenSesame counter: number of times item 'Passage' has run,integer,range 0 to 147,148,0,,system/logging variable
+opensesame_17_28,count_Passage_1,OpenSesame counter: number of times item 'Passage 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_1_Booklet_1,OpenSesame counter: number of times item 'Passage 1 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_1_Booklet_2,OpenSesame counter: number of times item 'Passage 1 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_1_Comprehension,OpenSesame counter: number of times item 'Passage 1 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_2,OpenSesame counter: number of times item 'Passage 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_2_Booklet_1,OpenSesame counter: number of times item 'Passage 2 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_2_Booklet_2,OpenSesame counter: number of times item 'Passage 2 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_2_Comprehension,OpenSesame counter: number of times item 'Passage 2 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_3,OpenSesame counter: number of times item 'Passage 3' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_3_Booklet_1,OpenSesame counter: number of times item 'Passage 3 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_3_Booklet_2,OpenSesame counter: number of times item 'Passage 3 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_3_Comprehension,OpenSesame counter: number of times item 'Passage 3 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_4,OpenSesame counter: number of times item 'Passage 4' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_4_Booklet_1,OpenSesame counter: number of times item 'Passage 4 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_4_Booklet_2,OpenSesame counter: number of times item 'Passage 4 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_4_Comprehension,OpenSesame counter: number of times item 'Passage 4 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_5,OpenSesame counter: number of times item 'Passage 5' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_5_Booklet_1,OpenSesame counter: number of times item 'Passage 5 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_5_Booklet_2,OpenSesame counter: number of times item 'Passage 5 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_5_Comprehension,OpenSesame counter: number of times item 'Passage 5 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_6,OpenSesame counter: number of times item 'Passage 6' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_6_Booklet_1,OpenSesame counter: number of times item 'Passage 6 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_6_Booklet_2,OpenSesame counter: number of times item 'Passage 6 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_6_Comprehension,OpenSesame counter: number of times item 'Passage 6 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_7,OpenSesame counter: number of times item 'Passage 7' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_7_Booklet_1,OpenSesame counter: number of times item 'Passage 7 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_7_Booklet_2,OpenSesame counter: number of times item 'Passage 7 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_7_Comprehension,OpenSesame counter: number of times item 'Passage 7 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_8,OpenSesame counter: number of times item 'Passage 8' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_8_Booklet_1,OpenSesame counter: number of times item 'Passage 8 Booklet 1' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_8_Booklet_2,OpenSesame counter: number of times item 'Passage 8 Booklet 2' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_8_Comprehension,OpenSesame counter: number of times item 'Passage 8 Comprehension' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_Passage_Comprehension,OpenSesame counter: number of times item 'Passage Comprehension' has run,text,NA | 23 | 15 | 27,37,0,,system/logging variable
+opensesame_17_28,count_Passage_sequence,OpenSesame counter: number of times item 'Passage sequence' has run,integer,range 0 to 147,148,0,,system/logging variable
+opensesame_17_28,count_Probe,OpenSesame counter: number of times item 'Probe' has run,integer,range 0 to 147,148,0,,system/logging variable
+opensesame_17_28,count_comprehension_response,OpenSesame counter: number of times item 'comprehension response' has run,text,NA | 23 | 15 | 27,37,0,,system/logging variable
+opensesame_17_28,count_experiment,OpenSesame counter: number of times item 'experiment' has run,integer,0,1,0,,system/logging variable
+opensesame_17_28,count_logger,OpenSesame counter: number of times item 'logger' has run,integer,range 1 to 331,215,0,,system/logging variable
+opensesame_17_28,count_passage_response,OpenSesame counter: number of times item 'passage response' has run,integer,range 0 to 147,148,0,,system/logging variable
+opensesame_17_28,count_probe_response,OpenSesame counter: number of times item 'probe response' has run,integer,range 0 to 147,148,0,,system/logging variable
+opensesame_17_28,datetime,Date/time the session was run,text,11/15/17 13:59:46 | 11/27/17 13:03:14 | 11/09/17 10:02:15 | 11/10/17 15:11:44,24,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,description,Experiment description,categorical (text),The main experiment item,1,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,disable_garbage_collection,Garbage-collection setting,categorical (text),yes,1,0,,system/logging variable
+opensesame_17_28,experiment_file,Name of the .osexp file,categorical (text),FengReplication (11).osexp | FengReplication (11) (1).osexp | FengReplication (2).osexp | FengReplication (11) (4).osexp,5,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,experiment_path,Path of the experiment on the lab computer,categorical (text),C:\Users\10574169\Downloads | C:\Users\10773470\Downloads | C:\Users\10759865\Downloads | C:\Users\10799001\Downloads,5,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,font_bold,Bold font setting,categorical (text),no,1,0,,system/logging variable
+opensesame_17_28,font_family,Font family,categorical (text),mono,1,0,,system/logging variable
+opensesame_17_28,font_italic,Italic font setting,categorical (text),no,1,0,,system/logging variable
+opensesame_17_28,font_size,Font size,integer,18,1,0,,system/logging variable
+opensesame_17_28,font_underline,Underline font setting,categorical (text),no,1,0,,system/logging variable
+opensesame_17_28,foreground,Display foreground (text) colour,categorical (text),black,1,0,,system/logging variable
+opensesame_17_28,form_clicks,OpenSesame form clicks setting/log,categorical (text),no,1,0,,system/logging variable
+opensesame_17_28,fullscreen,Whether run in fullscreen,categorical (text),yes,1,0,,system/logging variable
+opensesame_17_28,height,Display height (px),integer,768 | 767,2,0,,system/logging variable
+opensesame_17_28,instruct_num,Instruction screen number,integer,range 6 to 14,9,0,,inferred from data values; verify
+opensesame_17_28,instruct_text,Instruction screen text,categorical (text),Do you have any questions so far?<br ... | Now you will take the reading compreh... | Now you will take the reading compreh... | Now you will take the reading compreh...,9,0,,inferred from data values; verify
+opensesame_17_28,keyboard_backend,Keyboard back-end,categorical (text),legacy,1,0,,system/logging variable
+opensesame_17_28,line,"Line index within the passage: 0 = title line, then sentences 1..N; for comprehension rows it is the question number",text,3 | 4 | 2 | 1,41,0,sentence_num,inferred from data values; verify
+opensesame_17_28,line_text,Text of the sentence or question shown,text,Hawthorne saw the Browning's there: t... | She found the man even more to her li... | The young man with the lemon-colored ... | After pursuing his early career in It...,270,0,sentence_text,draft from data_combination.xlsx; unverified
+opensesame_17_28,live_row,Row of the loop table currently in use (generic OpenSesame live_row),integer,range 0 to 61,62,0,,system/logging variable
+opensesame_17_28,live_row_Booklet_Assignment,Row of the loop table currently in use by loop 'Booklet Assignment',integer,0,1,0,,system/logging variable
+opensesame_17_28,live_row_Instructions_1,Row of the loop table currently in use by loop 'Instructions 1',integer,5,1,0,,system/logging variable
+opensesame_17_28,live_row_Passage_1_Booklet_2,Row of the loop table currently in use by loop 'Passage 1 Booklet 2',integer,range 0 to 39,40,51.5,,auto: present in 11 of 24 files; system/logging variable
+opensesame_17_28,logfile,Path of the log file,text,C:/Users/10799001/Desktop/subject-12.csv | C:/Users/10799001/Desktop/subject-20.csv | C:/Users/10574169/Desktop/subject-1.csv | C:/Users/10574169/Desktop/subject-10.csv,24,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,mouse_backend,Mouse back-end,categorical (text),xpyriment,1,0,,system/logging variable
+opensesame_17_28,opensesame_codename,OpenSesame release codename,categorical (text),Jazzy James,1,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,opensesame_version,OpenSesame version used,categorical (text),3.1.9,1,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,osf_id,OSF link/token field (unused),categorical (text),5942b73bb83f690229b9b281,1,83.9,,auto: present in 4 of 24 files; inferred from data values; verify
+opensesame_17_28,passage,Passage number (1-8),categorical (text),1 | 6 | 4 | 7,9,0,passage,draft from data_combination.xlsx; unverified
+opensesame_17_28,probe,y/n: whether a mind-wandering probe follows this sentence,categorical (text),n | y | ,3,0,,inferred from data values; verify
+opensesame_17_28,repeat_cycle,Loop repeat-cycle counter,integer,0,1,0,,system/logging variable
+opensesame_17_28,response,Key pressed on the current row: space = advance sentence; y/n = probe; a-e = comprehension answer,categorical (text),space | n | y | a,8,0,,inferred from data values; verify
+opensesame_17_28,response_Instr_1_response,Last response recorded by item 'Instr 1 response' (carried forward),categorical (text),space,1,0,,system/logging variable
+opensesame_17_28,response_Instr_1_response_1,Last response recorded by item 'Instr 1 response 1' (carried forward),categorical (text),space | NA | n,3,0,,system/logging variable
+opensesame_17_28,response_Instr_1_response_1_1,Last response recorded by item 'Instr 1 response 1 1' (carried forward),categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,response_comprehension_response,Last comprehension answer given (a-e); carried forward,categorical (text),NA | a | e | c,6,0,,inferred from data values; verify
+opensesame_17_28,response_passage_response,Last response (key) to a sentence page; carried forward,categorical (text),space,1,0,,inferred from data values; verify
+opensesame_17_28,response_probe_response,Last response to the mind-wandering probe (y/n); carried forward on subsequent rows until the next probe,categorical (text),n | y | NA,3,0,mw_probe,inferred from data values; verify; recode y/n to 1/0; valid only on probe rows
+opensesame_17_28,response_time,"Response time (ms) for the current row (sentence reading, probe, or comprehension answer)",integer,range 141 to 55837,3791,0,read_rt_ms,inferred from data values; verify; only on sentence rows (response == space)
+opensesame_17_28,response_time_Instr_1_response,Response time (ms) of the last response collected in item 'Instr 1 response' (carried forward),integer,range 1391 to 6846,24,0,,system/logging variable
+opensesame_17_28,response_time_Instr_1_response_1,Response time (ms) of the last response collected in item 'Instr 1 response 1' (carried forward),text,NA | 3314 | 1064 | 1527,186,0,,system/logging variable
+opensesame_17_28,response_time_Instr_1_response_1_1,Response time (ms) of the last response collected in item 'Instr 1 response 1 1' (carried forward),categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,response_time_comprehension_response,Response time (ms) of last comprehension answer; carried forward,text,NA | 5992 | 12417 | 11542,813,0,,inferred from data values; verify
+opensesame_17_28,response_time_passage_response,Response time (ms) of the last sentence page; carried forward until next sentence,integer,range 141 to 47884,2672,0,read_rt_ms,"inferred from data values; verify; the xlsx draft lists time_passage_response, but that is a timestamp"
+opensesame_17_28,response_time_probe_response,Response time (ms) of the last probe response; carried forward,text,NA | 1912 | 2390 | 4089,557,0,,inferred from data values; verify
+opensesame_17_28,round_decimals,Decimal places used when logging,integer,2,1,0,,system/logging variable
+opensesame_17_28,sampler_backend,Audio back-end,categorical (text),legacy,1,0,,system/logging variable
+opensesame_17_28,sound_buf_size,Sound buffer size,integer,1024,1,0,,system/logging variable
+opensesame_17_28,sound_channels,Sound channels,integer,2,1,0,,system/logging variable
+opensesame_17_28,sound_freq,Sound sample frequency,integer,48000,1,0,,system/logging variable
+opensesame_17_28,sound_sample_size,Sound sample size,integer,-16,1,0,,system/logging variable
+opensesame_17_28,start,Experiment start time / start item setting,categorical (text),experiment,1,0,,system/logging variable
+opensesame_17_28,subject_nr,OpenSesame subject number (auto-assigned or typed at start),integer,range 1 to 24,24,0,subject_id,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,subject_parity,Odd/even parity of subject number (OpenSesame),categorical (text),even | odd,2,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,time_Booklet_Assignment,Timestamp (ms since experiment start) when item 'Booklet Assignment' ran,integer,range 769 to 20126,23,0,,system/logging variable
+opensesame_17_28,time_Comprehension,Timestamp (ms since experiment start) when item 'Comprehension' ran,text,NA | 1101431 | 1103892 | 1130137,841,0,,system/logging variable
+opensesame_17_28,time_End_of_Experiment,Timestamp (ms since experiment start) when item 'End of Experiment' ran,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,time_End_of_Experiment_Inst,Timestamp (ms since experiment start) when item 'End of Experiment Inst' ran,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,time_Instr_1_response,Timestamp (ms since experiment start) when item 'Instr 1 response' ran,integer,range 16267 to 1450914,24,0,,system/logging variable
+opensesame_17_28,time_Instr_1_response_1,Timestamp (ms since experiment start) when item 'Instr 1 response 1' ran,text,NA | 1073830 | 1079501 | 1097795,187,0,,system/logging variable
+opensesame_17_28,time_Instr_1_response_1_1,Timestamp (ms since experiment start) when item 'Instr 1 response 1 1' ran,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,time_Instruction1,Timestamp (ms since experiment start) when item 'Instruction1' ran,integer,range 16267 to 1450914,24,0,,system/logging variable
+opensesame_17_28,time_Instruction1_1,Timestamp (ms since experiment start) when item 'Instruction1 1' ran,text,NA | 1073830 | 1079501 | 1097795,187,0,,system/logging variable
+opensesame_17_28,time_Instruction1_1_1,Timestamp (ms since experiment start) when item 'Instruction1 1 1' ran,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,time_Instructions,Timestamp (ms since experiment start) when item 'Instructions' ran,integer,range 16263 to 1450910,24,0,,system/logging variable
+opensesame_17_28,time_Instructions_1,Timestamp (ms since experiment start) when item 'Instructions 1' ran,integer,range 770 to 20127,23,0,,system/logging variable
+opensesame_17_28,time_Instructions_2,Timestamp (ms since experiment start) when item 'Instructions 2' ran,text,NA | 1073826 | 1079496 | 1097791,187,0,,system/logging variable
+opensesame_17_28,time_Instructions_2_1,Timestamp (ms since experiment start) when item 'Instructions 2 1' ran,categorical (text),NA,1,0,,system/logging variable
+opensesame_17_28,time_P1_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P1 Comprehension Instructions' ran,text,NA | 1221814 | 1703498 | 372713,25,0,,system/logging variable
+opensesame_17_28,time_P2_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P2 Comprehension Instructions' ran,text,NA | 1033858 | 1084052 | 1111086,25,0,,system/logging variable
+opensesame_17_28,time_P3_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P3 Comprehension Instructions' ran,text,NA | 1102171 | 1152613 | 1175644,24,0,,system/logging variable
+opensesame_17_28,time_P4_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P4 Comprehension Instructions' ran,text,NA | 1037886 | 1176430 | 1269343,24,0,,system/logging variable
+opensesame_17_28,time_P5_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P5 Comprehension Instructions' ran,text,NA | 1186267 | 1377747 | 1379590,24,0,,system/logging variable
+opensesame_17_28,time_P6_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P6 Comprehension Instructions' ran,text,NA | 1079162 | 1344408 | 1454602,24,0,,system/logging variable
+opensesame_17_28,time_P7_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P7 Comprehension Instructions' ran,text,NA | 1094633 | 1182849 | 1217680,24,0,,system/logging variable
+opensesame_17_28,time_P8_Comprehension_Instructions,Timestamp (ms since experiment start) when item 'P8 Comprehension Instructions' ran,text,NA | 1065224 | 1166798 | 1180359,24,0,,system/logging variable
+opensesame_17_28,time_Passage,Timestamp (ms since experiment start) when item 'Passage' ran,integer,range 18067 to 2519172,3042,0,,system/logging variable
+opensesame_17_28,time_Passage_1,Timestamp (ms since experiment start) when item 'Passage 1' ran,integer,range 17946 to 1455655,24,0,,system/logging variable
+opensesame_17_28,time_Passage_1_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 1 Booklet 1' ran,text,NA | 160932 | 96789 | 120887,14,0,,system/logging variable
+opensesame_17_28,time_Passage_1_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 1 Booklet 2' ran,text,NA | 133452 | 135157 | 137711,12,0,,system/logging variable
+opensesame_17_28,time_Passage_1_Comprehension,Timestamp (ms since experiment start) when item 'Passage 1 Comprehension' ran,text,NA | 1232526 | 1711471 | 380959,25,0,,system/logging variable
+opensesame_17_28,time_Passage_2,Timestamp (ms since experiment start) when item 'Passage 2' ran,text,NA | 1020695 | 1312693 | 1774361,25,0,,system/logging variable
+opensesame_17_28,time_Passage_2_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 2 Booklet 1' ran,text,NA | 313708 | 342587 | 350823,14,0,,system/logging variable
+opensesame_17_28,time_Passage_2_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 2 Booklet 2' ran,text,NA | 1020695 | 1312693 | 1774362,12,0,,system/logging variable
+opensesame_17_28,time_Passage_2_Comprehension,Timestamp (ms since experiment start) when item 'Passage 2 Comprehension' ran,text,NA | 1037014 | 1087838 | 1113956,25,0,,system/logging variable
+opensesame_17_28,time_Passage_3,Timestamp (ms since experiment start) when item 'Passage 3' ran,text,NA | 1067266 | 1124371 | 1142287,25,0,,system/logging variable
+opensesame_17_28,time_Passage_3_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 3 Booklet 1' ran,text,NA | 1045284 | 389349 | 433048,14,0,,system/logging variable
+opensesame_17_28,time_Passage_3_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 3 Booklet 2' ran,text,NA | 1067266 | 1124371 | 1142287,12,0,,system/logging variable
+opensesame_17_28,time_Passage_3_Comprehension,Timestamp (ms since experiment start) when item 'Passage 3 Comprehension' ran,text,NA | 1105965 | 1154917 | 1178711,24,0,,system/logging variable
+opensesame_17_28,time_Passage_4,Timestamp (ms since experiment start) when item 'Passage 4' ran,text,NA | 1045187 | 1159443 | 1207681,24,0,,system/logging variable
+opensesame_17_28,time_Passage_4_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 4 Booklet 1' ran,text,NA | 1197223 | 463196 | 521948,13,0,,system/logging variable
+opensesame_17_28,time_Passage_4_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 4 Booklet 2' ran,text,NA | 1045187 | 1159443 | 1207681,12,0,,system/logging variable
+opensesame_17_28,time_Passage_4_Comprehension,Timestamp (ms since experiment start) when item 'Passage 4 Comprehension' ran,text,NA | 1041766 | 1178386 | 1272879,24,0,,system/logging variable
+opensesame_17_28,time_Passage_5,Timestamp (ms since experiment start) when item 'Passage 5' ran,text,NA | 1087483 | 1254435 | 1315642,24,0,,system/logging variable
+opensesame_17_28,time_Passage_5_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 5 Booklet 1' ran,text,NA | 1019181 | 1032091 | 1130817,13,0,,system/logging variable
+opensesame_17_28,time_Passage_5_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 5 Booklet 2' ran,text,NA | 1087483 | 1254435 | 1315642,12,0,,system/logging variable
+opensesame_17_28,time_Passage_5_Comprehension,Timestamp (ms since experiment start) when item 'Passage 5 Comprehension' ran,text,NA | 1190933 | 1380042 | 1381103,24,0,,system/logging variable
+opensesame_17_28,time_Passage_6,Timestamp (ms since experiment start) when item 'Passage 6' ran,text,NA | 1014347 | 1248609 | 1409815,24,0,,system/logging variable
+opensesame_17_28,time_Passage_6_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 6 Booklet 1' ran,text,NA | 1018719 | 1113387 | 1117228,13,0,,system/logging variable
+opensesame_17_28,time_Passage_6_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 6 Booklet 2' ran,text,NA | 1014347 | 1248610 | 1409815,12,0,,system/logging variable
+opensesame_17_28,time_Passage_6_Comprehension,Timestamp (ms since experiment start) when item 'Passage 6 Comprehension' ran,text,NA | 1080410 | 1350669 | 1456174,24,0,,system/logging variable
+opensesame_17_28,time_Passage_7,Timestamp (ms since experiment start) when item 'Passage 7' ran,text,NA | 1013799 | 1127060 | 1378805,24,0,,system/logging variable
+opensesame_17_28,time_Passage_7_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 7 Booklet 1' ran,text,NA | 1062352 | 1075883 | 1115108,13,0,,system/logging variable
+opensesame_17_28,time_Passage_7_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 7 Booklet 2' ran,text,NA | 1013799 | 1127060 | 1378805,12,0,,system/logging variable
+opensesame_17_28,time_Passage_7_Comprehension,Timestamp (ms since experiment start) when item 'Passage 7 Comprehension' ran,text,NA | 1096506 | 1184579 | 1224066,24,0,,system/logging variable
+opensesame_17_28,time_Passage_8,Timestamp (ms since experiment start) when item 'Passage 8' ran,text,NA | 1102907 | 1219562 | 1261514,24,0,,system/logging variable
+opensesame_17_28,time_Passage_8_Booklet_1,Timestamp (ms since experiment start) when item 'Passage 8 Booklet 1' ran,text,NA | 1102907 | 1219562 | 1261514,13,0,,system/logging variable
+opensesame_17_28,time_Passage_8_Booklet_2,Timestamp (ms since experiment start) when item 'Passage 8 Booklet 2' ran,text,NA | 1008402 | 1097022 | 1270982,12,0,,system/logging variable
+opensesame_17_28,time_Passage_8_Comprehension,Timestamp (ms since experiment start) when item 'Passage 8 Comprehension' ran,text,NA | 1067861 | 1168069 | 1181721,24,0,,system/logging variable
+opensesame_17_28,time_Passage_Comprehension,Timestamp (ms since experiment start) when item 'Passage Comprehension' ran,text,NA | 1101425 | 1103888 | 1130132,841,0,,system/logging variable
+opensesame_17_28,time_Passage_sequence,Timestamp (ms since experiment start) when item 'Passage sequence' ran,integer,range 18063 to 2519166,3042,0,,system/logging variable
+opensesame_17_28,time_Probe,Timestamp (ms since experiment start) when item 'Probe' ran,text,NA | 303514 | 449883 | 570672,632,0,,system/logging variable
+opensesame_17_28,time_comprehension_response,Timestamp (ms since experiment start) when item 'comprehension response' ran,text,NA | 1101431 | 1103892 | 1130137,841,0,,system/logging variable
+opensesame_17_28,time_experiment,Timestamp (ms since experiment start) when item 'experiment' ran,integer,range 767 to 20125,24,0,,system/logging variable
+opensesame_17_28,time_logger,Timestamp (ms since experiment start) when item 'logger' ran,integer,range 19200 to 2568850,4509,0,,system/logging variable
+opensesame_17_28,time_passage_response,Absolute timestamp (ms since experiment start) at which the sentence response item ran - NOT a reaction time,integer,range 18067 to 2519172,3042,0,,inferred from data values; verify; corrects xlsx draft
+opensesame_17_28,time_probe_response,Timestamp (ms since experiment start) when item 'probe response' ran,text,NA | 303514 | 449883 | 570672,632,0,,system/logging variable
+opensesame_17_28,title,Experiment title,categorical (text),Feng Replication,1,0,,standard OpenSesame/PsychoPy/Qualtrics field
+opensesame_17_28,total_correct,Running count of correct comprehension answers,integer,range 6 to 37,32,0,,inferred from data values; verify
+opensesame_17_28,total_response_time,Running total response time (ms),integer,range 16653 to 2522087,4513,0,,draft from data_combination.xlsx; unverified
+opensesame_17_28,total_responses,Running count of responses logged,integer,range 7 to 225,218,0,,inferred from data values; verify
+opensesame_17_28,uniform_coordinates,Uniform coordinates setting,categorical (text),yes,1,0,,system/logging variable
+opensesame_17_28,width,Display width (px),integer,1024,1,0,,system/logging variable
+opensesame_17_28,live_row_Passage_1_Booklet_1,Row of the loop table currently in use by loop 'Passage 1 Booklet 1',integer,range 0 to 61,62,48.5,,auto: present in 13 of 24 files; system/logging variable

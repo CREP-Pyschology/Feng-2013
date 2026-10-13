@@ -1,0 +1,18 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+opensesame_18_38,Subject,Participant number,integer,range 1 to 161,137,0,subject_id,from the original Feng (2013) codebook sheet
+opensesame_18_38,Passages,Passage number (1-8),integer,range 1 to 8,8,0,passage,from the original Feng (2013) codebook sheet
+opensesame_18_38,Condition,Passage difficulty label (Easy / Difficult; some sources 'Diff.'),categorical (text),Diff. | Easy,2,0,difficulty,from the original Feng (2013) codebook sheet
+opensesame_18_38,Condition_Num,"Numeric difficulty for analysis: 1 = Difficult, 2 = Easy",integer,1 | 2,2,0,difficulty_num,from the original Feng (2013) codebook sheet
+opensesame_18_38,Booklet,"Booklet: 1 = odd passages difficult, even easy; 2 = vice versa",integer,1 | 2,2,0,booklet,from the original Feng (2013) codebook sheet
+opensesame_18_38,Sen_Num,Sentence number within passage,integer,range 1 to 7,7,0,probe_num,from the original Feng (2013) codebook sheet
+opensesame_18_38,Num_Probs,Number of mind-wandering thought probes in the passage,integer,range 2 to 7,5,0,n_probes_in_passage,from the original Feng (2013) codebook sheet
+opensesame_18_38,Passages_Sen_Num,Passage_sentence key (e.g. 1_3),text,1_1 | 1_2 | 1_3 | 1_4,27,0,passage_sentence_id,from the original Feng (2013) codebook sheet
+opensesame_18_38,Com_Score,"Comprehension score: 1 = correct, 0 = incorrect on that item",integer,1 | 0,2,0,comprehension_correct,from the original Feng (2013) codebook sheet
+opensesame_18_38,RT,Reading time for the sentence (ms),integer,range 2 to 67383,3246,0,read_rt_ms,from the original Feng (2013) codebook sheet
+opensesame_18_38,MW,"Mind wandering at the probe: 0 = no, 1 = yes (18_06 stored as n/y)",integer,0 | 1,2,0,mw_probe,from the original Feng (2013) codebook sheet
+opensesame_18_38,Gender,Participant gender (German labels in 18_38: männlich / weiblich / divers),categorical (text),männlich | weiblich | divers,3,0,gender,inferred from data values; verify
+opensesame_18_38,Age,Participant age in years,integer,range 18 to 57,17,4.4,age,inferred from data values; verify
+opensesame_18_38,Muttersprache,"Native language (German 'Muttersprache'), coded 1 or 2 (120 participants = 1, 17 = 2)",integer,1 | 2,2,0,native_language,"meaning confirmed by project lead; value coding not documented - 1 is probably German (majority in a German-language sample), verify"
+opensesame_18_38,Sorgfalt,"Care / carefulness (German 'Sorgfalt') self-rating, 1-4 (31/60/39/7 for 1/2/3/4)",integer,2 | 3 | 1 | 4,4,0,,meaning confirmed by project lead; direction of the scale (is 4 most careful?) not documented; not mapped to the master
+opensesame_18_38,RTNoOut,Outlier-treated reading time (ms),numeric,range 566.58 to 35256.6,3174,0,,from the original Feng (2013) codebook sheet; verify winsorized vs removed; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data
+opensesame_18_38,RTNoOut_Zub,Z-score of outlier-treated reading time,numeric,range -1.24667 to 4.52001,3174,0,,from the original Feng (2013) codebook sheet; entirely missing in 18_06; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data

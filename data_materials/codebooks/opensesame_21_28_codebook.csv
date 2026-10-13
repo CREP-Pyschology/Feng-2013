@@ -1,0 +1,13 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+opensesame_21_28,Set,Passage set (1 or 2),integer,1 | 2,2,0,set,inferred from data values; verify
+opensesame_21_28,ID,Participant number,integer,range 1 to 45,45,0,subject_id,inferred from data values; verify
+opensesame_21_28,Passage,Passage number,integer,range 1 to 7,7,0,passage,inferred from data values; verify
+opensesame_21_28,Sentence_Num,Sentence number within passage,integer,range 1 to 7,7,0,probe_num,inferred from data values; verify
+opensesame_21_28,MW_mean,Mind-wandering probe response (0/1) for the sentence; name suggests a mean but values are 0/1,integer,0 | 1,2,0,mw_probe,inferred from data values; verify
+opensesame_21_28,correct_mean,Comprehension correctness (0/1) for the item; name suggests a mean but values are 0/1; ~12% missing,integer,1 | 0,2,12.4,comprehension_correct,inferred from data values; verify
+opensesame_21_28,Condition,Passage difficulty label (Easy / Difficult; some sources 'Diff.'),categorical (text),Diff. | Easy,2,0,difficulty,from the original Feng (2013) codebook sheet
+opensesame_21_28,Condition_Num,"Numeric difficulty for analysis: 1 = Difficult, 2 = Easy",integer,1 | 2,2,0,difficulty_num,from the original Feng (2013) codebook sheet
+opensesame_21_28,Num_Probs,Number of mind-wandering thought probes in the passage,integer,range 2 to 7,5,0,n_probes_in_passage,from the original Feng (2013) codebook sheet
+opensesame_21_28,Passages_Sen_Num,Passage_sentence key (e.g. 1_3),integer,range 11 to 72,23,0,passage_sentence_id,from the original Feng (2013) codebook sheet
+opensesame_21_28,rt,Reading time for the sentence (ms); non-integer values suggest a converted/aggregated value,numeric,range 63.32 to 40381.9,973,0,read_rt_ms,inferred from data values; verify
+opensesame_21_28,RT_noOutliers,Outlier-treated reading time (ms),numeric,range 150 to 25265,955,0,,inferred from data values; verify; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data

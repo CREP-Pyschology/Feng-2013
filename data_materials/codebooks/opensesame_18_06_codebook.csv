@@ -1,0 +1,14 @@
+dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_master_name,source_notes
+opensesame_18_06,Subject,Participant number,integer,range 101 to 614,96,0,subject_id,from the original Feng (2013) codebook sheet
+opensesame_18_06,Passages,Passage number (1-8),integer,range 1 to 8,8,0,passage,from the original Feng (2013) codebook sheet
+opensesame_18_06,Condition,Passage difficulty label (Easy / Difficult; some sources 'Diff.'),categorical (text),Diff. | Easy,2,0,difficulty,from the original Feng (2013) codebook sheet
+opensesame_18_06,Condition_Num,"Numeric difficulty for analysis: 1 = Difficult, 2 = Easy",integer,1 | 2,2,0,difficulty_num,from the original Feng (2013) codebook sheet
+opensesame_18_06,Booklet,"Booklet: 1 = odd passages difficult, even easy; 2 = vice versa",integer,1 | 2,2,0,booklet,from the original Feng (2013) codebook sheet
+opensesame_18_06,Sen_Num,Sentence number within passage,integer,range 1 to 7,7,0,probe_num,from the original Feng (2013) codebook sheet
+opensesame_18_06,Num_Probs,Number of mind-wandering thought probes in the passage,integer,range 2 to 7,5,0,n_probes_in_passage,from the original Feng (2013) codebook sheet
+opensesame_18_06,RT,Reading time for the sentence (ms),integer,range 51 to 56734,2316,0,read_rt_ms,from the original Feng (2013) codebook sheet
+opensesame_18_06,RTNoOut,Outlier-treated reading time (ms),numeric,range 663.95 to 32426.7,2269,0,,from the original Feng (2013) codebook sheet; verify winsorized vs removed; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data
+opensesame_18_06,RTNoOut_Zub,Z-score of outlier-treated reading time,empty,,0,100,,from the original Feng (2013) codebook sheet; entirely missing in 18_06; not carried to master_data: cleaning/splits are recomputed from read_rt_ms on the full data
+opensesame_18_06,MW,"Mind wandering at the probe: 0 = no, 1 = yes (18_06 stored as n/y)",categorical (text),n | y,2,0,mw_probe,from the original Feng (2013) codebook sheet
+opensesame_18_06,Com_Score,"Comprehension score: 1 = correct, 0 = incorrect on that item",integer,1 | 0,2,0,comprehension_correct,from the original Feng (2013) codebook sheet
+opensesame_18_06,Passages_Sen_Num,Passage_sentence key (e.g. 1_3),text,1_1 | 1_2 | 1_3 | 1_4,27,0,passage_sentence_id,from the original Feng (2013) codebook sheet

@@ -506,7 +506,7 @@ columns are read in file order, which follows the survey flow within a booklet:
 * **Comprehension:** the answered comprehension columns are grouped by passage (labelled in the codebooks), and
   question *k* is paired with probe *k*. Answers are scored against `superlab/superlab_answer_key.csv`. 19_42 stores the
   option letter; 19_01 and 19_53 store only the option text, which is matched to the closest option of that question
-  (taken from the OpenSesame logs).
+  (taken from the OpenSesame logs; a few option texts are cut off there, so a prefix also counts as a match).
 * **Booklet** comes from which branch of the survey the respondent was in (the first probe column they answered).
   For 19_01 and 19_53 this was read from the survey definitions (`.qsf`). 19_42 is a translated copy whose question
   numbers do not match its `.qsf`, so its two branches were identified from the number of sentence pages: the
@@ -540,6 +540,10 @@ comp_options <- list.files(file.path(dm, "open_sesame/19_08"), pattern = "\\.csv
 
 letter_from_text <- function(answer, passage, question) {
   opts <- comp_options$options[comp_options$passage == passage & comp_options$question == question][[1]]
+  # some option texts are cut off in the OpenSesame logs: accept a prefix match
+  a <- norm_text(answer)
+  prefix <- map_lgl(norm_text(opts$text), ~ nchar(.x) >= 10 && (startsWith(a, .x) || startsWith(.x, a)))
+  if (sum(prefix) == 1) return(opts$letter[prefix])
   d <- adist(norm_text(answer), norm_text(opts$text))[1, ] / pmax(nchar(norm_text(opts$text)), nchar(norm_text(answer)), 1)
   if (min(d) <= 0.25) opts$letter[which.min(d)] else NA_character_
 }
@@ -635,6 +639,13 @@ master_data <- master_data %>%
   select(-n, -reused)
 
 reused_ids
+
+# difficulty_num must be the same in every project: 1 = Difficult, 2 = Easy
+stopifnot(
+  all(master_data$difficulty_num[master_data$difficulty %in% "Difficult"] == 1),
+  all(master_data$difficulty_num[master_data$difficulty %in% "Easy"] == 2),
+  !anyNA(master_data$difficulty_num[!is.na(master_data$difficulty)])
+)
 
 write_csv(master_data, file.path(dm, "master_data.csv"), na = "")
 dim(master_data)

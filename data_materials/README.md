@@ -70,7 +70,8 @@ Exceptions to the 27 rows:
   eight passages from one set; the Set 2 odd passages use the easy wording (verified against
   `replication_materials/Easy Passages.docx` and `Difficult Passages.docx`).
 - **Difficulty coding:** source labels vary (`Diff.`, `Diff`, `Hard`, `Difficult`, `Easy`) and are recoded to
-  Easy/Difficult and 1 = Difficult, 2 = Easy. E-Prime's `Difficult` column is a 0/1 dummy and is not used for this.
+  Easy/Difficult and 1 = Difficult, 2 = Easy. E-Prime's `Difficult` column is a 0/1 dummy (1 = Difficult, 0 = Easy) and is not used for this; `difficulty_num` is
+  taken from the Condition label, and `data_combination.Rmd` stops with an error if any project disagrees.
 - **Units:** reading times are milliseconds in the master. PsychoPy logs and Qualtrics page timers are in
   seconds and are converted (x1000) in the master.
 - **Reading times are the original, untreated values only.** Outlier treatment is decided once on the full
@@ -180,7 +181,11 @@ SuperLab keeps the file structure of the export but several column headers do no
 - **Probe answers** are text: Yes/No, or Igen/Nem in Hungarian.
 - **Comprehension** is scored here against `superlab/superlab_answer_key.csv`. 19_42 stores the option letter
   ("e. ..."); 19_01 and 19_53 store only the option text, which is matched to the closest option (within 25% edit
-  distance) of that question, taken from the OpenSesame logs. Unmatched answers are `NA`.
+  distance) of that question, taken from the OpenSesame logs. Every answered comprehension question is now scored. One option in the OpenSesame logs is cut off (passage 4,
+  question 3, option e), so a prefix also counts as a match. Remaining `NA`s are questions the respondent did not answer.
+- **Only 27 of the 36 comprehension answers per participant are in the master**, in every software: question *k* is
+  paired with probe *k*, and passages with more questions than probes (passage 1: 8 vs 7; passages 2, 3, 7: 4 vs 2;
+  and so on) lose the extra questions. They are scored but not kept.
 - **Booklet** is the survey branch the respondent was in (their first answered probe column). For 19_01 (`Q12` =
   booklet 1, `Q227` = booklet 2) and 19_53 (`Q227` = booklet 1, `Q11` = booklet 2) it comes from the `.qsf`.
   **For 19_42 it is an inference:** the two branches (`Q13`, `Q376`) were matched to 19_53 by total sentence pages

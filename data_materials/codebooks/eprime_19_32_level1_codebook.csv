@@ -2,7 +2,7 @@ dataset,variable,description,type,example_values,n_unique,pct_missing,mapped_mas
 eprime_19_32_level1,Subject,Participant number,integer,range 1 to 512,80,0,subject_id,from the original Feng (2013) codebook sheet
 eprime_19_32_level1,Passages,Passage number (1-8),integer,range 1 to 8,8,0,passage,from the original Feng (2013) codebook sheet
 eprime_19_32_level1,Condition,Passage difficulty label (Easy / Difficult; some sources 'Diff.'),categorical (text),Easy | Difficult,2,0,difficulty,from the original Feng (2013) codebook sheet
-eprime_19_32_level1,Difficult,"Dummy code for difficulty in E-Prime export (values 0/1); NOT the same coding as Condition_Num (1 = Difficult, 2 = Easy)",integer,0 | 1,2,0,difficulty_num,recode needed; confirm which of 0/1 is Difficult; draft from data_combination.xlsx; unverified
+eprime_19_32_level1,Difficult,"Dummy code for difficulty: 1 = Difficult, 0 = Easy (confirmed against Condition). NOT the same coding as Condition_Num (1 = Difficult, 2 = Easy)",integer,0 | 1,2,0,,"not used in master_data: difficulty_num is taken from the Condition label so every project uses 1 = Difficult, 2 = Easy; from the original Feng (2013) codebook sheet"
 eprime_19_32_level1,Booklet,"Booklet: 1 = odd passages difficult, even easy; 2 = vice versa",integer,2 | 1,2,0,booklet,from the original Feng (2013) codebook sheet
 eprime_19_32_level1,Sen_num,Sentence number within passage,integer,range 1 to 7,7,0,probe_num,from the original Feng (2013) codebook sheet
 eprime_19_32_level1,num_Probs,Number of mind-wandering thought probes in the passage,integer,range 2 to 7,5,0,n_probes_in_passage,from the original Feng (2013) codebook sheet

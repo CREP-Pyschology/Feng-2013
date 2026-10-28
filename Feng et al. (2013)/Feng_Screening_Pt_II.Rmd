@@ -22,8 +22,8 @@ Feng_Screening<-read_csv("Feng_Screening.csv")
 Feng_Screening%>%summary("Feng_Screening")
 ```
 ```{r}
-Feng_Screening_Table<-Feng_Screening%>%table(Feng_Screening$software,Feng_Screening$booklet)
-print(Data_Screening_Table)
+Feng_Screening_Table<-table(Feng_Screening$software,Feng_Screening$booklet)
+print(Feng_Screening_Table)
 ```
 
 
@@ -36,11 +36,23 @@ Read_rt_ms_by_participant<-Feng_Screening%>%group_by(subject_id)%>%summarise(mea
 print(Read_rt_ms_by_participant)
 ```
 ```{r}
-Read_rt_ms_by_project<-Feng_Screening%>%group_by(project)%>%summarise(proj_mean_read_rt=mean(read_rt_ms), proj_sd_read_rt=sd(read_rt_ms))
+Read_rt_ms_by_project<-Feng_Screening %>% 
+  group_by(project) %>% 
+  summarise(proj_mean_read_rt=mean(read_rt_ms), 
+            proj_sd_read_rt=sd(read_rt_ms))
 print(Read_rt_ms_by_project)
+
+# View(
+#   Feng_Screening %>%
+#   filter(project == "17_03")
+# )
 ```
 ```{r}
-Comprehension_Correct_by_project<-Feng_Screening%>%group_by(project)%>%summarise(proj_mean_comprehension_correct=mean(comprehension_correct), proj_sd_comprehension_correct=sd(comprehension_correct))
+Comprehension_Correct_by_project<-Feng_Screening %>% 
+  group_by(project) %>%
+  summarise(
+    proj_mean_comprehension_correct=mean(comprehension_correct, na.rm = TRUE),
+    proj_sd_comprehension_correct=sd(comprehension_correct, na.rm = TRUE))
 print(Comprehension_Correct_by_project)
 ```
 ```{r}
@@ -48,3 +60,15 @@ Comprehension_Correct_by_subject<-Feng_Screening%>%group_by(subject_id)%>%summar
 print(Comprehension_Correct_by_subject)
 ```
 
+
+## cleaning
+
+--> remove comprehension questions being 0 
+
+--> trim RTs for individual trials that are VERY long where there's a break (like the top three longest are too long by many times the next one)
+
+--> too short, we should:
+  - calculate the number of words per sentence
+  - multiple by 200 ms and get a lower bound for how fast we can read 
+  
+are the questions at the end or after each sentence set? 

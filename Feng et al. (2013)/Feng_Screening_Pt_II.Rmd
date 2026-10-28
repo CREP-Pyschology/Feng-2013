@@ -1,0 +1,50 @@
+---
+title: "Feng Data Screening"
+output: html_document
+date: "2026-10-27"
+---
+
+```{r}
+#Note: I did data screening in JASP first then tried to replicate + extend here. 
+#Disclaimer: I haven't used R since the summer, tried to start by memory, remembered everything slightly to the left, found my notebook of R notes, and then continued. If you see a billion errors no you didn't. 
+```
+
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+```{r}
+Feng_Screening<-read_csv("Feng_Screening.csv")
+```
+```{r}
+Feng_Screening%>%summary("Feng_Screening")
+```
+```{r}
+Feng_Screening_Table<-Feng_Screening%>%table(Feng_Screening$software,Feng_Screening$booklet)
+print(Data_Screening_Table)
+```
+
+
+
+
+
+
+```{r}
+Read_rt_ms_by_participant<-Feng_Screening%>%group_by(subject_id)%>%summarise(mean_read_rt = mean(read_rt_ms), sd_read_rt=sd(read_rt_ms), min_read_rt=min(read_rt_ms), max_read_rt=max(read_rt_ms))
+print(Read_rt_ms_by_participant)
+```
+```{r}
+Read_rt_ms_by_project<-Feng_Screening%>%group_by(project)%>%summarise(proj_mean_read_rt=mean(read_rt_ms), proj_sd_read_rt=sd(read_rt_ms))
+print(Read_rt_ms_by_project)
+```
+```{r}
+Comprehension_Correct_by_project<-Feng_Screening%>%group_by(project)%>%summarise(proj_mean_comprehension_correct=mean(comprehension_correct), proj_sd_comprehension_correct=sd(comprehension_correct))
+print(Comprehension_Correct_by_project)
+```
+```{r}
+Comprehension_Correct_by_subject<-Feng_Screening%>%group_by(subject_id)%>%summarise(subj_mean_comprehension_correct=mean(comprehension_correct), subj_sd_comprehension_correct=sd(comprehension_correct))
+print(Comprehension_Correct_by_subject)
+```
+

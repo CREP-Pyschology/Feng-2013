@@ -1,0 +1,96 @@
+---
+title: "Feng Data Screening"
+output: html_document
+date: "2026-10-27"
+---
+
+```{r}
+#Note: I did data screening in JASP first then tried to replicate + extend here. 
+#Disclaimer: I haven't used R since the summer, tried to start by memory, remembered everything slightly to the left, found my notebook of R notes, and then continued. If you see a billion errors no you didn't. 
+```
+
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+```
+
+```{r}
+Feng_Screening<-read_csv("Feng_Screening.csv")
+```
+```{r}
+Feng_Screening%>%summary("Feng_Screening")
+```
+```{r}
+Feng_Screening_Table<-table(Feng_Screening$software,Feng_Screening$booklet)
+print(Feng_Screening_Table)
+```
+
+
+
+
+
+
+```{r}
+Read_rt_ms_by_participant<-Feng_Screening%>%group_by(subject_id)%>%summarise(mean_read_rt = mean(read_rt_ms), sd_read_rt=sd(read_rt_ms), min_read_rt=min(read_rt_ms), max_read_rt=max(read_rt_ms))
+print(Read_rt_ms_by_participant)
+```
+```{r}
+Read_rt_ms_by_project<-Feng_Screening %>% 
+  group_by(project) %>% 
+  summarise(proj_mean_read_rt=mean(read_rt_ms), 
+            proj_sd_read_rt=sd(read_rt_ms))
+print(Read_rt_ms_by_project)
+
+# View(
+#   Feng_Screening %>%
+#   filter(project == "17_03")
+# )
+```
+
+
+```{r}
+#Allie Additions 11/2/2026
+Extreme_RT_Values_Filtered<-Feng_Screening%>%
+  filter(read_rt_ms>=350&read_rt_ms<=18300)
+Summary_Filtered_Feng<-Extreme_RT_Values_Filtered%>%
+  summarise(filtered_mean_read_rt=mean(read_rt_ms), 
+            filtered_sd_read_rt=sd(read_rt_ms), filtered_min=min(read_rt_ms), filtered_max=max(read_rt_ms))
+Summary_Filtered_by_Proj<-Extreme_RT_Values_Filtered%>%
+  group_by(project)%>%
+  summarise(filtered_Pr_mean_read_rt=mean(read_rt_ms), 
+            filtered_Pr_sd_read_rt=sd(read_rt_ms),)
+print(Summary_Filtered_Feng)
+print(Summary_Filtered_by_Proj)
+print(Extreme_RT_Values_Filtered)
+```
+
+
+
+```{r}
+Comprehension_Correct_by_project<-Feng_Screening %>% 
+  group_by(project) %>%
+  summarise(
+    proj_mean_comprehension_correct=mean(comprehension_correct, na.rm = TRUE),
+    proj_sd_comprehension_correct=sd(comprehension_correct, na.rm = TRUE))
+print(Comprehension_Correct_by_project)
+```
+```{r}
+Comprehension_Correct_by_subject<-Feng_Screening%>%group_by(subject_id)%>%summarise(subj_mean_comprehension_correct=mean(comprehension_correct), subj_sd_comprehension_correct=sd(comprehension_correct))
+print(Comprehension_Correct_by_subject)
+```
+
+
+
+
+## cleaning
+
+--> remove comprehension questions being 0 
+
+--> trim RTs for individual trials that are VERY long where there's a break (like the top three longest are too long by many times the next one)
+
+--> too short, we should:
+  - calculate the number of words per sentence
+  - multiple by 200 ms and get a lower bound for how fast we can read 
+  
+are the questions at the end or after each sentence set? 

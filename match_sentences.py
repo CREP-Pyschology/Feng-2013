@@ -16,8 +16,9 @@ def clean(s):  # strip stray labels found in the SuperLab (17_03) text, e.g. "Pa
 def docx(f):
     x = zipfile.ZipFile(f).read('word/document.xml').decode()
     t = [html.unescape(''.join(re.findall(r'<w:t[^>]*>([^<]*)</w:t>', p))) for p in re.findall(r'<w:p[ >].*?</w:p>', x, re.S)]
-    return [norm(s) for s in t if s.strip()]
-ref = {k: docx(f'{D}replication_materials/{k} Passages.docx') for k in ['Easy', 'Difficult']}
+    return [re.sub(r'\s+', ' ', s).strip() for s in t if s.strip()]
+ref_raw = {k: docx(f'{D}replication_materials/{k} Passages.docx') for k in ['Easy', 'Difficult']}
+ref = {k: [norm(s) for s in v] for k, v in ref_raw.items()}
 start = {'Difficult': [0, 30, 42, 51, 64, 73, 86, 96], 'Easy': [0, 39, 51, 62, 75, 89, 104, 120]}
 cache = {}
 def match(df, p, t):
@@ -30,32 +31,37 @@ def match(df, p, t):
             if r > best[0]: best = (r, i - a + 1)
         cache[key] = best
     return cache[key]
-d = pd.read_csv(D + 'master_data.csv', low_memory=False)
-has = d.sentence_text.notna() & d.passage.notna() & d.difficulty.notna()
-res = [match(r.difficulty, int(r.passage), r.sentence_text) for r in d[has].itertuples()]
-d['sentence_num_fuzzy'] = pd.NA; d['sentence_match_score'] = pd.NA
-d.loc[has, 'sentence_num_fuzzy'] = [r[1] for r in res]
-d.loc[has, 'sentence_match_score'] = [round(r[0], 3) for r in res]
-d['sentence_num_fuzzy'] = d.sentence_num_fuzzy.astype('Int64')
+def main():
+    d = pd.read_csv(D + 'master_data.csv', low_memory=False)
+    has = d.sentence_text.notna() & d.passage.notna() & d.difficulty.notna()
+    res = [match(r.difficulty, int(r.passage), r.sentence_text) for r in d[has].itertuples()]
+    d['sentence_num_fuzzy'] = pd.NA; d['sentence_match_score'] = pd.NA
+    d.loc[has, 'sentence_num_fuzzy'] = [r[1] for r in res]
+    d.loc[has, 'sentence_match_score'] = [round(r[0], 3) for r in res]
+    d['sentence_num_fuzzy'] = d.sentence_num_fuzzy.astype('Int64')
 
-# --- 19_46: sentence position rebuilt by counting rows in the raw logs -------------------------------------
-# 121 of 134 participants have a 7-column export with no `line`. In the 13 full files `line` equals the number of
-# "space" (sentence) rows seen so far in the passage minus 1 (the first space row is a title screen, line 0);
-# this rule reproduces `line` for all 351 probed sentences there, so it is applied to every file. A probe (y/n)
-# belongs to the sentence row before it; probes are numbered within passage in the same way as data_combination.Rmd.
-import glob, os
-rows = []
-for f in sorted(glob.glob(D + 'open_sesame/19_46/*.csv')):
-    g = pd.read_csv(f, low_memory=False, usecols=lambda c: c in ('response', 'passage'))
-    g['passage'] = pd.to_numeric(g.passage, errors='coerce')
-    sp = (g.response == 'space') & g.passage.notna()
-    pos = sp.groupby(g.passage).cumsum() - 1
-    cnt = {}
-    for i in g.index[g.response.isin(['y', 'n']) & g.passage.notna()]:
-        j = g.index[:i][sp[:i]].max(); p = int(g.passage[j]); cnt[p] = cnt.get(p, 0) + 1
-        rows.append((os.path.basename(f), p, cnt[p], int(pos[j])))
-rc = pd.DataFrame(rows, columns=['source_file', 'passage', 'probe_num', 'sentence_num_rowcount'])
-rc['project'] = '19_46'
-d = d.merge(rc, on=['project', 'source_file', 'passage', 'probe_num'], how='left')
-d['sentence_num_rowcount'] = d.sentence_num_rowcount.astype('Int64')
-d.to_csv(D + 'master_data_matched.csv', index=False)
+    # --- 19_46: sentence position rebuilt by counting rows in the raw logs -------------------------------------
+    # 121 of 134 participants have a 7-column export with no `line`. In the 13 full files `line` equals the number of
+    # "space" (sentence) rows seen so far in the passage minus 1 (the first space row is a title screen, line 0);
+    # this rule reproduces `line` for all 351 probed sentences there, so it is applied to every file. A probe (y/n)
+    # belongs to the sentence row before it; probes are numbered within passage in the same way as data_combination.Rmd.
+    import glob, os
+    rows = []
+    for f in sorted(glob.glob(D + 'open_sesame/19_46/*.csv')):
+        g = pd.read_csv(f, low_memory=False, usecols=lambda c: c in ('response', 'passage'))
+        g['passage'] = pd.to_numeric(g.passage, errors='coerce')
+        sp = (g.response == 'space') & g.passage.notna()
+        pos = sp.groupby(g.passage).cumsum() - 1
+        cnt = {}
+        for i in g.index[g.response.isin(['y', 'n']) & g.passage.notna()]:
+            j = g.index[:i][sp[:i]].max(); p = int(g.passage[j]); cnt[p] = cnt.get(p, 0) + 1
+            rows.append((os.path.basename(f), p, cnt[p], int(pos[j])))
+    rc = pd.DataFrame(rows, columns=['source_file', 'passage', 'probe_num', 'sentence_num_rowcount'])
+    rc['project'] = '19_46'
+    d = d.merge(rc, on=['project', 'source_file', 'passage', 'probe_num'], how='left')
+    d['sentence_num_rowcount'] = d.sentence_num_rowcount.astype('Int64')
+    d.to_csv(D + 'master_data_matched.csv', index=False)
+
+
+if __name__ == '__main__':
+    main()

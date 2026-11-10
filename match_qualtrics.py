@@ -59,8 +59,10 @@ def replay(ds, path, rt_offset, branch_booklet):
     return pd.DataFrame(rows)
 
 if __name__ == '__main__':
-    # run order: match_sentences.py (importing it rewrites master_data_matched.csv), then this adds sentence_num_qsf and sentence_num_design
+    # run this file only: it first calls match_sentences.main() (which writes master_data_matched.csv), then adds sentence_num_qsf, sentence_num_design, sentence_text_ref and sentence_text_ref_from
+    import match_sentences
     from match_sentences import match
+    match_sentences.main()   # rewrites master_data_matched.csv, then the Qualtrics/design columns are added below
     m = pd.read_csv(D + 'master_data_matched.csv', low_memory=False)
     jobs = {'19_01': (D + 'qualtrics/19_01/Replication_Data.csv', 1, D + 'qualtrics/Mind_Wandering_While_Reading_Study.qsf'),
             '19_53': (D + 'qualtrics/19_53/Widman & Herion_Raw Data.csv', 2, D + 'qualtrics/Mind_Wandering_CREP_Study.qsf')}
@@ -94,5 +96,21 @@ if __name__ == '__main__':
     print('observed rows off the design lookup:', int(off.sum()), 'of', len(obs), obs[off].groupby('project').size().to_dict())
     key = pd.MultiIndex.from_frame(m[['booklet', 'passage', 'probe_num']])
     m['sentence_num_design'] = pd.array(lut.reindex(key).values, dtype='Int64')
+    # Reference text: the sentence at the best available position, taken from the original passage Word files.
+    # Order of preference: the project's own number (17_03 uses its own numbering, so its fuzzy match when the score
+    # is >= 0.9), the 19_46 row count, the .qsf match, then the design lookup.
+    from match_sentences import ref_raw, start
+    own = m.sentence_num.where(m.project != '17_03')
+    fz = m.sentence_num_fuzzy.where((m.project == '17_03') & (m.sentence_match_score >= 0.9))
+    cands = [('sentence_num', own), ('sentence_num_fuzzy', fz), ('sentence_num_rowcount', m.sentence_num_rowcount),
+             ('sentence_num_qsf', m.sentence_num_qsf), ('sentence_num_design', m.sentence_num_design)]
+    num = pd.Series(np.nan, index=m.index); src = pd.Series(pd.NA, index=m.index, dtype='object')
+    for name, col in cands:
+        use = num.isna() & col.notna()
+        num[use] = col[use].astype(float); src[use] = name
+    txt = [ref_raw[r.difficulty][start[r.difficulty][int(r.passage) - 1] + int(n) - 1]
+           if pd.notna(n) and pd.notna(r.passage) and pd.notna(r.difficulty) else pd.NA
+           for r, n in zip(m.itertuples(), num)]
+    m['sentence_text_ref'] = txt; m['sentence_text_ref_from'] = src
     m.to_csv(D + 'master_data_matched.csv', index=False)
     print(m.groupby('project').sentence_num_qsf.apply(lambda s: s.notna().sum())[['19_01', '19_42', '19_53']])

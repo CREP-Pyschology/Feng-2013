@@ -105,3 +105,25 @@ Position (1-based) of the probed sentence within its passage, and its text.
   against passage + `probe_num` before replacing them.
 - **Still missing:** 19_32, because it has no `probe_num` (see above). The column adds no information beyond `passage`
   and `probe_num`; it is kept as a key.
+
+## `sentence_text`
+
+- **Missing in `master_data.csv`:** 25,537 of 39,537 rows (65%). Filled only for the raw OpenSesame, PsychoPy and
+  SuperLab projects (17_03, 17_25, 17_28, 19_08, 19_23, 19_41, 20_26) and 351 rows of 19_46.
+- **Why:** the processed files, the Qualtrics data files and the 19_46 short export do not contain the sentence text. See
+  `sentence_num` above.
+- **Recovery:** `sentence_text_ref` in `master_data_matched.csv` is the sentence at the best available position (given
+  by passage, difficulty and sentence position) in the original passage Word files in `replication_materials`. It is the
+  clean English text, without the `<br/>` markup in the raw logs. `sentence_text_ref_from` says which column gave the
+  position. Order of preference: the project's own `sentence_num` (17_03 uses `sentence_num_fuzzy` instead, when the
+  match score is 0.9 or more), then `sentence_num_rowcount`, `sentence_num_qsf` and `sentence_num_design`.
+- **Filled for:** 37,377 rows (everything except 19_32). Where the original text exists, the reference sentence
+  matches it in 98-100% of rows (100% for 19_08, 19_23, 19_41, 19_46 and 20_26; 99.5% for 17_28; 98% for 17_25).
+- **Caveats:**
+  - For the processed projects (17_32, 18_06, 18_38, 20_46, 21_28) the text is inferred from `sentence_num_design`, which
+    assumes their `probe_num` is correct. It is wrong for 20_46 passage 6 if the missing probe is not the last one, and
+    for 19_46 subject 144.
+  - 19_42 participants read a Hungarian translation; the reference text is the English original.
+  - 17_03 Set 2, passage 7, second probe: the sentence is unknown (the raw text repeats the first probe).
+  - The Word files are the replication materials, not necessarily what every lab displayed.
+- **Still missing:** 19_32 (2,160 rows), which has no sentence position.

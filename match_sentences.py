@@ -32,7 +32,8 @@ def match(df, p, t):
         cache[key] = best
     return cache[key]
 def main():
-    d = pd.read_csv(D + 'master_data.csv', low_memory=False)
+    import merge_into_master
+    d = merge_into_master.restore_observed(pd.read_csv(D + 'master_data.csv', low_memory=False))   # observed values only (repeatable)
     has = d.sentence_text.notna() & d.passage.notna() & d.difficulty.notna()
     res = [match(r.difficulty, int(r.passage), r.sentence_text) for r in d[has].itertuples()]
     d['sentence_num_fuzzy'] = pd.NA; d['sentence_match_score'] = pd.NA

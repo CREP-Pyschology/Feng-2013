@@ -1,8 +1,13 @@
-o# Missing data in `master_data.csv`
+# Missing data in `master_data.csv`
 
 One section per variable: how much is missing, where, why, and what (if anything) was done about it.
-Counts are from `master_data.csv` (39,538 rows, 17 projects). Variable definitions are in
-`master_codebook.xlsx` (source: `codebooks/master_schema.csv`).
+Variable definitions are in `master_codebook.xlsx` (source: `codebooks/master_schema.csv`).
+
+**State of the file.** The sections below were written while the recovered values were still in separate columns of
+`master_data_matched.csv`, and their "missing" counts describe `master_data.csv` *before* the merge. The final
+section, "After the merge into `master_data.csv`", gives the current state. Order of the pipeline:
+`data_combination.Rmd`, then `python3 match_qualtrics.py` (it calls `match_sentences.py`, `match_comprehension.py` and
+`merge_into_master.py` in turn; the merge can be repeated, re-running the Rmd resets the file).
 
 Add new variables below as they are reviewed.
 
@@ -172,3 +177,27 @@ Position (1-based) of the probed sentence within its passage, and its text.
   processed projects is inferred from the pairing rule, not observed.
 - **Not covered:** the master keeps only the 27 comprehension answers that pair with a probe. The other questions
   (36 per participant, all of them in `master_comprehension.csv`) have no item in `master_data.csv`.
+
+## After the merge into `master_data.csv`
+
+`sentence_num`, `sentence_text` and the comprehension question text were merged into `master_data.csv`. Observed values
+are never overwritten, and a source column says where each filled value came from.
+
+| Column | Now |
+|---|---|
+| `sentence_num` | Position of the sentence in the passage. Missing for 2,328 rows: 19_32 (2,160) and 168 rows of 17_03. |
+| `sentence_num_raw` | `sentence_num` exactly as exported (blank where the source had none). For 17_03 it counts probe screens, so it is not a position. |
+| `sentence_num_source` | `observed` 12,157 rows; `design` 12,368; `qsf` 5,016 (19_01, 19_53); `qsf_copy_19_53` 3,506 (19_42); `rowcount` 3,257 (19_46); `text_match` 905 (17_03). |
+| `sentence_text` | Missing for 2,160 rows (19_32). |
+| `sentence_text_source` | `observed` 14,000 rows; `reference` 23,377 (clean text from the passage Word files). |
+| `comprehension_question_ref`, `_options_ref`, `_key_ref` | Filled for the 37,128 rows that have a `comprehension_item`. |
+
+- **17_03 changed:** its `sentence_num` is now the position in the passage (from the text match), not its exported number
+  (kept in `sentence_num_raw`). The 168 rows left blank are Set 1 passage 4 probes 1-2 and Set 2 passage 6 probes 3-4 (the
+  text match and the design lookup disagree) and Set 2 passage 7 probe 2 (repeated text). See the 17_03 section above.
+- **Inferred values:** the 12,368 `design` rows (processed projects 17_32, 18_06, 18_38, 20_46, 21_28) rest on the
+  booklet x passage x `probe_num` lookup and the assumption that their `probe_num` is right. They are wrong for 20_46
+  passage 6 if the missing probe is not the last one. Filter on `sentence_num_source` to use observed values only.
+- **`master_comprehension.csv`** also gained `comprehension_item` and the three reference columns (blank for 19_32).
+- The intermediate recovery columns (`sentence_num_fuzzy`, `_rowcount`, `_qsf`, `_design`, match scores) stay in
+  `master_data_matched.csv`.

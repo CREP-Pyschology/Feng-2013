@@ -52,7 +52,10 @@ Every mapped name must exist in the master schema, and every schema variable
 (other than the columns added during combining) should be mapped somewhere.
 
 ```{r checks}
-added_when_combining <- c("project", "software", "datatype", "source_file")
+added_when_combining <- c("project", "software", "datatype", "source_file",
+                          # added after combining by match_qualtrics.py / merge_into_master.py
+                          "sentence_num_raw", "sentence_num_source", "sentence_text_source",
+                          "comprehension_question_ref", "comprehension_options_ref", "comprehension_key_ref")
 
 unknown <- setdiff(na.omit(unique(codebooks$mapped_master_name)), schema$master_name)
 if (length(unknown) > 0) stop("Mapped names not in master_schema.csv: ", paste(unknown, collapse = ", "))

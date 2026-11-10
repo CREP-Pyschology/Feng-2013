@@ -93,3 +93,15 @@ Position (1-based) of the probed sentence within its passage, and its text.
   absent from the file. Which one is unknown: `probe_num` for passage 6 is numbered 1-3 from `QuestionNum`, and there
   is no sentence text. If the missing probe is not the last one, `sentence_num_design` is wrong for the later passage 6
   probes of 20_46. The count therefore reflects the probes in the file, not the design. Ask the 20_46 lab.
+
+## `passage_sentence_id`
+
+- **Missing:** was missing for 29,760 of 39,537 rows (everything except the processed OpenSesame projects 17_32, 18_06,
+  18_38 and 21_28). Now missing for 2,160 rows, all of 19_32.
+- **What it is:** passage + probe index (`1_3` = passage 1, probe 3). It is **not** a sentence position, although the
+  original codebook calls it that. In all 9,778 rows that supplied it, it equals passage + `probe_num`.
+- **Handling:** derived as `passage_probe_num` for every row that has a passage and `probe_num`, in one format (21_28
+  originally wrote it without the underscore, for example `11`). `data_combination.Rmd` checks the supplied values
+  against passage + `probe_num` before replacing them.
+- **Still missing:** 19_32, because it has no `probe_num` (see above). The column adds no information beyond `passage`
+  and `probe_num`; it is kept as a key.

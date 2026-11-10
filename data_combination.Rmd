@@ -667,6 +667,15 @@ m_qualtrics <- bind_rows(
 master_data <- bind_rows(master_processed, m_os_raw, m_os_1941, m_psychopy, m_superlab, m_qualtrics) %>%
   mutate(mw_probe = as.integer(mw_probe), comprehension_correct = as.integer(comprehension_correct))
 
+# passage_sentence_id is passage + probe index ("1_3"), not a sentence position. The processed OpenSesame files
+# supply it (21_28 without the underscore); check that it always equals passage + probe_num, then derive it
+# for every row in one format
+stopifnot(all(
+  str_remove(master_data$passage_sentence_id, "_") == paste0(master_data$passage, master_data$probe_num) |
+    is.na(master_data$passage_sentence_id)))
+master_data <- master_data %>%
+  mutate(passage_sentence_id = if_else(!is.na(passage) & !is.na(probe_num), paste0(passage, "_", probe_num), NA_character_))
+
 # a few raw projects reuse a participant id across files (e.g. subject-141.csv and subject-141b.csv
 # are separate sessions with different data): make those ids unique by adding the file name
 reused_ids <- master_data %>%

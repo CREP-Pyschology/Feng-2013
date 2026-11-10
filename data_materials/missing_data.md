@@ -127,3 +127,25 @@ Position (1-based) of the probed sentence within its passage, and its text.
   - 17_03 Set 2, passage 7, second probe: the sentence is unknown (the raw text repeats the first probe).
   - The Word files are the replication materials, not necessarily what every lab displayed.
 - **Still missing:** 19_32 (2,160 rows), which has no sentence position.
+
+## 17_03 (SuperLab) sentence numbers: what the experiment script shows
+
+- The SuperLab 5 experiment file (`superlab/Completly Revised Mind Wandering Replication Study.sl5`) names every event
+  "Passage N (k, sentence text)", with `k` typed by hand. The "Is your mind wandering?" probe screens are events too
+  and take a number, so 17_03's `sentence_num` is the sentence's position in the passage **plus the number of probe
+  screens before it**. This explains why 17_03's numbers run 1-5 above the other labs' (for example the Hawthorne
+  sentence is passage sentence 18 and event 20, with two probe screens before it).
+- The labels have typos (events numbered out of order, passage names wrong on a few events, "actual 12" corrections),
+  so the conversion was not done from the script. Instead, for each set x passage x 17_03 number, the position was read
+  from the rows whose text matches the Word files with a score of 0.9 or more. That mapping is consistent: 21 cells,
+  no conflicts. The remaining 17_03 probe cells (low match scores because of truncated or reworded text) have the same
+  position in `sentence_num_fuzzy` and `sentence_num_design`, except Set 1 passage 4 (below).
+- **Set 1 passage 4:** 17_03's two probed sentences are "Just mountains, craters, cold winds, and dust storms." (own
+  number 7) and "It was almost as if scouts for Columbus…" (own number 9). The first is the difficult-version wording,
+  although booklet 1 passage 4 should be the easy version, and in the easy Word file the sentence is "All they saw
+  were mountains, craters, cold winds, and dust storms." So 17_03's script appears to mix the two wordings in this
+  passage, or probes a different sentence than the other labs. `sentence_num_design` (7, 8) assumes the other labs'
+  probes; `sentence_num_fuzzy` (6, 7) follows the text. Neither is verified. Ask the 17_03 lab.
+- **Set 2 passage 7:** the script labels "After pursuing his early career…" as event 6 and has a probe screen as event 5
+  right after it, but the labels around it skip numbers (2, and the third probe's screen is not labelled in the
+  same way), so the second probe's sentence could not be read from it. The third probe's text matches sentence 16.

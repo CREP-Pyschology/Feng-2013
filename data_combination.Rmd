@@ -204,8 +204,8 @@ m_eprime <- ep1 %>%
     subject_id = Subject, passage = Passages,
     difficulty = recode_difficulty(Condition), difficulty_num = difficulty_num(difficulty),
     booklet = Booklet,
-    # Level 1 is sorted by reading time, not trial order, and Sen_num is constant within a passage,
-    # so the probe order cannot be recovered
+    # Level 1 is sorted by reading time, not trial order, and Sen_num is not a usable probe
+    # index (values 1-7, same for all probes of passage 1; meaning unexplained), so the probe order cannot be recovered
     probe_num = NA_integer_, n_probes_in_passage = num_Probs,
     read_rt_ms = RT, mw_probe = MW,
     comprehension_correct = Com_Score, test_anxiety = Test_Anx

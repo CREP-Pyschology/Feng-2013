@@ -167,8 +167,11 @@ SuperLab keeps the file structure of the export but several column headers do no
 
 ### E-Prime and jsPsych
 
-- **E-Prime Level 1 is sorted by reading time within each participant, not by trial order.** `Sen_num` is a constant
-  per passage (all seven rows of passage 1 have `Sen_num` = 1), not a probe counter, so the probe order is lost:
+- **E-Prime Level 1 is sorted by reading time within each participant, not by trial order.** The authors' codebook
+  calls `Sen_num` "sentence number", but it is not one: it only takes values 1-7, is the same for all seven rows of
+  passage 1 (whose probes are at sentences 2, 3, 18, 20, 21, 22 and 30), and varies within a passage only in
+  passages 2, 5, 6, 7 and 8. It is not a reliable probe counter either (in the other processed files `Sen_num` is the
+  probe index), and its meaning is unexplained (ask the 19_32 lab), so the probe order is lost:
   `probe_num` and `comprehension_item` are `NA` for 19_32. Each row still carries its own `MW` and `Com_Score`, so the
   per-row data are intact; only the order within a passage is unknown.
 - E-Prime `RT_out` follows the "out = outliers removed" convention but has no missing values; `Test_Anx` (Level 2) is joined by

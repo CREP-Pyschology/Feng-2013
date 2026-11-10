@@ -149,3 +149,26 @@ Position (1-based) of the probed sentence within its passage, and its text.
 - **Set 2 passage 7:** the script labels "After pursuing his early career…" as event 6 and has a probe screen as event 5
   right after it, but the labels around it skip numbers (2, and the third probe's screen is not labelled in the
   same way), so the second probe's sentence could not be read from it. The third probe's text matches sentence 16.
+
+## `comprehension_item` and the question text
+
+- **Missing before:** `comprehension_item` (passage.question, for example `2.1`) was NA for all rows of the processed
+  OpenSesame projects (17_32, 18_06, 18_38, 21_28) and E-Prime 19_32: 9,657 rows had a comprehension answer but no item.
+- **Handling:** the master pairs question k with probe k, and every supplied item equals passage.`probe_num` (checked on
+  all 12 projects that supplied it). `data_combination.Rmd` now derives `comprehension_item` as passage.`probe_num` for every
+  row that has a comprehension answer and a `probe_num`. For the processed OpenSesame projects this assumes that row k
+  holds question k, as in the original processed files.
+- **Still missing (2,409 rows):** 19_32 (2,160 rows, no `probe_num`, so the question cannot be identified), and rows
+  where the question was not answered (no `comprehension_correct`): 21_28 121, 19_42 54, 19_01 40, 19_53 18,
+  17_25 7, 19_08 4, 19_23 3, 17_28 1, 19_41 1.
+- **Question text:** the master has no question text, so `master_data_matched.csv` adds `comprehension_question_ref` (the
+  question), `comprehension_options_ref` (options a-e) and `comprehension_key_ref` (keyed answer), looked up from
+  `comprehension_item`. The source is the OpenSesame 19_08 logs, which show each of the 36 questions with its options and
+  key (`match_comprehension.py`). Filled for all 37,128 rows that have a `comprehension_item`.
+- **Checks:** the keyed answer agrees with `correct_key` in `master_comprehension.csv` for 99.95% of 34,118 rows (the 18
+  disagreements are all 17_25). The question stems only roughly match the Nelson-Denny Word file (20 of the 36 stems
+  score below 0.9), so the replication wording differs from that file in places; the 19_08 text is what participants saw.
+- **Caveats:** this is one wording per question. 19_42 participants read a Hungarian translation. The text for the
+  processed projects is inferred from the pairing rule, not observed.
+- **Not covered:** the master keeps only the 27 comprehension answers that pair with a probe. The other questions
+  (36 per participant, all of them in `master_comprehension.csv`) have no item in `master_data.csv`.

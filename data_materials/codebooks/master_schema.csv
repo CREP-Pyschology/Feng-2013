@@ -16,7 +16,7 @@ passage_sentence_id,probe,"Passage and probe key (e.g. 1_3 = passage 1, probe 3)
 sentence_text,probe,Text of the sentence shown,text,,Only in raw logs; SuperLab text is truncated by the export
 read_rt_ms,probe,Time spent reading the sentence before pressing to advance,numeric,milliseconds,"Raw, untreated reading time: outlier treatment is decided on the full combined data, so the source files' cleaned columns (RT_out, RTnoOut, RT_wind ...) are not carried into the master. PsychoPy and Qualtrics are logged in seconds and converted to ms (x1000)"
 mw_probe,probe,Mind-wandering probe response for the sentence,integer,0 = not mind wandering (n); 1 = mind wandering (y),NA when no probe followed the sentence; y/n must be recoded to 1/0
-comprehension_item,probe,Identifier of the comprehension question (passage.question),text,,
+comprehension_item,probe,Identifier of the comprehension question (passage.question),text,passage.question,"Question k of the passage is paired with probe k, so this is passage.probe_num for every row with a comprehension answer and a probe_num (derived for the processed OpenSesame projects 17_32, 18_06, 18_38 and 21_28, which assumes row k holds question k). NA for 19_32 (no probe_num) and where the question was unanswered"
 comprehension_correct,probe,Whether the comprehension answer was correct,integer,0 = incorrect; 1 = correct,Question k of the passage paired with probe k (as in the processed files). SuperLab and Qualtrics are scored against superlab/superlab_answer_key.csv (Qualtrics text answers matched to the closest option)
 gender,subject,Self-reported gender,categorical,as reported (German values in 18_38 need translation),
 age,subject,Age in years,integer,years,

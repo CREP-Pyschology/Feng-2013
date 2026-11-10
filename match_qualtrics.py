@@ -114,3 +114,5 @@ if __name__ == '__main__':
     m['sentence_text_ref'] = txt; m['sentence_text_ref_from'] = src
     m.to_csv(D + 'master_data_matched.csv', index=False)
     print(m.groupby('project').sentence_num_qsf.apply(lambda s: s.notna().sum())[['19_01', '19_42', '19_53']])
+    import match_comprehension
+    match_comprehension.main()

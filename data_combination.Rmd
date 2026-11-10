@@ -673,6 +673,17 @@ master_data <- bind_rows(master_processed, m_os_raw, m_os_1941, m_psychopy, m_su
 stopifnot(all(
   str_remove(master_data$passage_sentence_id, "_") == paste0(master_data$passage, master_data$probe_num) |
     is.na(master_data$passage_sentence_id)))
+# comprehension_item is passage.question, where question k is paired with probe k (the pairing of the processed
+# files). Check the supplied values follow that rule, then derive it for every row with an answer and a probe_num
+# (the processed OpenSesame files did not supply it)
+stopifnot(all(
+  master_data$comprehension_item == paste0(master_data$passage, ".", master_data$probe_num) |
+    is.na(master_data$comprehension_item)),
+  !any(!is.na(master_data$comprehension_item) & is.na(master_data$comprehension_correct)))
+master_data <- master_data %>%
+  mutate(comprehension_item = if_else(!is.na(comprehension_correct) & !is.na(probe_num) & !is.na(passage),
+                                      paste0(passage, ".", probe_num), NA_character_))
+
 master_data <- master_data %>%
   mutate(passage_sentence_id = if_else(!is.na(passage) & !is.na(probe_num), paste0(passage, "_", probe_num), NA_character_))
 

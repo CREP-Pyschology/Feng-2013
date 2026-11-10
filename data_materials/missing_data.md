@@ -81,3 +81,15 @@ Position (1-based) of the probed sentence within its passage, and its text.
   the other 60 respondents for 4 probes). Their `read_rt_ms` for those probes is probably the wrong sentence's time.
   Not fixed.
 - **Not recoverable:** the sentence text itself for the processed projects, and positions for 19_32.
+
+## `n_probes_in_passage`
+
+- **Missing:** was missing for all 1,820 rows of 20_46 (jsPsych); now filled for every row.
+- **Why it was missing:** the other processed files report the count (`num_Probs`, `Num_Probs`), but the jsPsych file
+  has no such variable, and `data_combination.Rmd` left it blank.
+- **Handling:** counted per participant and passage from the rows present, the same way as for the raw projects.
+  All 70 participants give 7, 2, 2, 4, 3, 3, 2, 3 probes in passages 1-8 (26 rows each).
+- **Caution:** the design has 4 probes in passage 6 (27 rows per participant), and 20_46 has 3, so one passage 6 probe is
+  absent from the file. Which one is unknown: `probe_num` for passage 6 is numbered 1-3 from `QuestionNum`, and there
+  is no sentence text. If the missing probe is not the last one, `sentence_num_design` is wrong for the later passage 6
+  probes of 20_46. The count therefore reflects the probes in the file, not the design. Ask the 20_46 lab.

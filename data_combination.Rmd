@@ -230,6 +230,8 @@ m_jspsych <- js %>%
     gender = Gender, implicit_willpower = ImplicitWP, mindwander_theory = MindwanderTheory,
     chronotype = Chronotype
   ) %>%
+  # the jsPsych file has no probe-count variable: count the probes per participant and passage, as for raw data
+  group_by(subject_id, passage) %>% mutate(n_probes_in_passage = n()) %>% ungroup() %>%
   finish("20_46", "jspsych", "processed")
 
 # OpenSesame processed files
